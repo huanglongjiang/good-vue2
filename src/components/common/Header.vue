@@ -1,0 +1,292 @@
+<template>
+<div class="header height-60 width-max background-white" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px; background: rgb(32, 35, 42);">
+    <div class="header height-60 width-max position-r">
+        <div class="position-a left-230 clearfix">
+            
+            <a :href="domain" class="color-666 none-line float-left" target="_blank">
+              <template v-if="form.image!=''">
+                  <img :src="state.Imgpath+'user/'+form.image" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.image!=''">
+              </template>
+              <template v-else>
+                  <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
+              </template>
+              <span class="line-height-60 margin-left-20" >
+                {{form.name}}
+                
+  
+
+              </span>
+              
+
+            </a>
+            
+            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">
+                <span class=" margin-right-10">admin</span>
+                <template v-if="constant.authority==2">(超级管理员)</template>
+                <template v-if="constant.authority==1">(管理员)</template>
+                <template v-if="constant.authority==0">(普通用户)</template>
+              </span>
+            <!-- <template v-if="state.authority!=2">
+            <marquee class="float-left position-r top-20 margin-left-20" style="width:450px;">{{state.marquee}}</marquee>
+            </template> -->
+        </div>
+        <ul class="padding-top-20">
+
+            <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 margin-right-20 pointer" style="color: #adb5bd; top:-3px;" @click="logOut()">
+              
+                <i class="fa fa-sign-in font-size-18" style="color: #adb5bd;"></i>
+            </li>
+
+            <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 pointer" style="color: #adb5bd; top:-3px;" title="修改密码" @click="editPass()">
+              
+                <i class="fa fa-lock font-size-18" style="color: #adb5bd;"></i>
+            </li>
+
+            <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-30 radius-4 float-right position-r radius-20 pointer" style="color: #adb5bd; top:-3px;" title="编辑个人资料" @click="select()">
+              
+                <i class="fa fa-user font-size-18" style="color: #adb5bd;"></i>
+            </li>
+            <router-link to="bbs" tag="li" class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 pointer" style="color: #adb5bd; top:-3px;">
+                <i class="fa fa-envelope-o font-size-18 color-white" style="color: #adb5bd;"></i>
+            
+                <good-info class="position-a left-20 height-18 line-height-18" :data="state.bbs_total" v-if="state.bbs_total" style="top: -10px;"></good-info>
+                <good-info class="position-a left-20 height-18 line-height-18" :data="0" v-else style="top: -10px;"></good-info>
+            </router-link>
+            
+            <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20" style="color: #adb5bd; top:-3px;">
+              <a :href="domain" target="_blank">
+                <i class="fa fa-bell-o font-size-18" style="color: #adb5bd;"></i>
+            
+                <div class="notify  position-a top-0 right-0">
+                    <span class="ring  position-a top-0 right-0"></span>
+                    <span class="ring-point background-danger position-a top-0 right-0 color-white radius-20"></span>
+                </div>
+              </a>
+            </li>
+            <!-- <li class="width-auto height-36 line-height-36 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 clearfix pointer" style="color: #adb5bd; top:-3px;">
+              <a :href="constant.qq" rel="nofollow"><img src="http://good1230.com//templates/code/images/button_11.gif" style="position:relative; top:3px;"></a>
+            </li> -->
+            <!-- <router-link to="money" tag="li" class="width-auto height-36 line-height-36 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 clearfix pointer" style="color: #adb5bd; top:-3px;">
+              <img src="static/images/money-bag.png" alt="" class="width-30 float-left">
+              <span class="float-left bold color-primary">+{{income}}</span>
+            </router-link> -->
+
+        </ul>
+      
+    </div>
+
+      <!-- 模态框 -->
+      <good-dialog title="个人资料" :visible.sync='dialogShow'>   
+        <div slot="body">
+               <div class="table-default" style="margin:0px">
+              <table class="table-group">
+                  
+                  
+                  
+                  <tr>
+                      <tds-label>用户邮箱：</tds-label>
+                      <td><good-input v-model="form.email" :disabled="true"></good-input></td>
+                  </tr>
+                  
+                  <tr>
+                      <tds-label>用户角色：</tds-label>
+
+                      <td><div type="text" class="input-default line-height-34 width-max" readonly="readonly">
+                        <template v-if="form.role==1">普通用户</template>
+                        <template v-if="form.role==2">管理员</template>
+                        <template v-if="form.role==3">超级管理员</template>
+                      </div>
+                      </td>
+                  </tr>
+                  <tr>
+                      <tds-label>用户名称：</tds-label>
+                      <td><good-input v-model="form.name"></good-input></td>
+                  </tr>
+                  <tr>
+                      <tds-label class=" position-r">
+                          <div class="position-a top-0 right-0">用户头像：</div>
+                      </tds-label>
+                      <td>
+                        <good-upload id="u1" type="user" :data.sync='form'></good-upload>
+                      </td>
+                  </tr>
+
+              </table> 
+          </div>
+        </div>
+        <div slot="footer">
+          <good-button @click="Submit">确定</good-button>
+        </div>
+       </good-dialog>
+
+       <!-- 修改密码 -->
+      <good-dialog title="修改密码" :visible.sync='dialogShow2'>
+        <div slot="body">
+               <div class="table-default">
+              <table class="table-group">
+                  <tr>
+                      <tds-label>旧密码：</tds-label>
+                      <td><good-input v-model="form2.passOld" :disabled="true"></good-input></td>
+                  </tr>
+                  <tr>
+                      <tds-label>新密码：</tds-label>
+                      <td><good-input v-model="form2.passNew" :disabled="true"></good-input></td>
+                  </tr>
+              </table> 
+          </div>
+        </div>
+        <div slot="footer">
+          <good-button @click="SubmitEdit">确定</good-button>
+        </div>
+       </good-dialog>
+        <!-- 模态框 -->
+ 
+</div>
+</template>
+<script>
+    import { mapState } from 'vuex'
+    //import Images from '../common/image'
+    //import UploadFiles from '../common/uploadFile'
+    export default {
+        components: {
+            //Images,//UploadFiles,
+        },
+        data() {
+            return {
+              dialogShow:false,
+              dialogShow2:false,
+              domain:'',
+              result:'',
+              bbs:0,
+              income:0,
+              paycount:0,
+              form:{
+                  name:'',
+                  email:'',
+                  image:'',
+              },
+              form2:{
+                  id:0,
+                  passOld:'',
+                  passNew:'',
+              },
+            }
+        },
+        created: function() {
+            //this.submitForm();
+            this.domain=window.location.origin
+        },
+        computed: {
+            ...mapState(['state']),
+        },
+        methods:{
+            logOut(){
+              this.$router.push('login');
+               // this.$axios.post('http://127.0.0.1/vue/return.php').then(res => {
+                 
+              //  })
+            },
+           
+            submitForm(){
+                let data={
+                        "google":"t-10014",
+                        "operating":"select",
+                    }
+                this.$axios.post(global.APIPATH,data).then(res => { 
+                    this.form2.id=res.data.data.id
+                    this.form=res.data.data;
+                    this.bbs=res.data.bbs;
+                    this.income=res.data.income;
+                    this.paycount=res.data.paycount;
+                    this.state.authority=res.data.data.role;
+                    this.constant.authority=res.data.data.role;
+                    this.state.account=res.data.data.account;
+                    this.state.bbs_total=res.data.bbs_total;
+                    this.state.log_total=res.data.log_total;
+
+                })
+            },
+            Submit(index){
+                let data={
+                    "google":"t-10014",
+                    "operating":"update",
+                    "form":this.form
+                }
+                this.$axios.post(global.APIPATH,data).then(res => {    
+                    this.result=res.data.result;
+                    this.submitForm();
+                });
+            },
+            SubmitEdit(index){
+                let data={
+                    "google":"t-10014",
+                    "operating":"updatePass",
+                    "form":this.form2
+                }
+                this.$axios.post(global.APIPATH,data).then(res => {   
+                    //this.submitForm();
+                });
+            },
+            
+            select(){
+              this.dialogShow=true;
+            },
+            editPass(){
+              this.dialogShow2=true;
+            },
+            imgNames(item){
+              this.form.image=item;
+            },
+
+        },
+    }
+</script>
+
+<style>
+.background-disabled{background: #f5f7fa}
+  .rotate {
+    -webkit-animation: rotating 1.2s linear infinite;
+    -moz-animation: rotating 1.2s linear infinite;
+    -o-animation: rotating 1.2s linear infinite;
+    animation: rotating 1.2s linear infinite;
+}
+.top_music {
+    border: 0px solid red;
+    position: absolute;
+    right: 300px;
+    top: 60px;
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+    background: url(../../../static/images/normalmusic.svg) no-repeat;
+    z-index: 999;
+}
+
+@-webkit-keyframes rotating {
+from {
+-webkit-transform:rotate(0deg)
+}
+to {
+  -webkit-transform: rotate(360deg)
+}
+}
+@keyframes rotating {
+from {
+transform:rotate(0deg)
+}
+to {
+  transform: rotate(360deg)
+}
+}
+@-moz-keyframes rotating {
+from {
+-moz-transform:rotate(0deg)
+}
+to {
+  -moz-transform: rotate(360deg)
+}
+}
+</style>
+<style>
+      .uploader-list{display: none;}  
+</style>

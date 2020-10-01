@@ -1,0 +1,166 @@
+
+  /* body{background:#ECF0F1;} */
+  body{background:#fff;}
+  #side{padding-top: 10px;}
+  #side>li{ line-height: 40px; text-indent: 10px;border-bottom: 0px solid #272D2D;margin-left: 10px;margin-right: 10px; }
+  /* #side li ul{ text-indent: 34px;} */
+  .table-data{ border: 1px solid #DDDDDD;border-bottom: 0px}
+  .table-data .table-group th{border: 0px; border-bottom: 1px solid #DDDDDD;}
+  .table-data .table-group td{border: 0px; border-bottom: 1px solid #DDDDDD;}
+
+
+  #side li .title{cursor: pointer;color: #adb5bd;}
+  #side li .active {
+      background-image: linear-gradient(to right, #9C27B0 0%, #00BCD4 100%);
+      background-repeat: repeat-x;
+      color: #fff;
+  }
+  /* #side li ul{background: #1A2432} */
+
+  #side li ul::before{
+
+    content: '';
+      position: absolute;
+      top: 0px;
+      left: 16px;
+      margin-top: -.5px;
+      width: 1px;
+      height: 100%;
+      border-radius: 5px;
+      background-color: #fff;
+      opacity: .5;
+      transition: all 0.2s ease-in-out;
+  }
+  #side li ul li span::before{
+    content: '';
+      position: absolute;
+      top: 13px;
+      left: -2px;
+      margin-top: -.5px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #adb5bd;
+      transition: all 0.2s ease-in-out;
+  }
+
+  #side li ul li span{
+    color: #adb5bd;
+    cursor: pointer;
+  }
+
+  #side li ul li span:hover{
+    color: #17A2B8;
+  }
+
+  #side li ul li span a{
+    color: #adb5bd;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #side li ul li span a:hover{
+    color: #17A2B8;
+  }
+
+
+  #side li a{
+    color: #adb5bd;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #side li a:hover{
+    color: #17A2B8;
+  }
+
+  #side li ul li{width: 190px}
+/*  #side li ul li span:hover::before,#side li ul li span:focus::before{
+  width: 20px;
+    left: -15px;
+    opacity: 1;
+    background-color: #17A2B8;
+} */
+     G. Breadcrumb
+================================================= */
+.breadcrumb-styled {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border-radius: 0;
+  background-color: transparent;
+}
+.breadcrumb-styled .fa {
+  font-size: 14px;
+}
+.breadcrumb-styled li {
+  float: left;
+}
+.breadcrumb-styled li + li:before {
+  display: none;
+}
+.breadcrumb-styled li a {
+  display: block;
+  font-weight: 600;
+  color: #999;
+  background: #e1e1e1;
+  text-decoration: none;
+  position: relative;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 7px 0 5px;
+  text-align: center;
+  margin-right: 23px;
+}
+.breadcrumb-styled li:nth-child(even) a {
+  background-color: #e1e1e1;
+}
+.breadcrumb-styled li:nth-child(even) a:before {
+  border-color: #e1e1e1;
+  border-left-color: transparent;
+}
+.breadcrumb-styled li:nth-child(even) a:after {
+  border-left-color: #e1e1e1;
+}
+.breadcrumb-styled li:first-child a {
+  padding-left: 15px;
+  border-radius: 4px 0 0 4px;
+}
+.breadcrumb-styled li:first-child a:before {
+  border: none;
+}
+.breadcrumb-styled li:last-child a {
+  padding-right: 15px;
+  border-radius: 0 4px 4px 0;
+}
+.breadcrumb-styled li a:before,
+.breadcrumb-styled li a:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  border: 0 solid #e1e1e1;
+  border-width: 15px 10px;
+  width: 0;
+  height: 0;
+}
+.breadcrumb-styled li a:before {
+  left: -20px;
+  border-left-color: transparent;
+}
+.breadcrumb-styled li a:after {
+  left: 100%;
+  border-color: transparent;
+  border-left-color: #e1e1e1;
+}
+.breadcrumb-styled li a:hover {
+  color: #333;
+}
+.breadcrumb-styled li a:focus {
+  color: #333;
+}
+.breadcrumb-styled li.active a {
+  color: #333;
+}
+.breadcrumb-styled li a .fa {
+  padding-right: 7px;
+}

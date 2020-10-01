@@ -1,0 +1,2406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>button.css-1.0.2</title>
+<link id="link-button" rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+
+</head>
+<body>
+	<div class="layout background-primary width-220 height-60 line-height-60 position-f left-0 top-0" style="background: #242A2A">
+		<span class="width-60 height-60 line-height-60 align-center color-white font-size-24 radius-30 margin-20 zx-icon-quill">
+			<span class="margin-left-5">button.css</span>
+		</span>
+	</div>
+<div class="conter width-max position-a top-0 bottom-0 height-auto">
+	<div class="layout width-220 height-max border-primary position-f left-0 top-60 bottom-0 padding-bottom-70 z-index-100 background-primary mCustomScrollbar" style="box-sizing:border-box; background: #1D2939;">
+
+
+	<ul id="side">
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#npm">npm 安装</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#link-tomato">切换主题</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#button">按钮</a>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title active">
+				<i class="zx-icon-meter margin-right-10"></i>基础用法
+				<i class="zx-icon-down float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r">
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#class">局部大类class</a></span>
+				</li>
+				<li class="position-r line-height-36 position-r">
+					<span class="margin-left-10"><a href="#layout">块状图层</a></span>
+					<i class="bold font-size-12 padding-left-5 padding-right-5 padding-top-1 padding-bottom-1 radius-4 position-r right-0" style="background-color: #9C27B0; color: #fff;">Upcoming</i>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#border-default">边框设置</a></span>
+				</li>
+			
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#overflow">overflow</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#align">文字对齐</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#position">position定位</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#float">float浮动</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#white-space">省略号样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#word-break">div强制换行样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#vertical">图片垂直居中</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#mouse">鼠标状态</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#underline">文字下划线</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#other">其他</a></span>
+				</li>
+			</ul>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title">
+				<i class="zx-icon-meter margin-right-10"></i>像素(px)
+				<i class="zx-icon-down float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#padding">padding 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#margin">margin  像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#width">width  像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#height">height  像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#line-height">line-height 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#radius">radius圆角 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#font-size">font-size文字大小 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#top">top 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#text-indent">文字缩进</a></span>
+				</li>
+			</ul>
+		</li>
+		
+		<li class="color-white font-size-14">
+			<div class="title">
+				<i class="zx-icon-file-text margin-right-10"></i>颜色
+				<i class="zx-icon-next float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#color-text">文字颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#color-a">链接颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#color-tag">标签颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#background-color">背景颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#border-color">边框颜色</a></span>
+				</li>
+			</ul>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title">
+				<i class="zx-icon-user-tie margin-right-10"></i>组件一
+				<i class="zx-icon-next float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#breadbar">路径导航</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#tab">tab选项卡</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#checkbox">复选框颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#radio">单选框颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#input">文本框样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#star">星号等级</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#menu">悬浮菜单</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#msg">悬浮信息提示</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#menu2">二级导航菜单</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#menu-right">右边带信息导航菜单</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#menu-left">左边带信息导航菜单</a></span>
+				</li>
+			</ul>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title">
+				<i class="zx-icon-setting_f margin-right-10"></i>组件二
+				<i class="zx-icon-next float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#page">分页样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#hear-nav">头部导航菜单</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#progress">进度条</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#table">表格样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#tag-group">分类刷选项样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#nav-selected">分类刷选项选择状态</a></span>
+				</li>
+			</ul>
+		</li>
+		
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#popover">弹出图层</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#panel-backdrop">遮罩图层</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#model">js模态框事件</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="fonts/demo.html" target="_blank">字体图标</a>
+		</li>
+
+	</ul>
+	</div>
+	<div class="layout  width-max position-r left-0  border-success padding-right-10  margin-top-20" style=" padding-left: 220px;box-sizing:border-box; min-width: 250px;">
+
+
+<div class="margin-left-10 padding-10" style="box-shadow: inset 0px 0px 5px #ccc;">
+<div>
+<p id="npm">
+--------------------------------------------npm 安装-----------</p>
+<br>
+	
+<div class="background-default height-30 line-height-30 color-primary">
+		通过 npm 安装
+	</div>
+	<div class="background-default height-30 line-height-30 color-primary">
+		npm install button.css --save
+	</div>
+	
+	<div class="background-default height-30 line-height-30 color-primary">
+		 import 语法
+	</div>
+	<div class="background-default height-30 line-height-30 color-primary">
+	
+		import button from 'button.css';
+	</div>
+</div>
+<br>
+<p id="link-tomato">
+
+
+--------------------------------------------切换主题-----------</p>
+<br>
+<div onclick="Classstyle('tomato')" class="pointer a-primary">番茄主题</div>
+<br>
+<div onclick="Classstyle('green')" class="pointer a-primary">绿色主题</div>
+<br>
+<div onclick="Classstyle('blue')" class="pointer a-primary">蓝色主题</div>
+<br>
+<div onclick="Classstyle('red')" class="pointer a-primary">红色主题</div>
+<br>
+<p id="button">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------按钮-----------</p>
+<br>
+<div class="button button-primary  button-sms">primary</div>
+<div class="button button-success  button-sms">success</div>
+<div class="button button-info  button-sms">info</div>
+<div class="button button-danger button-sms">danger</div>
+<div class="button button-warning  button-sms">warning</div>
+<div class="button button-default  button-sms">default</div>
+<br><br>
+
+<div class="button button-primary  button-sms"><i class="button-ico zx-icon-home2"></i>primary</div>
+<div class="button button-success  button-sms"><i class="button-ico zx-icon-home2"></i>success</div>
+<div class="button button-info  button-sms"><i class="button-ico zx-icon-home2"></i>info</div>
+<div class="button button-danger button-sms"><i class="button-ico zx-icon-home2"></i>danger</div>
+<div class="button button-warning  button-sms"><i class="button-ico zx-icon-home2"></i>warning</div>
+<div class="button button-default  button-sms"><i class="button-ico zx-icon-home2"></i>default</div>
+<br><br>
+
+<div class="button button-primary  button-sm">primary</div>
+<div class="button button-success  button-sm">success</div>
+<div class="button button-info  button-sm">info</div>
+<div class="button button-danger button-sm">danger</div>
+<div class="button button-warning  button-sm">warning</div>
+<div class="button button-default  button-sm">default</div>
+<br><br>
+
+<div class="button button-primary  button-sm"><i class="button-ico zx-icon-home2"></i>primary</div>
+<div class="button button-success  button-sm"><i class="button-ico zx-icon-home2"></i>success</div>
+<div class="button button-info  button-sm"><i class="button-ico zx-icon-home2"></i>info</div>
+<div class="button button-danger button-sm"><i class="button-ico zx-icon-home2"></i>danger</div>
+<div class="button button-warning  button-sm"><i class="button-ico zx-icon-home2"></i>warning</div>
+<div class="button button-default  button-sm"><i class="button-ico zx-icon-home2"></i>default</div>
+<br><br>
+
+<div class="button button-primary  button-md">primary</div>
+<div class="button button-success  button-md">success</div>
+<div class="button button-info  button-md">info</div>
+<div class="button button-danger button-md">danger</div>
+<div class="button button-warning  button-md">warning</div>
+<div class="button button-default  button-md">default</div>
+<br><br>
+
+<div class="button button-primary  button-md"><i class="button-ico zx-icon-home2"></i>primary</div>
+<div class="button button-success  button-md"><i class="button-ico zx-icon-home2"></i>success</div>
+<div class="button button-info  button-md"><i class="button-ico zx-icon-home2"></i>info</div>
+<div class="button button-danger button-md"><i class="button-ico zx-icon-home2"></i>danger</div>
+<div class="button button-warning  button-md"><i class="button-ico zx-icon-home2"></i>warning</div>
+<div class="button button-default  button-md"><i class="button-ico zx-icon-home2"></i>button</div>
+<br><br>
+
+<div class="button button-primary  button-lg">primary</div>
+<div class="button button-success  button-lg">button</div>
+<div class="button button-info  button-lg">info</div>
+<div class="button button-danger button-lg">danger</div>
+<div class="button button-warning  button-lg">warning</div>
+<div class="button button-default  button-lg">default</div>
+<br><br>
+
+<div class="button button-primary  button-lg"><i class="button-ico zx-icon-home2"></i>primary</div>
+<div class="button button-success  button-lg"><i class="button-ico zx-icon-home2"></i>success</div>
+<div class="button button-info  button-lg"><i class="button-ico zx-icon-home2"></i>info</div>
+<div class="button button-danger button-lg"><i class="button-ico zx-icon-home2"></i>danger</div>
+<div class="button button-warning  button-lg"><i class="button-ico zx-icon-home2"></i>warning</div>
+<div class="button button-default  button-lg"><i class="button-ico zx-icon-home2"></i>default</div>
+<br><br>
+
+<br><br>
+
+
+<p id="class">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------局部大类class-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<p class="padding-10">头部：header</p>
+<p class="padding-10">主体：conter</p>
+<p class="padding-10">左侧：sidebar</p>
+<p class="padding-10">右侧：right</p>
+<p class="padding-10">底部：footer</p>
+</div>
+<br>
+<p id="layout">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------块状图层-----------</p>
+<br>
+<div class="layout  border-default padding-10" style="margin-left:0px;">layout</div>
+<br>
+<p id="border-default">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------边框设置-----------</p>
+<br>
+<div class="layout border-default padding-10" style="margin-left:0px;">
+<p class="padding-10">默认边框(#ccc)：border-default</p>
+<p class="padding-10">无边框：border-0</p>
+<p class="padding-10">无上边框：border-top-0</p>
+<p class="padding-10">无下边框：border-bottom-0</p>
+<p class="padding-10">无左边框：border-left-0</p>
+<p class="padding-10">无右边框：border-right-0</p>
+
+</div>
+<br>
+<p id="overflow">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------overflow-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<pre class="font-size-16">
+
+	overflow-auto-x{ overflow-x: auto}
+
+	overflow-auto-y{ overflow-y: auto}
+
+	overflow-auto{ overflow: auto}
+
+	overflow-scroll-x{ overflow-x: scroll}
+
+	overflow-scroll-y{ overflow-y: scroll}
+
+	overflow-scroll{ overflow: scroll}
+
+	overflow-hidden{ overflow: hidden}
+
+</pre> 
+</div>
+<br>
+<p id="align">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------文字对齐-----------</p>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<pre class="font-size-16">
+
+	文字向左对齐：align-left
+
+	文字居中对齐：align-center
+
+	文字向右对齐：align-right
+
+	vertical-top{vertical-align: text-top;}
+
+	vertical-middle{vertical-align: middle;}
+
+	vertical-bottom{vertical-align: text-bottom;}
+
+
+</pre> 
+</div>
+
+<br><br>
+<p id="position">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------position定位-----------</p>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<pre class="font-size-16">
+
+	绝对定位：position-a
+
+	相对定位：position-r
+
+	固定定位：position-f
+
+	.z-index-1{z-index: 1;}
+	.z-index-10{z-index: 10;}
+	.z-index-100{z-index: 100;}
+	.z-index-1000{z-index: 1000;}
+	.z-index--1{z-index: -1;}
+
+</pre> 
+</div>
+<p id="float">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------float浮动-----------</p>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<pre class="font-size-16">
+
+	左浮动：float-left
+
+	又浮动：float-right
+
+	取消浮动：clear
+
+	取消浮动(父级类)：clearfix
+
+</pre> 
+</div>
+<br><br>
+<p id="white-space">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------省略号样式-----------</p>
+<br>
+
+1、单行省略号
+<br>
+<br>
+<div class="layout float-left">class="ellipsis"</div>
+<br>
+<br>
+<div class="layout float-left color-ccc">overflow: hidden;text-overflow: ellipsis;white-space: nowrap;</div>
+
+<br>
+<br>
+<br>
+<br>
+2、多行省略号
+<br>
+<br>
+<div class="layout float-left">class="ellipsis2"</div>
+<br>
+<br>
+<div class="layout float-left color-ccc">overflow: hidden;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;</div>
+
+<div class="clear"></div>
+<br><br>
+<p id="word-break">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------div强制换行样式-----------</p>
+<br><br>
+<div class="layout float-left">class="break"</div>
+<div class="clear"></div>
+<div class="layout float-left color-default" style="width:300px;word-break:break-all;">word-break:break-all</div>
+<div class="clear"></div>
+<br><br>
+<p id="vertical">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------图片垂直居中-----------</p>
+<br>
+<div class="layout width-300  height-300 border-default margin-10 border-1 border-primary background-white vertical">
+	<img src="images/logo.png" class="block margin-auto" alt="">
+</div>
+<br><br>
+
+
+
+<p id="mouse">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------鼠标状态-----------</p>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<pre class="font-size-16">
+
+	pointer{ cursor: pointer;}
+
+	move{cursor: move;}
+
+	no-drop{cursor: no-drop;}
+
+</pre> 
+</div>
+<br><br>
+<p id="underline">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------文字下划线-----------</p>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<pre class="font-size-16">
+
+	.none-line{text-decoration: none;}
+
+	.underline{text-decoration: underline;}
+
+	.hover-underline:hover{text-decoration: underline;}
+
+</pre> 
+</div>
+<br><br>
+
+
+<p id="other">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------其他-----------</p>
+<pre class="font-size-16">
+
+	.bold(文字粗体)
+
+	.none{ display:none;}
+
+	.block{ display: block;}
+
+	.inline-block{ display:inline-block;}
+
+	.inline-flex{ display:inline-flex;}
+
+	.none-line{text-decoration: none;}
+
+	.underline{text-decoration: underline;}
+
+	.hover-underline:hover{text-decoration: underline;}
+
+</pre> 
+<p id="padding">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------padding 像素(px)-----------</p>
+<br>
+<div class="layout border-default padding-10" style="margin-left:0px;">
+<p class="padding-10">padding-1~padding-100</p>
+<p class="padding-10">padding-top-1~padding-top-150</p>
+<p class="padding-10">padding-bottom-1~padding-bottom-150</p>
+<p class="padding-10">padding-left-1~padding-left-150</p>
+<p class="padding-10">padding-right-1~padding-right-150</p>
+</div>
+<br>
+<p id="margin">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------margin 像素(px)-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<p class="padding-10">margin-auto{margin:auto}</p>
+<p class="padding-10">margin-1~margin-100</p>
+<p class="padding-10">margin-top-1~margin-top-300</p>
+<p class="padding-10">margin-bottom-1~margin-bottom-300</p>
+<p class="padding-10">margin-left-1~margin-left-300</p>
+<p class="padding-10">margin-right-1~margin-right-300</p>
+</div>
+<br>
+<p id="width">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------width 像素(px)-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<p class="padding-10">width-1180{width: 1180px;}</p>
+<p class="padding-10">width-auto{width: auto;}</p>
+<p class="padding-10">width-max{width: 100%;}</p>
+<p class="padding-10">width-1~width-400</p>
+</div>
+<br>
+<p id="height">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------height 像素(px)-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<p class="padding-10">height-auto{height: auto;}</p>
+<p class="padding-10">height-max{height: 100%;}</p>
+<p class="padding-10">height-1~height-400</p>
+</div>
+<br>
+<p id="line-height">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------line-height 像素(px)-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<p class="padding-10">line-height-1~line-height-100</p>
+</div>
+<br>
+<p id="radius">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------radius圆角 像素(px)-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+
+<p class="padding-10">.radius-max{border-radius:50%}</p>
+<p class="padding-10">radius-1~radius-50</p>
+</div>
+<br>
+<p id="font-size">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------font-size文字大小 像素(px)-----------</p>
+<br>
+<div class="layout border-default  margin-10" style="margin-left:0px;">
+<p class="padding-10">font-size-12~font-size-60</p>
+</div>
+<br>
+
+<p id="top">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------top 像素(px)-----------</p>
+<br>
+<div class="layout border-default padding-10" style="margin-left:0px;">
+<p class="padding-10">top-0~top-300</p>
+<p class="padding-10">bottom-0~bottom-300</p>
+<p class="padding-10">left-0~left-300</p>
+<p class="padding-10">right-0~right-300</p>
+</div>
+<br>
+<p id="text-indent">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------文字缩进 像素(px)-----------</p>
+<br>
+<div class="layout border-default padding-10" style="margin-left:0px;">
+<p class="padding-10">text-indent-0~text-indent-100</p>
+</div>
+<br>
+
+<p id="color-text">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------文字颜色-----------</p>
+
+<div class="color-primary">color-primary</div>
+<br>
+<div class="color-success">color-success</div>
+<br>
+<div class="color-info">color-info</div>
+<br>
+<div class="color-danger">color-danger</div>
+<br>
+<div class="color-warning">color-warning</div>
+<br>
+<div class="color-default">color-default</div>
+
+<br>
+<div class="color-black" href="">color-black</div>
+<br>
+<div class="color-red" href="">color-red</div>
+<br>
+<div class="color-yellow" href="">color-yellow</div>
+<br>
+<div class="color-333" href="">color-333</div>
+<br>
+<div class="color-666" href="">color-666</div>
+<br>
+<div class="color-999" href="">color-999</div>
+<br>
+<div class="color-ccc" href="">color-ccc</div>
+<br>
+<div class="color-ddd" href="">color-ddd</div>
+<br>
+<div class="color-eee" href="">color-eee</div>
+<br>
+<div class="color-black">color-white(白色)</div>
+<br>
+<div>color-star (<span class="padding-10"><i class="color-star">表单星号颜色</i></span>)</div>
+<br>
+<br>
+<p id="color-a">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------链接颜色-----------</p>
+<a class="a-primary" href="">a-primary</a>
+<br><br>
+<a class="a-success" href="">a-success</a>
+<br><br>
+<a class="a-info" href="">a-info</a>
+<br><br>
+<a class="a-danger" href="">a-danger</a>
+<br><br>
+<a class="a-warning" href="">a-warning</a>
+<br><br>
+<a class="a-default" href="">a-default</a>
+<br><br>
+<a class="a-link" href="">a-link</a>
+<br><br>
+<a class="a-black" href="">a-black</a>
+<br><br>
+<a class="a-red" href="">a-red</a>
+<br><br>
+<a class="a-yellow" href="">a-yellow</a>
+<br><br>
+<a class="a-333" href="">a-333</a>
+<br><br>
+<a class="a-666" href="">a-666</a>
+<br><br>
+<a class="a-999" href="">a-999</a>
+<br><br>
+<a class="a-ccc" href="">a-ccc</a>
+<br><br>
+<a class="a-ddd" href="">a-ddd</a>
+<br><br>
+<a class="a-eee" href="">a-eee</a>
+<br><br>
+<div class="color-white"></div>a-white(白色)
+<br><br>
+
+
+<p id="color-tag">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------标签颜色-----------</p>
+<br>
+<br>
+<div class="tag-primary width-300 ">tag-primary</div><br>
+<div class="tag-success width-300 ">sutag-successccess</div><br>
+<div class="tag-info width-300 ">tag-info</div><br>
+<div class="tag-danger width-300 ">tag-danger</div><br>
+<div class="tag-warning width-300 ">tag-warning</div><br>
+<div class="tag-default width-300 ">tag-default</div><br>
+<div class="tag-red width-300">tag-red</div><br>
+<div class="tag-yellow width-300 ">tag-yellow</div>
+
+<br>
+<br>
+
+<p id="background-color">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------背景颜色-----------</p>
+<br>
+<br>
+
+<div class="background-primary padding-10 width-300 color-white">background-primary</div>
+<div class="background-success padding-10 width-300 color-white">background-success</div>
+<div class="background-info padding-10 width-300 color-white">background-info</div>
+<div class="background-danger padding-10 width-300 color-white">background-danger</div>
+<div class="background-warning padding-10 width-300 color-white">background-warning</div>
+<div class="background-default padding-10 width-300 color-block">background-default</div>
+<div class="background-white padding-10 width-300 color-block">background-white</div>
+<div class="background-black padding-10 width-300 color-white">background-black</div>
+<div class="background-red padding-10 width-300 color-white">background-red</div>
+<div class="background-yellow padding-10 width-300 color-white">background-yellow</div>
+
+<div class="background-333 padding-10 width-300 color-white">background-333</div>
+<div class="background-666 padding-10 width-300 color-white">background-666</div>
+<div class="background-999 padding-10 width-300 color-white">background-999</div>
+<div class="background-ccc padding-10 width-300 color-white">background-ccc</div>
+<div class="background-ddd padding-10 width-300 color-white">background-ddd</div>
+<div class="background-eee padding-10 width-300 color-block">background-eee</div>
+
+<br>
+<br>
+
+<p id="border-color">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------边框颜色-----------</p>
+<br>
+<br>
+
+<div class="background-primary padding-10 width-300 color-white">border-primary</div>
+<div class="background-success padding-10 width-300 color-white">border-success</div>
+<div class="background-info padding-10 width-300 color-white">border-info</div>
+<div class="background-danger padding-10 width-300 color-white">border-danger</div>
+<div class="background-warning padding-10 width-300 color-white">border-warning</div>
+<div class="background-default padding-10 width-300 color-block">border-default</div>
+<div class="background-red padding-10 width-300 color-white">border-red</div>
+<div class="background-yellow padding-10 width-300 color-block">border-yellow</div>
+
+<div class="background-333 padding-10 width-300 color-white">border-333</div>
+<div class="background-666 padding-10 width-300 color-white">border-666</div>
+<div class="background-999 padding-10 width-300 color-white">border-999</div>
+<div class="background-ccc padding-10 width-300 color-white">border-ccc</div>
+<div class="background-ddd padding-10 width-300 color-white">border-ddd</div>
+<div class="background-eee padding-10 width-300 color-block">border-eee</div>
+<br>
+<br>
+
+
+<p id="breadbar">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------路径导航-----------</p>
+<ol class="breadbar">
+  <li><a href="#">首页</a></li>
+  <li><a href="#">栏目页</a></li>
+  <li class="active">详细页</li>
+</ol>
+
+<p id="tab">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------tab选项卡-----------</p>
+<br>
+<br>
+<div class="tab-button-group">
+	<div class="tab-link sm tab-active">button</div>
+	<div class="tab-link sm">button</div>
+	<div class="tab-link sm">button</div>
+	<div class="clear"></div>
+</div>
+
+<br>
+<br>
+
+<div class="tab-button-group">
+	<div class="tab-link md tab-active">button</div>
+	<div class="tab-link md">button</div>
+	<div class="tab-link md">button</div>
+	<div class="clear"></div>
+</div>
+
+<br>
+<br>
+<br>
+<div class="tab2-button-group">
+	<div class="tab2-button tab2-link">button</div>
+	<div class="tab2-button tab2-link tab2-active">button</div>
+</div>
+<br>
+<br>
+<div class="tab3-button-group">
+	<div class="tab3-link sm"><i class="button-ico  zx-icon-home2"></i>button</div>
+	<div class="tab3-link sm tab3-active"><i class="button-ico  zx-icon-home2"></i>button</div>
+	<div class="clear"></div>
+</div>
+<br>
+<br>
+<div class="tab3-button-group">
+	<div class="tab3-link md"><i class="button-ico  zx-icon-home2"></i>button</div>
+	<div class="tab3-link md tab3-active"><i class="button-ico  zx-icon-home2"></i>button</div>
+	<div class="clear"></div>
+</div>
+<br>
+<br>
+
+<br>
+<br>
+<p id="checkbox">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------复选框颜色-----------</p>
+<div class="checkbox-group  margin-20">
+	<label for="checkbox_1">
+		<input type="checkbox" id="checkbox_1" checked="checked">
+		<div class="ico"></div>
+		<span>是</span>
+	</label>
+	
+	<label for="checkbox_2">
+		<input type="checkbox" id="checkbox_2">
+		<div class="ico"></div>
+		<span>否</span>
+	</label>
+
+	<label for="checkbox_3">
+		<input type="checkbox" id="checkbox_3">
+		<div class="ico"></div>
+		<span>少时诵诗书</span>
+	</label>
+	<!-- <div class="checkbox-active"></div><br>
+	<div class="checkbox-disable"></div> -->
+</div>
+
+
+<div class="checkbox-group-default  margin-20">
+	<label for="checkbox_4">
+		<input type="checkbox" id="checkbox_4">
+		<span>是</span>
+	</label>
+	
+	<label for="checkbox_5">
+		<input type="checkbox" id="checkbox_5">
+		<span>否</span>
+	</label>
+
+	<label for="checkbox_6">
+		<input type="checkbox" id="checkbox_6">
+		<span>少时诵诗书</span>
+	</label>
+	<!-- <div class="checkbox-active"></div><br>
+	<div class="checkbox-disable"></div> -->
+</div>
+<br>
+<br>
+<p id="radio">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------单选框颜色-----------</p>
+<div class="radio-group margin-20">
+	<label for="radio_1">
+		<input type="radio" id="radio_1" name="radio" checked="checked">
+		<div class="ico"></div>
+		<span>是</span>
+	</label>
+
+	<label for="radio_2">
+		<input type="radio" id="radio_2" name="radio">
+		<div class="ico"></div>
+		<span>否</span>
+	</label>
+
+	<label for="radio_3">
+		<input type="radio" id="radio_3" name="radio">
+		<div class="ico"></div>
+		<span>少时诵诗书</span>
+	</label>
+</div>
+
+
+<div class="radio-group-default margin-20">
+	<label for="radio_4">
+		<input type="radio" id="radio_4" name="radio2">
+		<span>是</span>
+	</label>
+
+	<label for="radio_5">
+		<input type="radio" id="radio_5" name="radio2">
+		<span>否</span>
+	</label>
+
+	<label for="radio_6">
+		<input type="radio" id="radio_6" name="radio2">
+		<span>少时诵诗书</span>
+	</label>
+</div>
+
+<p id="input">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------文本框样式-----------</p>
+
+<div >
+	<input type="text" class="input-default" placeholder="请输入...">
+	<br>
+	<br>
+	<input type="text" class="input-default input-h45" placeholder="请输入...">
+	<br>
+	<br>
+	<input type="text" class="input-primary" placeholder="请输入...">
+	<br>
+	<br>
+	<input type="text" class="input-primary input-h45" placeholder="请输入...">
+	<br>
+	<br>
+	<input type="text" class="input-default" disabled="disabled" value="disabled">
+	<br>
+	<br>
+	<input type="text" class="input-default input-h45"  disabled="disabled" value="disabled">
+	<br>
+	<br>
+	<input type="text" class="input-default" readonly="readonly" value="readonly">
+	<br>
+	<br>
+	<input type="text" class="input-default input-h45"  readonly="readonly" value="readonly">
+	<br>
+	<br>
+	<input type="text" class="input-default input-time pointer">
+<br>
+<br>
+<select name="" id="" class="select-default">
+	<option value="12321">12321</option>
+	<option value="12321">12321</option>
+	<option value="12321">12321</option>
+	<option value="12321">12321</option>
+	<option value="12321">12321</option>
+</select>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="search-group">
+	  <div class="button button-primary button-sm search-button float-left">搜索</div>
+      <input type="text" class="input-default border-left float-left" placeholder="请输入...">
+</div>
+<br><br>
+<div class="search-group">
+	  
+      
+      <input type="text" class="input-default float-left border-right" placeholder="请输入...">
+      <div class="button button-primary button-sm search-button float-left">搜索</div>
+</div>
+<br><br>
+<div class="search-group">
+      <input type="text" class="input-default float-left border-right" placeholder="请输入...">
+      <div class="search-button-ico float-left zx-icon-search2"></div>
+</div>
+<br>
+<br>
+<br>
+	<div class="select-group select-group-open">
+		<div class="input">
+			<input type="text">
+			<button class="button-ico zx-icon-home2"></button>
+		</div>
+		<ul>
+			<li>100</li>
+			<li>100</li>
+			<li>100</li>
+			<li>100</li>
+			<li>100</li>
+			<li>100</li>
+		</ul>
+	</div>
+<!-- <br><br>
+<div class="button-off">
+	<div class="point"></div>
+</div>
+<br><br>
+<div class="button-on">
+	<div class="point"></div>
+</div>
+<br><br> -->
+
+<!-- <div class="radio-default"></div><br>
+<div class="radio-active"></div><br>
+<div class="radio-disable"></div> -->
+<br>
+<br>
+<br>
+<!-- <div class="nav-selected">
+	<span class="nav-addon">标准模块：</span>
+	<span class="nav-success">标准模块、</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+
+
+	<span class="nav-close">×</span>
+</div>
+<br>
+<br>
+<br>
+<br> -->
+<p id="star">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------星号等级-----------</p>
+<br>
+<br>
+	<div>
+		<span class="zx-icon-star_f color-yellow font-size-24"></span>
+		<span class="zx-icon-star_f color-yellow font-size-24"></span>
+		<span class="zx-icon-star_f color-yellow font-size-24"></span>
+		<span class="zx-icon-star_f color-yellow font-size-24"></span>
+		<span class="zx-icon-star_f color-ccc font-size-24"></span>
+	</div>
+<br>
+	<div>
+		<span class="zx-icon-star_f color-primary font-size-24"></span>
+		<span class="zx-icon-star_f color-primary font-size-24"></span>
+		<span class="zx-icon-star_f color-primary font-size-24"></span>
+		<span class="zx-icon-star_f color-primary font-size-24"></span>
+		<span class="zx-icon-star_f color-ccc font-size-24"></span>
+	</div>
+
+
+<br>
+
+
+<p id="menu">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------悬浮菜单-----------</p>
+
+<br>
+<div style="width:100px; height:280px; position:relative">
+	<ul class="popover-list">
+		<li>重命名</li>
+		<li>移动到…</li>
+		<li>下载</li>
+		<li>分享</li>
+		<li>重命名</li>
+		<li>重命名</li>
+	</ul>
+</div>
+
+<br>
+<p id="msg">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------悬浮信息提示-----------</p>
+<br>
+<br>
+<div class="tooltip" style="display:block">
+	<div class="triangle-top left-30"></div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<div class="tooltip" style="display:block">
+	<div class="triangle-bottom left-30"></div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<div class="tooltip" style="display:block">
+	<div class="triangle-left top-30"></div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<div class="tooltip" style="display:block">
+	<div class="triangle-right top-30"></div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<div class="tooltip-title-gound" style="display:block">
+	<div class="triangle-top left-30"></div>
+	<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<div class="tooltip-title-gound" style="display:block">
+	<div class="triangle-bottom left-30"></div>
+	<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<div class="tooltip-title-gound" style="display:block">
+	<div class="triangle-left top-50"></div>
+	<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起他们又是跳绳，又是玩接球，等着上课铃声响起他们又是跳绳，又是玩接球，等着上课铃声响起他们又是跳绳，又是玩接球，等着上课铃声响起他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+
+<div class="tooltip-title-gound" style="display:block">
+	<div class="triangle-right top-50"></div>
+	<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+	<div class="tooltip-body">
+		他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+	</div>
+</div>
+
+<br>
+
+
+<br><br>
+<br><br>
+<br><br>
+<p id="menu2">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------二级导航菜单-----------</p>
+
+<br><br>
+<div class="menu-group">
+	<div class="menu-title">室内</div>
+	<div class="menu-body">
+		<ul>
+	        <li>
+	            <div>{{item2.Name}}</div>
+	            <ul class="block">
+	                <li>
+	                    <div >{{item2.Name}}</div>
+	                    <ul class="block">
+	                        <li><div>{{item2.Name}}</div></li>
+	                        <li><div>{{item2.Name}}</div></li>
+	                        <li><div>{{item2.Name}}</div></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <div >{{item2.Name}}</div>
+	                    <ul class="block">
+	                        <li><div>{{item2.Name}}</div></li>
+	                        <li><div>{{item2.Name}}</div></li>
+	                        <li><div>{{item2.Name}}</div></li>
+	                    </ul>
+	                </li>
+	                <li>
+	                    <div >{{item2.Name}}</div>
+	                    <ul class="block">
+	                        <li><div>{{item2.Name}}</div></li>
+	                        <li><div>{{item2.Name}}</div></li>
+	                        <li><div>{{item2.Name}}</div></li>
+	                    </ul>
+	                </li>
+	            </ul>
+	        </li>
+
+	    </ul>
+	</div>
+</div>
+
+<br><br>
+
+
+<p id="menu-right">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------右边带信息导航菜单-----------</p>
+<br><br>
+<div class="menu2-group">
+	<div class="menu2-title">目录标题</div>
+	<div class="menu2-body">
+		<ul>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i class=" zx-icon-home2">df</i></a>
+			</li>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i>10</i></a>
+			</li>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i>10</i></a>
+			</li>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i>10</i></a>
+			</li>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i>10</i></a>
+			</li>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i>10</i></a>
+			</li>
+			<li>
+				<a href=""><span>{{item2.NameNameNameNameNameName}}</span> <i>10</i></a>
+			</li>
+			<li>
+				<span>{{item2.NameNameNameNameNameName}}</span> <i>10</i>
+			</li>
+
+	    </ul>
+	</div>
+</div>
+<br><br>
+<p id="menu-left">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------左边带信息导航菜单-----------</p>
+<div class="menu-ico-group">
+	<div class="menu-ico-title">目录标题</div>
+	<div class="menu-ico-body">
+		<ul>
+			<li>
+				<a href=""><i>10</i><span>{{item2.NameNameNameNameNameName}}</span> </a>
+			</li>
+			<li>
+				<a href=""><i>10</i><span>{{item2.NameNameNameNameNameName}}</span> </a>
+			</li>
+			<li>
+				<a href=""><i>10</i><span>{{item2.NameNameNameNameNameName}}</span> </a>
+			</li>
+			<li>
+				<a href=""><i>10</i><span>{{item2.NameNameNameNameNameName}}</span> </a>
+			</li>
+			<li>
+				<a href=""><i>10</i><span>{{item2.NameNameNameNameNameName}}</span> </a>
+			</li>
+			<li>
+				<a href=""><i>10</i><span>{{item2.NameNameNameNameNameName}}</span> </a>
+			</li>
+			<li>
+				<span>{{item2.NameNameNameNameNameName}}</span> <i>10</i>
+			</li>
+
+	    </ul>
+	</div>
+</div>
+<br><br>
+<p id="page">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------分页样式-----------</p>
+<br><br>
+<div>
+	<ul class="page-lg">
+		<li>上一页</li>
+		<li>1</li>
+		<li>2</li>
+		<li class="selected">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>...</li>
+		<li>205</li>
+		<li>下一页</li>
+		<li class="page-number">共10页，到</li>
+		<div  class="button button-primary button-sm">确定</div>
+		
+	</ul>
+</div>
+<br><br>
+
+<div>
+	<ul class="page-sm">
+		<li>上一页</li>
+		<li>1</li>
+		<li>2</li>
+		<li class="selected">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>...</li>
+		<li>205</li>
+		<li>下一页</li>
+		<li class="page-number">共10页，到</li>
+		<div  class="button button-primary button-sms">确定</div>
+		
+	</ul>
+</div>
+<br><br>
+
+
+<div>
+	<ul class="page-link-lg">
+		<li class="first">上一页</li>
+		<li>1</li>
+		<li>2</li>
+		<li class="selected">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>...</li>
+		<li>205</li>
+		<li>下一页</li>
+		<li class="page-number">共10页，到</li>
+		<div  class="button button-primary button-sm">确定</div>
+		
+	</ul>
+</div>
+<br><br>
+
+<div>
+	<ul class="page-link-sm">
+		<li class="first">上一页</li>
+		<li>1</li>
+		<li>2</li>
+		<li class="selected">3</li>
+		<li>4</li>
+		<li>5</li>
+		<li>...</li>
+		<li>205</li>
+		<li>下一页</li>
+		<li class="page-number">共10页，到</li>
+		<div  class="button button-primary button-sms">确定</div>
+		
+	</ul>
+</div>
+<br><br>
+<p id="hear-nav">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------头部导航菜单-----------</p>
+<br><br>
+<div class="headder-nav-group">
+	<ul>
+		<li>首页</li>
+		<li class="selected">产品线</li>
+		<li>项目库</li>
+		<li>模块库</li>
+		<li>部品部件</li>
+	</ul>
+</div>
+<br><br>
+
+<div class="headder-nav-group">
+	<ul>
+		<li><a href="">首页</a></li>
+		<li class="selected"><a href="">产品线</a></li>
+		<li><a href="">项目库</a></li>
+		<li><a href="">模块库</a></li>
+		<li><a href="">部品部件</a></li>
+	</ul>
+</div>
+<br><br>
+
+<p id="progress">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------进度条-----------</p>
+<br><br>
+ <div class="progress-sm">
+	<span class="progress-default">
+		<span class="progress-primary"></span>
+	</span>
+</div>
+<br><br>
+
+
+<div class="progress-sm">
+	<span class="progress-default">
+		<span class="progress-success"></span>
+	</span>
+</div>
+<br><br>
+
+
+<div class="progress-sm">
+	<span class="progress-default">
+		<span class="progress-info"></span>
+	</span>
+</div>
+<br><br>
+
+ <div class="progress-sm">
+	<span class="progress-default">
+		<span class="progress-danger"></span>
+	</span>
+</div>
+<br><br>
+
+
+<div class="progress-sm">
+	<span class="progress-default">
+		<span class="progress-warning"></span>
+	</span>
+</div>
+<br><br>
+
+
+
+<div class="progress-lg">
+	<span class="progress-default">
+		<span class="progress-primary"></span>
+	</span>
+</div>
+<br><br>
+
+
+<div class="progress-lg">
+	<span class="progress-default">
+		<span class="progress-success"></span>
+	</span>
+</div>
+<br><br>
+
+
+<div class="progress-lg">
+	<span class="progress-default">
+		<span class="progress-info"></span>
+	</span>
+</div>
+
+<br><br>
+<div class="progress-lg">
+	<span class="progress-default">
+		<span class="progress-danger"></span>
+	</span>
+</div>
+<br><br>
+
+
+<div class="progress-lg">
+	<span class="progress-default">
+		<span class="progress-warning"></span>
+	</span>
+</div>
+<br><br>
+
+
+<!-- <div class="select-group">
+	<div class="title">100010001000100010001000</div>
+	<i>100</i>
+	<div class="button-body">
+		<ul>
+			<li>项目已</li>
+			<li>项目已</li>
+			<li>项目已</li>
+			<li>项目已</li>
+			<li>项目已</li>
+			<li>项目已</li>
+			<li>项目已</li>
+		</ul>
+	</div>
+</div>
+
+<br>
+	<div class="select-srearch-group">
+		<div class="title">100010001000100010001000</div>
+		<i>100</i>
+		<div class="button-body">
+			<ul>
+				<li class="srearch">
+					<div class="search-group">
+					      <input type="text" placeholder="请输入" class="input-default float-left border-right">
+					      <div class="button button-danger button-sm search-button float-left">搜索</div>
+					</div>
+				</li>
+				<li>项目已</li>
+				<li>项目已</li>
+				<li>项目已</li>
+				<li>项目已</li>
+				<li>项目已</li>
+				<li>项目已</li>
+				<li>项目已</li>
+				<li>项目已</li>
+			</ul>
+		</div>
+	</div>
+<br><br> -->
+
+<br><br>
+<p id="table">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------表格样式-----------</p>
+<br><br>
+<div class="color-default bold">表格一</div>
+<br><br>
+<div class="table-data" style="margin:0px">
+	<table class="table-group panel-6">
+		<thead class="block-header">
+
+		<tr>
+			<th>日期</th>
+			<th>用户</th>
+			<th>来源IP</th>
+			<th>对象类型</th>
+			<th>操作类型</th>
+			<th>操作结果</th>
+			
+		</tr>
+		</thead>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100<br>100100<br>100100<br>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+	</table> 
+</div>
+
+<br><br>
+<div class="color-default bold">表格二</div>
+<br><br>
+<div class="table-data-row" style="margin:0px">
+	<table class="table-group panel-6">
+		<thead class="block-header">
+
+		<tr>
+			<th>日期</th>
+			<th>用户</th>
+			<th>来源IP</th>
+			<th>对象类型</th>
+			<th>操作类型</th>
+			<th>操作结果</th>
+			
+		</tr>
+		</thead>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100<br>100100<br>100100<br>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+	</table> 
+</div>
+<div class="color-default bold">表格三</div>
+<br><br>
+<div class="table-default" style="margin:0px">
+	<table class="width-max">
+		<thead class="block-header">
+
+		<tr class="align-left">
+			<th>日期</th>
+			<th>用户</th>
+			<th>来源IP</th>
+			<th>对象类型</th>
+			<th>操作类型</th>
+			<th>操作结果</th>
+			
+		</tr>
+		</thead>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+		<tr>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+			<td>100</td>
+		</tr>
+	</table> 
+</div>
+
+
+
+
+<!-- <div class="panel-backdrop"></div> -->
+<br><br>
+<p id="tag-group">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------分类刷选项样式-----------</p>
+<br><br>
+<div class="tag-group"  style="margin-left:0px">
+	<span class="tag-type">地基与基础：</span>
+	<a href="" class="tag-block">建筑主体</a>
+	<a href="" class="tag-block">装饰装修</a>
+	<a href="" class="tag-block tag-danger">景观工程</a>
+	<a href="" class="tag-block">幕墙工程</a>
+	<a href="" class="tag-block">强电系统</a>
+	<a href="" class="tag-block">暖通系统</a>
+	<a href="" class="tag-block">给排水系统</a>
+	<a href="" class="tag-block">消防系统</a>
+	<a href="" class="tag-block">弱电系统</a>
+	<a href="" class="tag-block">专项系统</a>
+	<a href="" class="tag-block">建筑主体</a>
+	<a href="" class="tag-block">装饰装修</a>
+	<a href="" class="tag-block">景观工程</a>
+	<a href="" class="tag-block">幕墙工程</a>
+	<a href="" class="tag-block">强电系统</a>
+	<a href="" class="tag-block">暖通系统</a>
+	<a href="" class="tag-block">给排水系统</a>
+	<a href="" class="tag-block">消防系统</a>
+	<a href="" class="tag-block">弱电系统</a>
+	<a href="" class="tag-block">专项系统</a>
+</div>
+
+<div class="tag-group"  style="margin-left:0px">
+	<span class="tag-type">地基与基础：</span>
+	<span class="tag-block">建筑主体</span>
+	<span class="tag-block">装饰装修</span>
+	<span class="tag-block tag-danger">景观工程</span>
+	<span class="tag-block">幕墙工程</span>
+	<span class="tag-block">强电系统</span>
+	<span class="tag-block">暖通系统</span>
+	<span class="tag-block">给排水系统</span>
+	<span class="tag-block">消防系统</span>
+	<span class="tag-block">弱电系统</span>
+	<span class="tag-block">专项系统</span>
+	<span class="tag-block">建筑主体</span>
+	<span class="tag-block">装饰装修</span>
+	<span class="tag-block">景观工程</span>
+	<span class="tag-block">幕墙工程</span>
+	<span class="tag-block">强电系统</span>
+	<span class="tag-block">暖通系统</span>
+	<span class="tag-block">给排水系统</span>
+	<span class="tag-block">消防系统</span>
+	<span class="tag-block">弱电系统</span>
+	<span class="tag-block">专项系统</span>
+</div>
+
+<br><br>
+<p id="nav-selected">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------分类刷选项选择状态-----------</p>
+<br><br>
+<div class="nav-selected">
+	<span class="nav-addon">标准模块：</span>
+	<span class="nav-success">标准模块、</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+
+	<span class="nav-close">×</span>
+</div>
+
+<div class="nav-selected">
+	<span class="nav-addon">标准模块：</span>
+	<span class="nav-success">标准模块、</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+
+	<span class="nav-close">×</span>
+</div>
+
+<div class="nav-selected">
+	<span class="nav-addon">标准模块：</span>
+	<span class="nav-success">标准模块、</span>
+	<span class="nav-success">标准模块</span>
+	<span class="nav-success">标准模块</span>
+
+	<span class="nav-close">×</span>
+</div>
+
+<br><br>
+
+
+
+
+
+<p id="popover">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------弹窗图层-----------</p>
+
+<div class="position-r" style="height: 1500px;">
+	<div class="popover-success" style="display:block;position: absolute;margin-left: 0px; left: 0px; margin-top:-700px">
+	<div class="popover-success-top">
+		<div class="popover-success-ico"></div>
+		<div class="popover-success-title1">操作成功</div>
+		<div class="popover-success-title2">你已成功创建该项目！</div>
+	</div>
+	<div class="popover-success-bottom">
+		<div class="button button-primary button-sm">关闭</div>
+	</div>
+</div>
+
+<div class="popover-danger" style="display:block;position: absolute;margin-left: 0px; left: 0px; margin-top:-360px">
+	<div class="popover-danger-top">
+		<div class="popover-danger-ico"></div>
+		<div class="popover-danger-title1">操作失败</div>
+		<div class="popover-danger-title2">您没有权限删除该项目！</div>
+	</div>
+	<div class="popover-danger-bottom">
+		<div class="button button-primary button-sm">关闭</div>
+	</div>
+</div>
+
+<div class="popover-info" style="display:block;position: absolute;margin-left: 0px; left: 0px; margin-top:0px">
+	<div class="popover-info-top">
+		<div class="popover-info-ico"></div>
+		<div class="popover-info-title1">操作成功</div>
+		<div class="popover-info-title2">您确定要删除该项目吗？</div>
+	</div>
+	<div class="popover-info-bottom">
+		<div class="button button-default button-sm">关闭</div>
+		<div class="button button-primary button-sm">确定</div>
+	</div>
+</div>
+
+
+
+<div class="popover-modal" style="display:block;position: absolute;margin-left: 0px; left: 0px; margin-top:350px">
+	<div class="popover-modal-header">
+		<div class="title">使用说明</div>
+		<div class="close"></div>
+	</div>
+
+	<div class="popover-modal-body">
+		1、引用button.css文件。copy对应的图层!<br>
+		2、不要随意更改button.css文件!<br>
+		3、修改图层样式时不要在一用的类目上重新定义。请从新创建新的class类名
+	</div>
+	<div class="popover-modal-footer">
+		<div class="button button-default button-sm">关闭</div>
+		<div class="button button-primary button-sm">确定</div>
+	</div>
+</div>
+
+
+
+<div class="loading2" style="display:block;position: absolute;margin-left: 0px; left: 0px; margin-top:750px">
+	<div class="text">我们正在努力更新中……</div>
+	<div class="i"></div>
+</div>
+
+<div class="loading" style="display:block;position: absolute;margin-left: 0px; left: 0px; margin-top:900px">
+	<div class="i font-size-45 zx-icon-spinner6"></div>
+	<div class="text">请稍等…</div>
+</div>
+
+</div>
+<br><br>
+<br><br>
+<p id="panel-backdrop"  style=" margin-top:300px">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------遮罩图层-----------</p>
+<div class="border-default font-size-18" style=" margin-top:20px">
+<pre>
+
+	半透明背景：class="panel-backdrop"
+
+	  透明背景：class="panel-backdrop2"
+
+</pre>
+</div>
+<br><br>
+<br><br>
+<div class="panel-backdrop" style="display: none;"></div>
+<div class="panel-backdrop2" style="display: none;"></div>
+<p id="model">
+<i class="font-size-18 bold zx-icon-checkmark" style="color: #c00"></i>
+--------------------------------------------js模态框事件-----------</p>
+<div class="border-default font-size-18" style=" margin-top:20px">
+
+<div>1、js代码弹出加载提示框：<span class="color-red">model("loading","title")</span>  <span class="pointer a-link underline bold" onclick='model("loading","加载中")'>demo</span></div>
+<br>
+<div>2、js代码弹出中间图层：<span class="color-red">target_popup(i)</span>  <span class="pointer a-link underline bold" data-popover="modal" data-target="#modal2">demo</span></div>
+<br>
+<div>3、js代码关闭中间图层：<span class="color-red">close_popup(i)</span></div>
+<br>
+<div>4、js代码弹出右侧模态框：<span class="color-red">target_popup_animate(i)</span>  <span class="pointer a-link underline bold" data-popover="modal-animate" data-target="#modal1">demo</span></div>
+<br>
+<div>5、js代码关闭右侧模态框：<span class="color-red">close_popup_animate(i)</span></div>
+<br>
+<div class="color-default">警告模态框</div>
+<br>
+<div>6、js代码弹出信息选择窗体：<span class="color-red">model("info","title");</span>  <span class="pointer a-link underline bold" onclick='model("info","info选择窗体")'>demo</span></div>
+
+<br>
+<div class="color-default">成功模态框</div>
+<br>
+<div>7、js代码弹出成功窗体：<span class="color-red">model("success","title");</span>  <span class="pointer a-link underline bold" onclick='model("success","success成功窗体")'>demo</span></div>
+
+<br>
+<div class="color-default">失败模态框</div>
+<br>
+
+<div>8、js代码弹出失败窗体：<span class="color-red">model("error","title");</span>  <span class="pointer a-link underline bold" onclick='model("error","error失败窗体")'>demo</span></div>
+<br>
+</div>
+<br><br>
+<br><br>
+
+
+</div>
+
+	</div>
+</div>
+
+
+<style>
+
+.popover-animate{top: 0px; right:-1000px; margin-top: 0px; margin-right: 0px; left: inherit; width: 700px; height: 100%; display: block;border-top-left-radius: 3px;border-bottom-left-radius: 3px;overflow: hidden;box-shadow: -1px 0px 5px #333;}
+.popover-animate .popover-modal-body{width:100%; height:auto; top:50px;bottom:60px;  position:absolute; overflow: auto;}
+</style>
+
+<!-- 模态框 新增编辑 -->
+        <div id="modal1" class="popover-modal popover-animate" data-modal="zx-animate">
+            <div class="popover-modal-header">
+                <div class="title" style="font-size:18px; color:#c9302c" v-html="trackTempateName">button.css右侧模态框</div>
+                <div class="close js-close" data-close="modal-animate"></div>
+            </div>
+            <div class="popover-modal-body">
+                <div class="table-data">
+					<table class="table-group panel-6">
+						<thead class="block-header">
+							<tr>
+								<th>#</th>
+								<th>用户名</th>
+								<th>密码</th>
+								<th>日期</th>
+								<th>类型</th>
+								<th>操作</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+							<tr>
+								<td>#</td>
+								<td>2018筑想</td>
+								<td>123456</td>
+								<td>2018-01-05</td>
+								<td>超级用户</td>
+								<td>
+									<span class="a-link pointer margin-right-10">编辑</span>
+									<span class="a-link pointer">删除</span>
+								</td>
+							</tr>
+						</tbody>
+					</table> 
+				</div>
+            </div>
+            <div class="popover-modal-footer position-a bottom-0 right-0" style="text-align: right;">
+                <div class="button button-primary button-md" @click="saveTrackTemplate()">确定</div>
+
+            </div>
+
+        </div>
+
+
+
+<div id="modal2" class="popover-modal" data-modal="zx" style="position: fixed;margin-top:-135px">
+	<div class="popover-modal-header">
+		<div class="title">使用说明</div>
+		<div class="close" data-close="modal"></div>
+	</div>
+
+	<div class="popover-modal-body">
+		1、引用button.css文件。copy对应的图层!<br>
+		2、不要随意更改button.css文件!<br>
+		3、修改图层样式时不要在一用的类目上重新定义。请从新创建新的class类名
+	</div>
+	<div class="popover-modal-footer">
+		<div class="button button-default button-sm" data-close="modal">关闭</div>
+		<div class="button button-primary button-sm" data-close="modal">确定</div>
+	</div>
+</div>
+</body>
+
+<script>
+$('a[href^="#"]').click(function(event) {
+		var id = $(this).attr("href");
+		var target = $(id).offset().top;
+		$('html, body').animate({scrollTop:target}, 300);
+		event.preventDefault();
+	});
+
+function getTargetTop(elem){
+	var id = elem.attr("href");
+	var offset = 60;
+	return $(id).offset().top - offset;
+}
+
+
+var sections = $('a[href^="#"]');
+
+
+$(function(){
+	$("#projecttemplates a").click(function(){
+		$("#projecttemplates a").removeClass("active");
+		$(this).addClass("active");
+	})
+})
+</script>
+</html>

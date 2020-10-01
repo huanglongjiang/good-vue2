@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Switchable Plugin Examples</title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/jQuery.easing.js"></script>
+<script src="js/switchable.min.js"></script>
+</head>
+<body>
+
+
+<div class="focus-demo-01 ">
+    <ul class="focus-main">
+        <li class="focus-panel red">1</li>
+        <li class="focus-panel blue">2</li>
+        <li class="focus-panel orange">3</li>
+        <li class="focus-panel green">4</li>
+    </ul>
+    <div class="focus-extra">
+        <ul class="focus-nav">
+            <li class="focus-item">1</li>
+            <li class="focus-item">2</li>
+            <li class="focus-item">3</li>
+            <li class="focus-item">4</li>
+        </ul>
+        <div class="focus-page"><a href="javascript:void(0)" class="focus-prev">&lt;</a><a href="javascript:void(0)" class="focus-next">&gt;</a></div>
+    </div>
+</div>
+<script>
+    $(".focus-demo-01").switchable({
+        type:"focus",
+        isAutoPlay:!0,
+        contentClass:"focus-main",
+        mainClass:"focus-panel",
+        bodyExtra:"focus-extra",
+        navItem:"focus-item",
+        prevClass:"focus-prev",
+        nextClass:"focus-next",
+        navSelectedClass:"focus-active",
+        contentPage:"focus-page",
+        stayTime: 1e3,
+    });
+
+</script>
+
+</body>
+</html>

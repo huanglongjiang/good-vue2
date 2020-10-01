@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="../button/css/button.css">
+<script type="text/javascript" src="../button/js/jquery.js"></script>
+<script type="text/javascript" src="../button/js/button.js"></script>
+<style>
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{background:url("../images/bg.jpg"); background-size:100% }
+.input-default{box-shadow: inset 0 1px 1px rgba(0,0,0,.075);border-radius: 4px;}
+.input-default[disabled], .input-default[readonly]{
+    background-color: #eee;
+    opacity: 1;
+    cursor: not-allowed;
+}
+</style>
+<script type="text/javascript">
+	$(function(){
+		$(document).on("click","#submit",function(){
+			
+			$.ajax({
+	             type: "POST",
+	             //url: "http://127.0.0.1/install/index.php",   //本地服务器
+	             url: "../../../install/index.php", //线上服务器地址
+	             data: {
+	                    "localhost":$("#localhost").val(),
+	         			"dataname":$("#dataname").val(),
+	         			"datapass":$("#datapass").val(),
+	         			"datadb":$("#datadb").val(),
+	     			}, 
+	             success: function(data){
+	             	//model("loading","请稍等...")
+	             	$("#submit2").remove();
+	             	$("#label").text(JSON.parse(data).msg);
+	             	if(JSON.parse(data).status=="200"){
+	             		//$("#submit,#submit2").css("display","inline-block");
+	             		$("#submit").after('<div id="submit2" class="button button-primary button-sm">开始安装程序</div>');
+	             		
+	             	}else{
+	             		$("#submit2").css("display","none");
+	             	}
+	             	
+	             }
+	         });
+		})
+		$(document).on("click","#submit2",function(){
+
+			$("#label").text("正在安装程序请不要关闭页面...");	
+			$.ajax({
+	             type: "POST",
+	             //url: "http://127.0.0.1/install/createtemplate.php",
+	             url: "../../../install/createtemplate.php", //线上服务器地址
+
+	             data: {
+	                    "localhost":$("#localhost").val(),
+	         			"dataname":$("#dataname").val(),
+	         			"datapass":$("#datapass").val(),
+	         			"datadb":$("#datadb").val(),
+	     			}, 
+
+	             success: function(data){
+	          	
+	             	$("#label").text(JSON.parse(data).msg);
+	             	$("#a-link").html(JSON.parse(data).url);
+	             	$("#submit,#submit2").remove();
+	             	
+	           
+	            
+	             }
+	         });
+		})
+	})
+</script>
+</head>
+<body>
+
+<div class="layout padding-20 position-a top-120 background-white radius-3" style="width:600px; margin-left: -300px; left: 50%; top: 50%; margin-top: -210px; height: 420px;">
+	<div class="table-default">
+		<table class=" width-max height-400" style="padding:20px">
+			<tr class="height-50">
+				<td></td>
+				<td><div class="font-size-24 color-primary bold">Canvas.vip网后台管理系统</div></td>
+			</tr>
+			<tr class="height-50">
+				<td class="align-right width-130 color-default"><span class="color-star">数据库连接地址：</span></td>
+				<td><input type="text" id="localhost" class="input-default input-h34 width-max" value="localhost" placeholder="请输入数据库连接地址"></td>
+			</tr>
+			<tr class="height-50">
+				<td class="align-right color-default"><span class="color-star">数据库用户名：</span></td>
+				<td><input  type="text" id="dataname" class="input-default input-h34 width-max" value="root" placeholder="请输入数据库用户名"></td>
+			</tr>
+			<tr class="height-50">
+				<td class="align-right color-default"><span class="color-star">数据库秘密：</span></td>
+				<td><input type="text" id="datapass" class="input-default input-h34 width-max" value="" placeholder="请输入数据库秘密"></td>
+			</tr>
+			<tr class="height-50">
+				<td class="align-right color-default"><span class="color-star">数据库名称：</span></td>
+				<td><input type="text" id="datadb" class="input-default input-h34 width-max" value="vue" placeholder="请输入数据库名称">
+				</td>
+			</tr>
+
+			<tr class="height-50">
+				<td></td>
+				<td>
+					<div id="submit" class="button button-primary button-sm margin-right-10">数据库连接检测</div>
+					<!-- <div id="submit2" class="button button-primary button-sm">开始安装程序</div> -->
+				</td>
+			</tr>
+			<tr class="height-50">
+				<td></td>
+				<td>
+					<div id="label" class="a-ccc inline-block"></div>
+					<div id="a-link" class="inline-block"></div>
+				</td>
+			</tr>
+			
+		</table> 
+	</div>
+	
+</div>
+
+</body>
+</html>

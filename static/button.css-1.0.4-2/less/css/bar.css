@@ -1,0 +1,108 @@
+/* 悬浮弹出层提示框背景色和文字色 */
+.breadbar {
+  padding: 8px 0px;
+  list-style: none;
+  border-radius: 4px;
+}
+.breadbar li {
+  display: inline-block;
+}
+.breadbar li + li:before {
+  padding: 0 5px;
+  color: #ccc;
+  content: "/\00a0";
+}
+.breadbar a {
+  text-decoration: none;
+  color: #999999;
+}
+.breadbar .active {
+  color: #555;
+}
+.tab-button-group {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #4fb845;
+  border-left: 1px solid #DDDDDD;
+  position: relative;
+}
+.tab-button-group .tab-link {
+  width: auto;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  background: #FAFAFA;
+  border: 1px solid #DDDDDD;
+  float: left;
+  cursor: pointer;
+  border-left: 0px;
+  border-bottom: 1px solid #4fb845;
+  margin-bottom: -1px;
+}
+.tab-button-group .tab-active {
+  border: 1px solid #4fb845;
+  color: #4fb845;
+  border-bottom: 1px  solid #fff;
+  background: #fff;
+}
+.tab-button-group .sm {
+  height: 36px;
+  line-height: 36px;
+  padding: 0px 20px;
+}
+.tab-button-group .md {
+  height: 45px;
+  line-height: 45px;
+  padding: 0px 36px;
+}
+.tab2-button-group {
+  width: 100%;
+  height: 51px;
+  border-bottom: 2px solid #ddd;
+  position: relative;
+}
+.tab2-button-group .tab2-button {
+  text-align: center;
+  height: 51px;
+  line-height: 51px;
+  padding: 0px 20px;
+}
+.tab2-button-group .tab2-link {
+  background: #fff;
+  border-bottom: 2px solid #DDDDDD;
+  float: left;
+  cursor: pointer;
+}
+.tab2-button-group .tab2-active {
+  border-bottom: 2px solid #4fb845;
+  background: #fff;
+}
+.tab3-button-group {
+  width: auto;
+  height: auto;
+  position: relative;
+}
+.tab3-button-group .tab3-link {
+  background: #fff;
+  border: 1px solid #DDDDDD;
+  float: left;
+  margin-left: -1px;
+  text-align: center;
+  cursor: pointer;
+}
+.tab3-button-group .tab3-link .button-ico {
+  padding: 0px 5px 0px 0px;
+}
+.tab3-button-group .tab3-active {
+  border: 1px solid #4fb845;
+  background: #fff;
+  color: #4fb845;
+  position: relative;
+  z-index: 10;
+}
+.tab3-button-group .sm {
+  padding: 5px;
+}
+.tab3-button-group .md {
+  padding: 10px;
+}

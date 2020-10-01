@@ -1,0 +1,100 @@
+
+  /* body{background:#ECF0F1;} */
+  body{background:#fff;}
+  #side{padding-top: 10px;}
+  #side>li{ line-height: 40px; text-indent: 10px;border-bottom: 0px solid #272D2D;margin-left: 10px;margin-right: 10px; }
+  /* #side li ul{ text-indent: 34px;} */
+/*   .table-data{ border: 1px solid #DDDDDD;border-bottom: 0px}
+.table-data .table-group th{border: 0px; border-bottom: 1px solid #DDDDDD;}
+.table-data .table-group td{border: 0px; border-bottom: 1px solid #DDDDDD;} */
+
+
+  #side li .title{cursor: pointer;color: #adb5bd;}
+  #side li .active {
+      background-image: linear-gradient(to right, #9C27B0 0%, #00BCD4 100%);
+      background-repeat: repeat-x;
+      color: #fff;
+  }
+  /* #side li ul{background: #1A2432} */
+
+  #side li ul::before{
+
+    content: '';
+      position: absolute;
+      top: 0px;
+      left: 16px;
+      margin-top: -.5px;
+      width: 1px;
+      height: 100%;
+      border-radius: 5px;
+      background-color: #fff;
+      opacity: .5;
+      transition: all 0.2s ease-in-out;
+  }
+  #side li ul li span::before{
+    content: '';
+      position: absolute;
+      top: 13px;
+      left: -2px;
+      margin-top: -.5px;
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background-color: #adb5bd;
+      transition: all 0.2s ease-in-out;
+  }
+
+  #side li ul li span{
+    color: #adb5bd;
+    cursor: pointer;
+  }
+
+  #side li ul li span:hover{
+    color: #17A2B8;
+  }
+
+  #side li ul li span a{
+    color: #adb5bd;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #side li ul li span a:hover{
+    color: #17A2B8;
+  }
+
+
+  #side li a{
+    color: #adb5bd;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  #side li a:hover{
+    color: #17A2B8;
+  }
+
+  #side li ul li{width: 190px}
+/*  #side li ul li span:hover::before,#side li ul li span:focus::before{
+  width: 20px;
+    left: -15px;
+    opacity: 1;
+    background-color: #17A2B8;
+} */
+
+#toTop {
+    display: none;
+    position: fixed;
+    bottom: 5px;
+    right: 5px;
+    width: 64px;
+    height: 64px;
+    background-image: url('../images/top.png');
+    background-repeat: no-repeat;
+    opacity: 0.4;
+    filter: alpha(opacity=40); /* For IE8 and earlier */
+}
+#toTop:hover {
+    opacity: 0.8;
+    filter: alpha(opacity=80); /* For IE8 and earlier */
+}

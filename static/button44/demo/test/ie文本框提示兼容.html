@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name=viewport content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no" />
+<title>Document</title>
+<script type="text/javascript" src="http://www.100sucai.com/js/jquery.js"></script>
+<style>
+*{ margin:0px; padding:0px;}
+</style>
+<script type="text/javascript">
+	
+	$(function(){
+
+if(!placeholderSupport()){   // 判断浏览器是否支持 placeholder
+	console.log(99999)
+    $('[placeholder]').focus(function() {
+        var input = $(this);
+        if (input.val() == input.attr('placeholder')) {
+            input.val('');
+            input.removeClass('placeholder');
+        }
+    }).blur(function() {
+        var input = $(this);
+        if (input.val() == '' || input.val() == input.attr('placeholder')) {
+            input.addClass('placeholder');
+            input.val(input.attr('placeholder'));
+        }
+    }).blur();
+};
+})
+function placeholderSupport() {
+    return 'placeholder' in document.createElement('input');
+}
+</script>
+</head>
+<body>
+<input type="text" placeholder="Username" name="">
+</body>
+</html>

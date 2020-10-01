@@ -1,0 +1,274 @@
+/* 番茄主题  #ff6347 */
+/* 红色主题  #e0363f */
+/* 蓝色主题  #4285f4 */
+/* 绿色主题  #42b983 */
+/* 悬浮弹出层提示框背景色和文字色 */
+/* 悬浮提示 */
+.tooltip {
+  width: 210px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background: #333333;
+  border-radius: 3px;
+  display: none;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.tooltip .triangle-top {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  top: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip .triangle-top:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  left: -10px;
+  top: 1px;
+  border-top-width: 0;
+  border-bottom-color: #333333;
+}
+.tooltip .triangle-bottom {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  bottom: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip .triangle-bottom:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  left: -10px;
+  bottom: 1px;
+  border-bottom-width: 0;
+  border-top-color: #333333;
+}
+.tooltip .triangle-left {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: -11px;
+  border-left-width: 0;
+  border-right-color: #999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip .triangle-left:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  bottom: -10px;
+  left: 1px;
+  border-left-width: 0;
+  border-right-color: #333333;
+}
+.tooltip .triangle-right {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  right: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip .triangle-right:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  bottom: -10px;
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #333333;
+}
+.tooltip .tooltip-body {
+  padding: 10px;
+  min-height: 20px;
+  font-size: 14px;
+  word-break: break-all;
+  color: #ffffff;
+}
+.tooltip-title-gound {
+  width: 210px;
+  height: auto;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  position: absolute;
+  background: #333333;
+  color: #333;
+  border-radius: 3px;
+  display: none;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.tooltip-title-gound .triangle-top {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  top: -11px;
+  border-top-width: 0;
+  border-bottom-color: #999;
+  border-bottom-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip-title-gound .triangle-top:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  left: -10px;
+  top: 1px;
+  border-top-width: 0;
+  border-bottom-color: #333333;
+}
+.tooltip-title-gound .triangle-bottom {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  bottom: -11px;
+  border-bottom-width: 0;
+  border-top-color: #999;
+  border-top-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip-title-gound .triangle-bottom:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  left: -10px;
+  bottom: 1px;
+  border-bottom-width: 0;
+  border-top-color: #333333;
+}
+.tooltip-title-gound .triangle-left {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  left: -11px;
+  border-left-width: 0;
+  border-right-color: #999;
+  border-right-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip-title-gound .triangle-left:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  bottom: -10px;
+  left: 1px;
+  border-left-width: 0;
+  border-right-color: #333333;
+}
+.tooltip-title-gound .triangle-right {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 11px;
+  right: -11px;
+  border-right-width: 0;
+  border-left-color: #999;
+  border-left-color: rgba(0, 0, 0, 0.25);
+}
+.tooltip-title-gound .triangle-right:after {
+  position: absolute;
+  display: block;
+  width: 0px;
+  height: 0px;
+  border-color: transparent;
+  border-style: solid;
+  content: "";
+  border-width: 10px;
+  bottom: -10px;
+  right: 1px;
+  border-right-width: 0;
+  border-left-color: #333333;
+}
+.tooltip-title-gound .tooltip-title {
+  height: auto;
+  background: #FAFAFA;
+  border-bottom: 1px solid #eee;
+  padding: 10px;
+  font-size: 14px;
+  color: #333;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  border-radius: 3px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+.tooltip-title-gound .tooltip-body {
+  padding: 10px;
+  min-height: 20px;
+  font-size: 14px;
+  word-break: break-all;
+  color: #ffffff;
+}
+/* 悬浮提示 */

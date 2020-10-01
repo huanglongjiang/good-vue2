@@ -1,0 +1,56 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery Switchable Plugin Examples</title>
+<link href="css/base.css" rel="stylesheet">
+<link href="css/main.css" rel="stylesheet">
+<script src="js/jquery.js"></script>
+<script src="js/jQuery.easing.js"></script>
+<script src="js/switchable.min.js"></script>
+</head>
+<body>
+
+<div class="slider-demo-02 mb20 " >
+    <div class="slider-wrap">
+        <ul class="slider-main">
+            <li class="slider-panel red">1</li>
+            <li class="slider-panel blue">2</li>
+            <li class="slider-panel orange">3</li>
+            <li class="slider-panel green">4</li>
+        </ul>
+    </div>
+    <div class="slider-extra">
+        <ul class="slider-nav">
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+            <li class="slider-item"></li>
+        </ul>
+        <div class="slider-page">
+            <a href="javascript:void(0)" class="slider-prev">&lt;</a>
+            <a href="javascript:void(0)"  class="slider-next">&gt;</a>
+        </div>
+    </div>
+
+</div>
+<script>
+    $(".slider-demo-02").switchable({
+        type:"slider",
+        direction:"top",
+        isAutoPlay:!0,
+        seamlessLoop:!0,
+        contentClass:"slider-main",
+        mainClass:"slider-panel",
+        navItem:"slider-item",
+        prevClass:"slider-prev",
+        nextClass:"slider-next",
+        navSelectedClass:"slider-active",
+        stayTime: 1e3
+
+    })
+</script>
+</body>
+</html>

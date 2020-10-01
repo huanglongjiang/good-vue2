@@ -1,0 +1,117 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  outline: none;
+}
+body {
+  font-family: "微软雅黑";
+}
+.float-left {
+  float: left;
+}
+.float-right {
+  float: right;
+}
+.clear {
+  clear: both;
+}
+.position-a {
+  position: absolute;
+}
+.position-r {
+  position: relative;
+}
+.position-f {
+  position: fixed;
+}
+.layout {
+  width: auto;
+  height: auto;
+  margin: 0px auto;
+}
+.border-default {
+  border: 1px solid #ccc;
+}
+.background-white {
+  background: #fff;
+}
+.background-default {
+  background: #fafafa;
+}
+.background-success {
+  background: #8E1723;
+}
+.border-0 {
+  border: 0px;
+}
+.border-top-0 {
+  border-top: 0px;
+}
+.border-bottom-0 {
+  border-bottom: 0px;
+}
+.border-left-0 {
+  border-left: 0px;
+}
+.border-right-0 {
+  border-right: 0px;
+}
+.pointer {
+  cursor: pointer;
+}
+.ellipsis {
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.break {
+  word-break: break-all;
+}
+.bold {
+  font-weight: bold;
+}
+.block {
+  display: block;
+}
+.inline-block {
+  display: inline-block;
+}
+.none {
+  display: none;
+}
+.z-index-10 {
+  z-index: 10;
+}
+.z-index--1 {
+  z-index: -1;
+}
+.pla {
+  left: 10px;
+  top: 0px;
+  z-index: -1;
+  color: #ccc;
+}
+li {
+  list-style: none;
+}
+.header {
+  width: 1200px;
+  height: auto;
+}
+.conter {
+  width: 1200px;
+  height: auto;
+}
+.sidebar {
+  width: 300px;
+  height: auto;
+}
+.right {
+  width: 800px;
+  height: auto;
+}
+.footer {
+  width: 1200px;
+  height: auto;
+}

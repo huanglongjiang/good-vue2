@@ -1,0 +1,68 @@
+
+.triangle(top,@color){
+	border-width: 10px;
+	border-style: solid;
+	border-color: @color transparent transparent transparent;
+}
+.triangle(bottom,@color){
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent @color transparent;
+}
+.triangle(left,@color){
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent @color transparent transparent;
+}
+.triangle(right,@color){
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent transparent @color;
+}
+
+
+.box-shadow(@x,@y,@blur,@color){
+	box-shadow: @x @y @blur @color;
+}
+
+.pos(a){position: absolute;}
+.pos(r){position: relative;}
+.pos(f){position: fixed;}
+
+
+/* 悬浮提示 */
+.tooltip{width: 210px;height: auto;border: 0px solid red;position: relative;background: #fff; border-radius: 3px; display: none;
+	.box-shadow(0px,0px,5px,#999);
+	.triangle-bottom{bottom: -20px;right: 20px;.pos(a);.triangle(top,#fff)};
+	.triangle-top{top: -20px;right: 20px;.pos(a);.triangle(bottom,#fff)};
+	.triangle-left{top: 20px;left: -20px;.pos(a);.triangle(left,#fff)};
+	.triangle-right{top: 20px;right: -20px;.pos(a);.triangle(right,#fff)};
+
+
+
+
+	.tooltip-body{padding: 10px; font-size: 14px;}
+}
+
+
+.tooltip-black{width: 210px;height: auto;border: 0px solid red;position: relative;background: #333333; color: #fff; border-radius: 3px; display: none;
+	.box-shadow(0px,5px,15px,#999);
+	.triangle-bottom{bottom: -20px;right: 20px;.pos(a);.triangle(top,#333333)};
+	.triangle-top{top: -20px;right: 20px;.pos(a);.triangle(bottom,#333333)};
+	.triangle-left{top: 10px;left: -20px;.pos(a);.triangle(left,#333333)};
+	.triangle-right{top: 10px;right: -20px;.pos(a);.triangle(right,#333333)};
+
+	.tooltip-body{padding: 10px; font-size: 14px;}
+}
+
+
+.tooltip-title-gound{width: 210px;height: auto;border: 0px solid #ddd;position: relative;background: #fff; color: #333; border-radius: 3px; display: none;
+	.box-shadow(0px,15px,30px,#999);
+	.triangle-bottom{bottom: -20px;right: 20px;.pos(a);.triangle(top,#fff)};
+	.triangle-top{top: -20px;right: 20px;.pos(a);.triangle(bottom,#FAFAFA)};
+	.triangle-left{top: 45px;left: -20px;.pos(a);.triangle(left,#fff)};
+	.triangle-right{top: 45px;right: -20px;.pos(a);.triangle(right,#fff)};
+	.tooltip-title{height: auto; background: #FAFAFA; border-bottom: 1px solid #eee; padding: 10px; font-size: 14px; color: #333;overflow: hidden; text-overflow: ellipsis; white-space: nowrap; border-radius: 3px;border-bottom-left-radius:0px;border-bottom-right-radius:0px}
+	.tooltip-body{padding: 10px; font-size: 14px;}
+}
+/* 悬浮提示 */

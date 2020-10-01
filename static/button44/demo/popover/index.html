@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<link rel="stylesheet" href="../../css/button.css">
+<script type="text/javascript" src="http://www.100sucai.com/js/jquery.js"></script>
+<script type="text/javascript" src="../../js/button.js"></script>
+
+</head>
+<body>
+<div class="table-data" style="margin:200px auto; width: 800px;">
+	<table class="table-group align-center">
+		<tbody>
+			<tr>
+				<td><div class="button button-info button-sm" onclick="loading2();"><i class="button-ico zx-icon-home2"></i>info</div></td>
+				<td><div class="button button-success button-sm" onclick="success();"><i class="button-ico zx-icon-home2"></i>success</div></td>
+				<td><div class="button button-danger button-sm" onclick="error();"><i class="button-ico zx-icon-home2"></i>error</div></td>
+				<td><div class="button button-warning button-sm" onclick="warning();"><i class="button-ico zx-icon-home2"></i>warning</div></td>
+				<td><div class="button button-info button-sm" onclick="loading3();"><i class="button-ico zx-icon-home2"></i>info</div></td>
+				<td><div class="button button-info button-sm" onclick="loading4();"><i class="button-ico zx-icon-home2"></i>info</div></td>
+			</tr>
+			<tr>
+				<td><div class="button button-info button-sm" data-popover="modal" data-target="#model1"><i class="button-ico zx-icon-home2"></i>info</div></td>
+				<td><div class="button button-success button-sm" data-popover="modal-animate" data-target="#model2"><i class="button-ico zx-icon-home2"></i>success</div></td>
+				<td>
+				<div class="button button-danger button-sm" onclick="error();"><i class="button-ico zx-icon-home2"></i>error</div></td>
+				<td><div class="button button-warning button-sm" onclick="warning();"><i class="button-ico zx-icon-home2"></i>warning</div></td>
+				<td><div class="button button-info button-sm" onclick="loading3();"><i class="button-ico zx-icon-home2"></i>info</div></td>
+				<td><div class="button button-info button-sm" onclick="loading4();"><i class="button-ico zx-icon-home2"></i>info</div></td>
+			</tr>
+			
+		</tbody>
+	</table> 
+</div>
+
+
+<div id="model1" class="popover-modal" data-modal="zx">
+	<div class="popover-modal-header">
+		<div class="title">模态框一</div>
+		<div class="close" data-close="modal"	></div>
+	</div>
+
+	<div class="popover-modal-body">
+		1、引用button.css文件。copy对应的图层!<br>
+		2、不要随意更改button.css文件!<br>
+		3、修改图层样式时不要在一用的类目上重新定义。请从新创建新的class类名
+	</div>
+	<div class="popover-modal-footer">
+		<div class="button button-default button-sm" data-close="modal">关闭</div>
+		<div class="button button-primary button-sm" data-close="modals" data-popover="modals" data-target="#model3">确定</div>
+	</div>
+</div>
+
+<div id="model3" class="popover-modal" data-modal="zx">
+	<div class="popover-modal-header">
+		<div class="title">模态框二</div>
+		<div class="close" data-close="modal"	></div>
+	</div>
+
+	<div class="popover-modal-body">
+		1、引用button.css文件。copy对应的图层!<br>
+		2、不要随意更改button.css文件!<br>
+		3、修改图层样式时不要在一用的类目上重新定义。请从新创建新的class类名
+	</div>
+	<div class="popover-modal-footer">
+		<div class="button button-default button-sm" data-close="modal">关闭</div>
+		<div class="button button-primary button-sm" data-close="modals" data-popover="modals" data-target="#model1">确定</div>
+	</div>
+</div>
+
+
+<div id="model2" class="popover-modal" data-modal="zx" style="top: 0px; right: -1000px; margin-top: 0px; margin-right: 0px; left: inherit; width: 640px; height: 100%; display: block;">
+  <div class="popover-modal-header">
+    <div class="title" style="font-size:18px;">批量导入询价结果</div>
+    <div class="close" data-close="modal-animate"></div>
+  </div>
+
+  <div class="popover-modal-body" style="width:600px; height:auto; top:50px;bottom:60px;  overflow-y: auto; position:absolute">
+
+  <div class="table-default" style=" width: 100%;">
+  <table class="table-group">
+
+  <tbody>
+  <tr>
+    <td width="90" class="position-r">
+    	<div class="position-a" style="top: 8px; right: 0px;">下载表格：</div>
+    </td>
+    <td>
+    	<div class="color-primary margin-bottom-10"><i class="zx-icon-download3"></i>询价结果导入模板</div>
+    	<div class="color-default">下载导入模板，并按表格内容填写信息。完成后上传该表格，系统将自动导入</div>
+    </td>
+  </tr>
+  <tr>
+    <td width="90" class="position-r">
+    	<div class="position-a" style="top: 8px; right: 0px;">上传询价结果：</div>
+    </td>
+    <td>
+    	<div class="color-primary"><i class="zx-icon-attachment"></i>询价结果导入模板</div>
+    	<div class="layout position-r news-success margin-top-10 padding-10" style="width: auto; height: auto; line-height: 20px;">
+    		<div class="layout margin-bottom-10">概念方案设计阶段设计任务书模板.doc</div>
+    		<div class="layout">
+    			<span class="a-success">10KB </span>
+    			<span class="a-success">上传成功</span>
+    		</div>
+    		<div class="position-a pointer font-size-24" style="right: 10px; top: 10px;">×</div>
+    	</div>
+    </td>
+  </tr>
+  
+  </tbody>
+</table> 
+</div>
+  </div>
+  <div class="popover-modal-footer position-a" style="bottom: 0px; right: 0px; text-align: right;">
+    <div class="button button-success button-sm" data-popover="modals" data-target="#model4">确定</div>
+    
+  </div>
+</div>
+
+
+<div id="model4" class="popover-modal" data-modal="zx">
+	<div class="popover-modal-header">
+		<div class="title">模态框三</div>
+		<div class="close" data-close="modals"></div>
+	</div>
+
+	<div class="popover-modal-body">
+		1、引用button.css文件。copy对应的图层!<br>
+		2、不要随意更改button.css文件!<br>
+		3、修改图层样式时不要在一用的类目上重新定义。请从新创建新的class类名
+	</div>
+	<div class="popover-modal-footer">
+		<div class="button button-default button-sm" data-close="modals">关闭</div>
+		<div class="button button-primary button-sm" data-close="modals">确定</div>
+	</div>
+</div>
+</body>
+</html>

@@ -1,0 +1,84 @@
+/* 番茄主题  #ff6347 */
+/* 红色主题  #e0363f */
+/* 蓝色主题  #4285f4 */
+/* 绿色主题  #42b983 */
+/* 悬浮弹出层提示框背景色和文字色 */
+.nav-selected {
+  width: auto;
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  padding: 0px 10px;
+  padding-right: 40px;
+  border: 1px solid #DDDDDD;
+  position: relative;
+  background: #fff;
+  margin: 3px;
+  border-radius: 0px;
+}
+.nav-addon {
+  color: #999999;
+  font-size: 12px;
+}
+.nav-success {
+  color: #333;
+  font-size: 12px;
+}
+.nav-close {
+  color: #333;
+  font-size: 12px;
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  font-size: 18px;
+  color: #EF5453;
+  cursor: pointer;
+  right: 0px;
+  top: 0px;
+  border-left: 1px solid #dddddd;
+}
+.tag-group {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin: 10px auto;
+  padding: 20px;
+  font-size: 14px;
+  background: #fff;
+}
+.tag-group .tag-block {
+  padding: 5px 6px;
+  text-decoration: none;
+  display: inline-block;
+  color: #333;
+  margin: 8px 0px;
+  cursor: pointer;
+}
+.tag-group .tag-type {
+  padding: 5px 6px;
+}
+.tag-group .tag-primary {
+  background: #ff6347;
+  color: #ffffff;
+}
+.tag-group .tag-success {
+  background: #5cb85c;
+  color: #ffffff;
+}
+.tag-group .tag-info {
+  background: #d9534f;
+  color: #ffffff;
+}
+.tag-group .tag-danger {
+  background: #d9534f;
+  color: #ffffff;
+}
+.tag-group .tag-warning {
+  background: #f0ad4e;
+  color: #ffffff;
+}
+.tag-group .tag-block:hover {
+  background: #ff6347;
+  color: #ffffff;
+}

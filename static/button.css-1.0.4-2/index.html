@@ -1,0 +1,1749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>button.css-1.0.2</title>
+<link rel="stylesheet" href="css/button.css">
+<link rel="stylesheet" href="css/css.css">
+<link rel="stylesheet" href="css/jquery.mCustomScrollbar.css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/button.js"></script>
+<script type="text/javascript" src="js/admin.js"></script>
+<script type="text/javascript" src="js/jquery.mCustomScrollbar.concat.min.js"></script>
+<style>
+	.layouts{border: 0px solid red; box-shadow: 0px 0px 0px #ccc; padding: 10px; margin-top: 20px; margin-bottom: 20px;}
+	.layouts ul.ul li{padding: 5px; display:block;}
+	.fa{display: initial;}
+</style>
+</head>
+<body>
+	<div class="layout background-primary width-220 height-auto line-height-60 position-f left-0 top-0" style="background: #242A2A">
+		<span class="width-auto height-auto align-center color-white font-size-24 radius-30 margin-20 fa fa-paint-brush">
+			<span class="margin-left-5">button.css</span>
+		</span>
+	</div>
+<div class="conter width-max position-a top-0 bottom-0 height-auto">
+	<div class="layout width-220 height-max border-primary position-f left-0 top-60 bottom-0 padding-bottom-70 z-index-100 background-primary mCustomScrollbar" style="box-sizing:border-box; background: #2B3131;">
+
+
+	<ul id="side">
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#read">使用阅读</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#npm">npm 安装</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#button">按钮</a>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title active">
+				<span class="fa fa-tachometer margin-right-10"></span>基础用法
+				<i class="fa fa-angle-down float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r">
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#class">局部大类class</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#border-default">边框设置</a></span>
+				</li>
+			
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#overflow">overflow</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#align">文字对齐</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#position">position定位</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#float">float浮动</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#white-space">省略号样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#word-break">div强制换行样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#vertical">图片垂直居中</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#mouse">鼠标状态</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#underline">文字下划线</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#other">其他</a></span>
+				</li>
+			</ul>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title">
+				<span class="fa fa-tachometer margin-right-10"></span>像素(px)
+				<i class="fa fa-angle-up float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#padding">padding 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#margin">margin  像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#width">width  像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#height">height  像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#line-height">line-height 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#radius">radius圆角 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#font-size">font-size文字大小 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#top">top 像素(px)</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#text-indent">文字缩进</a></span>
+				</li>
+			</ul>
+		</li>
+		
+		<li class="color-white font-size-14">
+			<div class="title">
+				<span class="fa fa-tachometer margin-right-10"></span>颜色
+				<i class="fa fa-angle-up float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#color-text">文字颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#color-a">链接颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#color-tag">标签颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#background-color">背景颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#border-color">边框颜色</a></span>
+				</li>
+			</ul>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title">
+				<span class="fa fa-cog margin-right-10"></span>组件一
+				<i class="fa fa-angle-up float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#breadbar">路径导航</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#tab">tab选项卡</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#checkbox">复选框颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#radio">单选框颜色</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#input">文本框样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#star">星号等级</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#menu">悬浮菜单</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#msg">悬浮信息提示</a></span>
+				</li>
+			</ul>
+		</li>
+		<li class="color-white font-size-14">
+			<div class="title">
+				<span class="fa fa-cog margin-right-10"></span>组件二
+				<i class="fa fa-angle-up float-right position-r top-15 right-10"></i>
+			</div>
+			<ul class=" padding-20 padding-left-15 position-r none">
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#progress">进度条</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#table">表格样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#tag-group">分类刷选项样式</a></span>
+				</li>
+				<li class="position-r line-height-36">
+					<span class="margin-left-10"><a href="#nav-selected">分类刷选项选择状态</a></span>
+				</li>
+			</ul>
+		</li>
+		
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#popover">弹出图层</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#panel-backdrop">遮罩图层</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="#model">js模态框事件</a>
+		</li>
+		<li class="font-size-14" style="margin-bottom: 0px;color: #adb5bd;">
+			<a href="http://www.fontawesome.com.cn/faicons/" target="_blank">字体图标</a>
+		</li>
+
+	</ul>
+	</div>
+	<div class="layout  width-max position-r left-0  border-success padding-right-10  margin-top-20" style=" padding-left: 220px;box-sizing:border-box; min-width: 250px;">
+
+
+<div class="margin-left-10 padding-10" style="box-shadow: inset 0px 0px 5px #ccc;">
+<div>
+<p id="read">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------使用阅读-----------</p>
+<div class="layouts font-size-18 bold a-link">
+	button.css简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。
+</div>
+
+<p id="npm">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------npm 安装-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>通过 npm 安装</li>
+		<li>npm install button.css --save</li>
+		<li>import 语法</li>
+		<li>import button from 'button.css';</li>
+		<li><a href="http://www.100sucai.com/download.php?id=1509785549" class="a-link" target="_blank">官网下载</a></li>
+	</ul>
+
+</div>
+
+<p id="button">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------按钮-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<button class="button button-sms button-primary">primary</button>
+			<button class="button button-sms button-success">success</button>
+			<button class="button button-sms button-info">info</button>
+			<button class="button button-sms button-warning">warning</button>
+			<button class="button button-sms button-danger">danger</button>
+			<button class="button button-sms button-default">default</button>
+		</li>
+		<li>
+			<button class="button button-sms button-primary"><i class="button-ico fa fa-plus-square"></i>primary</button>
+			<button class="button button-sms button-success"><i class="button-ico fa fa-plus-square"></i>success</button>
+			<button class="button button-sms button-info"><i class="button-ico fa fa-plus-square"></i>info</button>
+			<button class="button button-sms button-warning"><i class="button-ico fa fa-plus-square"></i>warning</button>
+			<button class="button button-sms button-danger"><i class="button-ico fa fa-plus-square"></i>danger</button>
+			<button class="button button-sms button-default"><i class="button-ico fa fa-plus-square"></i>default</button>
+		</li>
+		<li>
+			<button class="button button-sm button-primary">primary</button>
+			<button class="button button-sm button-success">success</button>
+			<button class="button button-sm button-info">info</button>
+			<button class="button button-sm button-warning">warning</button>
+			<button class="button button-sm button-danger">danger</button>
+			<button class="button button-sm button-default">default</button>
+		</li>
+		<li>
+			<button class="button button-sm button-primary"><i class="button-ico fa fa-plus-square"></i>primary</button>
+			<button class="button button-sm button-success"><i class="button-ico fa fa-plus-square"></i>success</button>
+			<button class="button button-sm button-info"><i class="button-ico fa fa-plus-square"></i>info</button>
+			<button class="button button-sm button-warning"><i class="button-ico fa fa-plus-square"></i>warning</button>
+			<button class="button button-sm button-danger"><i class="button-ico fa fa-plus-square"></i>danger</button>
+			<button class="button button-sm button-default"><i class="button-ico fa fa-plus-square"></i>default</button>
+		</li>
+		<li>
+			<button class="button button-md button-primary">primary</button>
+			<button class="button button-md button-success">success</button>
+			<button class="button button-md button-info">info</button>
+			<button class="button button-md button-warning">warning</button>
+			<button class="button button-md button-danger">danger</button>
+			<button class="button button-md button-default">default</button>
+		</li>
+		<li>
+			<button class="button button-md button-primary"><i class="button-ico fa fa-plus-square"></i>primary</button>
+			<button class="button button-md button-success"><i class="button-ico fa fa-plus-square"></i>success</button>
+			<button class="button button-md button-info"><i class="button-ico fa fa-plus-square"></i>info</button>
+			<button class="button button-md button-warning"><i class="button-ico fa fa-plus-square"></i>warning</button>
+			<button class="button button-md button-danger"><i class="button-ico fa fa-plus-square"></i>danger</button>
+			<button class="button button-md button-default"><i class="button-ico fa fa-plus-square"></i>default</button>
+		</li>
+		<li>
+			<button class="button button-lg button-primary">primary</button>
+			<button class="button button-lg button-success">success</button>
+			<button class="button button-lg button-info">info</button>
+			<button class="button button-lg button-warning">warning</button>
+			<button class="button button-lg button-danger">danger</button>
+			<button class="button button-lg button-default">default</button>
+		</li>
+		<li>
+			<button class="button button-lg button-primary"><i class="button-ico fa fa-plus-square"></i>primary</button>
+			<button class="button button-lg button-success"><i class="button-ico fa fa-plus-square"></i>success</button>
+			<button class="button button-lg button-info"><i class="button-ico fa fa-plus-square"></i>info</button>
+			<button class="button button-lg button-warning"><i class="button-ico fa fa-plus-square"></i>warning</button>
+			<button class="button button-lg button-danger"><i class="button-ico fa fa-plus-square"></i>danger</button>
+			<button class="button button-lg button-default"><i class="button-ico fa fa-plus-square"></i>default</button>
+		</li>
+	</ul>
+
+</div>
+<p id="class">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------局部大类class-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>头部：header</li>
+		<li>主体：center</li>
+		<li>左侧：sidebar</li>
+		<li>右侧：right</li>
+		<li>底部：footer</li>
+		<li>默认块状图层：layout</li>
+		<li>底部线条设置<span class="color-default">(手机上使用)</span>：item-inner</li>
+	</ul>
+</div>
+<p id="border-default">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------边框设置-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>默认边框(#ccc)：border-default</li>
+		<li>无边框：border-0</li>
+		<li>无上边框：border-top-0</li>
+		<li>无下边框：border-bottom-0</li>
+		<li>无左边框：border-left-0</li>
+		<li>无右边框：border-right-0</li>
+	</ul>
+</div>
+<p id="overflow">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------overflow-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>overflow-auto-x{ overflow-x: auto}</li>
+		<li>overflow-auto-y{ overflow-y: auto}</li>
+		<li>overflow-scroll-x{ overflow-x: scroll}</li>
+		<li>overflow-scroll-y{ overflow-y: scroll}</li>
+		<li>overflow-scroll{ overflow: scroll}</li>
+		<li>overflow-hidden{ overflow: hidden}</li>
+	</ul>
+</div>
+<p id="align">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------文字对齐-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>文字向左对齐：align-left</li>
+		<li>文字居中对齐：align-center</li>
+		<li>文字向右对齐：align-right</li>
+		<li>vertical-top{vertical-align: text-top;}</li>
+		<li>vertical-middle{vertical-align: middle;}</li>
+		<li>vertical-bottom{vertical-align: text-bottom;}</li>
+	</ul>
+</div>	
+
+<p id="position">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------position定位-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>绝对定位：position-a</li>
+		<li>相对定位：position-r</li>
+		<li>固定定位：position-f</li>
+		<li>.z-index-10{z-index: 10;}</li>
+		<li>.z-index-100{z-index: 100;}</li>
+		<li>.z-index-1000{z-index: 1000;}</li>
+		<li>.z-index-after{z-index: -1;}</li>
+	</ul>
+</div>	
+
+<p id="float">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------float浮动-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>左浮动：float-left</li>
+		<li>又浮动：float-right</li>
+		<li>取消浮动：clear</li>
+		<li>取消浮动(父级类)：clearfix</li>
+	</ul>
+</div>	
+<p id="white-space">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------省略号样式-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>1、单行省略号</li>
+		<li>class="ellipsis"</li>
+		<li class="color-default">overflow: hidden;text-overflow: ellipsis;white-space: nowrap;</li>
+		<li>2、多行省略号</li>
+		<li>class="ellipsis2</li>
+		<li>class="ellipsis3</li>
+		<li>class="ellipsis4</li>
+		<li>class="ellipsis5</li>
+		<li>class="ellipsis6</li>
+		<li class="color-default">overflow: hidden;display: -webkit-box;-webkit-line-clamp: 5;-webkit-box-orient: vertical;</li>
+	</ul>
+</div>	
+<p id="word-break">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------div强制换行样式-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>class="break"</li>
+		<li>word-break:break-all</li>
+	</ul>
+</div>
+<p id="vertical">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------图片垂直居中-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="layout width-300  height-300 border-default margin-10 background-primary vertical">
+				<img src="images/logo.png" class="block margin-auto width-300" alt="">
+			</div>
+		</li>
+	</ul>
+</div>	
+<p id="mouse">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------鼠标状态-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>pointer{ cursor: pointer;}</li>
+		<li>move{cursor: move;}</li>
+		<li>no-drop{cursor: no-drop;}</li>
+	</ul>
+</div>
+<p id="underline">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------文字下划线-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>.none-line{text-decoration: none;}</li>
+		<li>.underline{text-decoration: underline;}</li>
+		<li>.hover-underline:hover{text-decoration: underline;}</li>
+	</ul>
+</div>	
+<p id="other">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------其他-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>.bold(文字粗体)</li>
+		<li>.none{ display:none;}</li>
+		<li>.block{ display: block;}</li>
+		<li>.inline-block{ display:inline-block;}</li>
+		<li>.inline-flex{ display:inline-flex;}</li>
+		<li>.display-init{ display:initial;}</li>
+		<li class="italic">.italic{font-style:italic;}(文字斜体)</li>
+		<li>.italic-init{font-style:italic;}(取消文字斜体)</li>
+	</ul>
+</div>	
+<p id="padding">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------padding 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>padding-1~padding-100</li>
+		<li>padding-top-1~padding-top-150</li>
+		<li>padding-bottom-1~padding-bottom-150</li>
+		<li>padding-left-1~padding-left-150</li>
+		<li>padding-right-1~padding-right-150</li>
+	</ul>
+</div>	
+<p id="margin">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------margin 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>margin-auto{margin:auto}</li>
+		<li>margin-1~margin-100</li>
+		<li>margin-top-1~margin-top-300</li>
+		<li>margin-bottom-1~margin-bottom-300</li>
+		<li>margin-left-1~margin-left-300</li>
+		<li>margin-right-1~margin-right-300</li>
+	</ul>
+</div>	
+<p id="width">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------width 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>width-1180{width: 1180px;}</li>
+		<li>width-auto{width: auto;}</li>
+		<li>width-max{width: 100%;}</li>
+		<li>width-1~width-400</li>
+	</ul>
+</div>
+<p id="height">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------height 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>height-auto{height: auto;}</li>
+		<li>height-max{height: 100%;}</li>
+		<li>height-1~height-400</li>
+	</ul>
+</div>
+<p id="line-height">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------line-height 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>line-height-1~line-height-100</li>
+	</ul>
+</div>
+<p id="radius">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------radius圆角 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>.radius-max{border-radius:50%}</li>
+		<li>radius-1~radius-50</li>
+	</ul>
+</div>
+<p id="font-size">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------font-size文字大小 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>font-size-12~font-size-60</li>
+	</ul>
+</div>
+<p id="top">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------top 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>top-0~top-300</li>
+		<li>bottom-0~bottom-300</li>
+		<li>left-0~left-300</li>
+		<li>right-0~right-300</li>
+	</ul>
+</div>
+<p id="text-indent">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------文字缩进 像素(px)-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>text-indent-0~text-indent-100</li>
+	</ul>
+</div>
+<p id="color-text">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------文字颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li><div class="color-primary">color-primary</div></li>
+		<li><div class="color-success">color-success</div></li>
+		<li><div class="color-info">color-info</div></li>
+		<li><div class="color-warning">color-warning</div></li>
+		<li><div class="color-danger">color-danger</div></li>
+		<li><div class="color-default">color-default</div></li>
+		<li><a class="color-red" href="">color-red</a></li>
+		<li><a class="color-orange" href="">color-orange</a></li>
+		<li><a class="color-yellow" href="">color-yellow</a></li>
+		<li><a class="color-green" href="">color-green</a></li>
+		<li><a class="color-aqua" href="">color-aqua</a></li>
+		<li><a class="color-blue" href="">color-blue</a></li>
+		<li><a class="color-purple" href="">color-purple</a></li>
+
+		<li><div class="color-black" href="">color-black</div></li>
+		<li><div class="color-333" href="">color-333</div></li>
+		<li><div class="color-666" href="">color-666</div></li>
+		<li><div class="color-999" href="">color-999</div></li>
+		<li><div class="color-ccc" href="">color-ccc</div></li>
+		<li></li>
+		<li><div class="color-ddd" href="">color-ddd</div></li>
+		<li><div class="color-eee" href="">color-eee</div></li>
+		<li><div class="color-black">color-white(白色)</div></li>
+		<li><div>color-star (<span class="padding-10"><i class="color-star">表单星号颜色</i></span>)</div></li>
+	</ul>
+</div>
+<p id="color-a">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------链接颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li><a class="a-primary" href="">a-primary</a></li>
+		<li><a class="a-success" href="">a-success</a></li>
+		<li><a class="a-info" href="">a-info</a></li>
+		<li><a class="a-warning" href="">a-warning</a></li>
+		<li><a class="a-danger" href="">a-danger</a></li>
+		<li><a class="a-default" href="">a-default</a></li>
+
+		<li><a class="a-red" href="">a-red</a></li>
+		<li><a class="a-orange" href="">a-orange</a></li>
+		<li><a class="a-yellow" href="">a-yellow</a></li>
+		<li><a class="a-green" href="">a-green</a></li>
+		<li><a class="a-aqua" href="">a-aqua</a></li>
+		<li><a class="a-blue" href="">a-blue</a></li>
+		<li><a class="a-purple" href="">a-purple</a></li>
+
+		<li><a class="a-link" href="">a-link</a></li>
+		<li><a class="a-black" href="">a-black</a></li>
+		<li><a class="a-red" href="">a-red</a></li>
+		<li><a class="a-yellow" href="">a-yellow</a></li>
+		<li><a class="a-333" href="">a-333</a></li>
+		<li><a class="a-666" href="">a-666</a></li>
+		<li><a class="a-999" href="">a-999</a></li>
+		<li><a class="a-ccc" href="">a-ccc</a></li>
+		<li><a class="a-ddd" href="">a-ddd</a></li>
+		<li><a class="a-eee" href="">a-eee</a></li>
+		<li><div class="color-white"></div>a-white(白色)</li>
+	</ul>
+</div>
+<p id="color-tag">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------标签颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="block tag-primary width-300 ">tag-primary</div>
+			<div class="block tag-success width-300 ">tag-success</div>
+			<div class="block tag-info width-300 ">tag-info</div>
+			<div class="block tag-warning width-300 ">tag-warning</div>
+			<div class="block tag-danger width-300 ">tag-danger</div>
+			<div class="block tag-default width-300 ">tag-default</div>
+			<div class="block tag-red width-300 ">tag-red</div>
+			<div class="block tag-orange width-300 ">tag-orange</div>
+			<div class="block tag-yellow width-300">tag-yellow</div>
+			<div class="block tag-green width-300 ">tag-green</div>
+			<div class="block tag-aqua width-300 ">tag-aqua</div>
+			<div class="block tag-blue width-300 ">tag-blue</div>
+			<div class="block tag-purple width-300">tag-purple</div>
+		</li>
+	</ul>
+</div>
+<p id="background-color">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------背景颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="background-success padding-10 width-300 color-white">background-success</div>
+			<div class="background-info padding-10 width-300 color-white">background-info</div>
+			<div class="background-warning padding-10 width-300 color-white">background-warning</div>
+			<div class="background-danger padding-10 width-300 color-white">background-danger</div>
+			<div class="background-default padding-10 width-300 color-white">background-default</div>
+			<div class="background-red padding-10 width-300 color-white">background-red</div>
+			<div class="background-orange padding-10 width-300 color-white">background-orange</div>
+			<div class="background-yellow padding-10 width-300 color-white">background-yellow</div>
+			<div class="background-green padding-10 width-300 color-white">background-green</div>
+			<div class="background-aqua padding-10 width-300 color-white">background-aqua</div>
+			<div class="background-blue padding-10 width-300 color-white">background-blue</div>
+			<div class="background-purple padding-10 width-300 color-white">background-purple</div>
+			<div class="background-black padding-10 width-300 color-white">background-black</div>
+			<div class="background-333 padding-10 width-300 color-white">background-333</div>
+			<div class="background-666 padding-10 width-300 color-white">background-666</div>
+			<div class="background-999 padding-10 width-300 color-white">background-999</div>
+			<div class="background-ccc padding-10 width-300 color-white">background-ccc</div>
+			<div class="background-ddd padding-10 width-300 color-white">background-ddd</div>
+			<div class="background-eee padding-10 width-300 color-block">background-eee</div>
+			<div class="background-white padding-10 width-300 color-block">background-white</div>
+			
+		</li>
+	</ul>
+</div>
+<p id="border-color">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------边框颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="background-primary padding-10 width-300 color-white">border-primary</div>
+			<div class="background-success padding-10 width-300 color-white">border-success</div>
+			<div class="background-info padding-10 width-300 color-white">border-info</div>
+			<div class="background-warning padding-10 width-300 color-white">border-warning</div>
+			<div class="background-danger padding-10 width-300 color-white">border-danger</div>
+			<div class="background-default padding-10 width-300 color-white">border-default</div>
+
+			<div class="background-red padding-10 width-300 color-white">border-red</div>
+			<div class="background-orange padding-10 width-300 color-white">border-orange</div>
+			<div class="background-yellow padding-10 width-300 color-white">border-yellow</div>
+			<div class="background-green padding-10 width-300 color-white">border-green</div>
+			<div class="background-aqua padding-10 width-300 color-white">border-aqua</div>
+			<div class="background-blue padding-10 width-300 color-white">border-blue</div>
+			<div class="background-purple padding-10 width-300 color-white">border-purple</div>
+
+			<div class="background-333 padding-10 width-300 color-white">border-333</div>
+			<div class="background-666 padding-10 width-300 color-white">border-666</div>
+			<div class="background-999 padding-10 width-300 color-white">border-999</div>
+			<div class="background-ccc padding-10 width-300 color-white">border-ccc</div>
+			<div class="background-ddd padding-10 width-300 color-white">border-ddd</div>
+			<div class="background-eee padding-10 width-300 color-block">border-eee</div>
+		</li>
+	</ul>
+</div>
+<p id="breadbar">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------路径导航-----------</p>
+<div class="layouts">
+	
+	<li>
+		<ol class="breadbar">
+		  <li><a href="#">首页</a></li>
+		  <li><a href="#">栏目页</a></li>
+		  <li class="active">详细页</li>
+		</ol>
+	</li>
+	
+</div>
+<p id="tab">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------tab选项卡-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="tab-button-group">
+				<div class="tab-link sm tab-active">button</div>
+				<div class="tab-link sm">button</div>
+				<div class="tab-link sm">button</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+		<li>
+			<div class="tab-button-group">
+				<div class="tab-link md tab-active">button</div>
+				<div class="tab-link md">button</div>
+				<div class="tab-link md">button</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+		<li>
+			<div class="tab2-button-group">
+				<div class="tab2-button tab2-link">button</div>
+				<div class="tab2-button tab2-link tab2-active">button</div>
+			</div>
+		</li>
+		<li>
+			<div class="tab3-button-group">
+				<div class="tab3-link sm"><i class="button-ico  fa fa-plus-square"></i>button</div>
+				<div class="tab3-link sm tab3-active"><i class="button-ico  fa fa-plus-square"></i>button</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+		<li>
+			<div class="tab3-button-group">
+				<div class="tab3-link md"><i class="button-ico  fa fa-plus-square"></i>button</div>
+				<div class="tab3-link md tab3-active"><i class="button-ico  fa fa-plus-square"></i>button</div>
+				<div class="clear"></div>
+			</div>
+		</li>
+	</ul>
+</div>
+<p id="checkbox">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------复选框颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div>
+				<label class="margin-right-10" for="checkbox">
+					<i class="fa fa-check-square color-primary"></i>
+					<input type="checkbox" id="checkbox" checked="checked" class="none">
+					<span>是</span>
+				</label>
+				<label class="margin-right-10" for="checkbox">
+					<i class="fa fa-check-square color-primary"></i>
+					<input type="checkbox" id="checkbox" class="none">
+					<span>少时诵诗书</span>
+				</label>
+				<label class="margin-right-10" for="checkbox">
+					<i class="fa fa-square-o color-default"></i>
+					<input type="checkbox" id="checkbox" checked="checked" class="none">
+					<span>否</span>
+				</label>
+				
+			</div>
+		</li>
+		<li>
+			<div>
+				<label for="checkbox1">
+					<input type="checkbox" id="checkbox1">
+					<span>是</span>
+				</label>
+				
+				<label for="checkbox2">
+					<input type="checkbox" id="checkbox2">
+					<span>否</span>
+				</label>
+
+				<label for="checkbox3">
+					<input type="checkbox" id="checkbox3">
+					<span>少时诵诗书</span>
+				</label>
+			</div>
+		</li>
+	</ul>
+</div>
+<p id="radio">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------单选框颜色-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div>
+				<label class="margin-right-10" for="radio">
+					<i class="fa fa-dot-circle-o color-primary"></i>
+					<input type="radio" id="radio" name="radio" checked="checked" class="none">
+					<span>是</span>
+				</label>
+				<label class="margin-right-10" for="radio2">
+					<i class="fa fa-dot-circle-o color-primary"></i>
+					<input type="radio" id="radio2" name="radio" class="none">
+					<span>否</span>
+				</label>
+				<label class="margin-right-10" for="radio3">
+					<i class="fa fa-circle-o color-default"></i>
+					<input type="radio" id="radio3" name="radio" class="none">
+					<span>少时诵诗书</span>
+				</label>
+			</div>
+		</li>
+		<li>
+			<div>
+				<label class="margin-right-10" for="radio4">
+					<input type="radio" id="radio4" name="radio2">
+					<span>是</span>
+				</label>
+
+				<label class="margin-right-10" for="radio5">
+					<input type="radio" id="radio5" name="radio2">
+					<span>否</span>
+				</label>
+
+				<label class="margin-right-10" for="radio6">
+					<input type="radio" id="radio6" name="radio2">
+					<span>少时诵诗书</span>
+				</label>
+			</div>
+		</li>
+	</ul>
+</div>
+<p id="input">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------文本框样式-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li><input type="text" class="input-default" placeholder="请输入..."></li>
+		<li><input type="text" class="input-default" disabled="disabled" value="disabled" placeholder="请输入..."></li>
+		<li><input type="text" class="input-default" readonly="readonly" value="readonly" placeholder="请输入..."></li>
+		<li>
+			<div class="search-group clearfix">
+				<div class="button button-sm button-primary search-button float-left">搜索</div>
+			    <input type="text" class="input-default border-left float-left" placeholder="请输入...">
+			</div>
+		</li>
+		<li>
+			<div class="search-group clearfix">
+			    <input type="text" class="input-default float-left border-right" placeholder="请输入...">
+			    <div class="button button-sm button-primary search-button float-left">搜索</div>
+			</div>
+		</li>
+		<li>
+			<div class="search-group clearfix">
+			      <input type="text" class="input-default float-left border-right" placeholder="请输入...">
+			      <div class="search-button-ico float-left fa fa-search"></div>
+			</div>
+		</li>
+		<!-- <li>
+			<div class="select-group select-group-open">
+				<div class="input">
+					<input type="text">
+					<button class="button-ico fa fa-search"></button>
+				</div>
+				<ul class="ul">
+					<li>100</li>
+					<li>100</li>
+					<li>100</li>
+					<li>100</li>
+					<li>100</li>
+					<li>100</li>
+				</ul>
+			</div>
+		</li> -->
+	</ul>
+</div>
+<p id="star">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------星号等级-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div>
+				<span class="fa fa-star-o color-primary font-size-24"></span>
+				<span class="fa fa-star-o color-primary font-size-24"></span>
+				<span class="fa fa-star-o color-primary font-size-24"></span>
+				<span class="fa fa-star-o color-primary font-size-24"></span>
+				<span class="fa fa-star-o color-ccc font-size-24"></span>
+			</div>
+		</li>
+	</ul>
+</div>	
+<p id="menu">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------悬浮菜单-----------</p>
+<div class="layouts height-250">
+	
+	<li>
+		<ul class="popover-list">
+			<li>重命名</li>
+			<li>移动到…</li>
+			<li>下载</li>
+			<li>分享</li>
+			<li>重命名</li>
+			<li>重命名</li>
+		</ul>
+	</li>
+	
+</div>
+<p id="msg">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------悬浮信息提示-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li style="height: 100px;">
+			<div class="tooltip" style="display:block">
+				<div class="triangle-top left-30"></div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 100px;">
+			<div class="tooltip" style="display:block">
+				<div class="triangle-bottom left-30"></div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 100px;">
+			<div class="tooltip" style="display:block">
+				<div class="triangle-left top-30"></div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 100px;">
+			<div class="tooltip" style="display:block">
+				<div class="triangle-right top-30"></div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 150px;">
+			<div class="tooltip-title-gound" style="display:block">
+				<div class="triangle-top left-30"></div>
+				<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 150px;">
+			<div class="tooltip-title-gound" style="display:block">
+				<div class="triangle-bottom left-30"></div>
+				<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 150px;">
+			<div class="tooltip-title-gound" style="display:block">
+				<div class="triangle-left top-50"></div>
+				<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+		<li style="height: 150px;">
+			<div class="tooltip-title-gound" style="display:block">
+				<div class="triangle-right top-50"></div>
+				<div class="tooltip-title">他们又是跳绳，又是玩接球，等着上课</div>
+				<div class="tooltip-body">
+					他们又是跳绳，又是玩接球，等着上课铃声响起 ;他们又是跳绳
+				</div>
+			</div>
+		</li>
+	</ul>
+</div>	
+
+<p id="progress">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------进度条-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="progress-sm">
+				<span class="progress-default">
+					<span class="progress-primary"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="progress-sm">
+				<span class="progress-default">
+					<span class="progress-success"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="progress-sm">
+				<span class="progress-default">
+					<span class="progress-info"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			 <div class="progress-sm">
+				<span class="progress-default">
+					<span class="progress-danger"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			 <div class="progress-sm">
+				<span class="progress-default">
+					<span class="progress-warning"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="progress-lg">
+				<span class="progress-default">
+					<span class="progress-primary"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="progress-lg">
+				<span class="progress-default">
+					<span class="progress-success"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			<div class="progress-lg">
+				<span class="progress-default">
+					<span class="progress-info"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			 <div class="progress-lg">
+				<span class="progress-default">
+					<span class="progress-danger"></span>
+				</span>
+			</div>
+		</li>
+		<li>
+			 <div class="progress-lg">
+				<span class="progress-default">
+					<span class="progress-warning"></span>
+				</span>
+			</div>
+		</li>
+	</ul>
+</div>
+<p id="table">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------表格样式-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>表格一</li>
+	</ul>
+	<div class="table-data" style="margin:0px; width: 800px;">
+		<table class="table-group panel-6">
+			<thead class="block-header">
+				<tr>
+					<th>序号</th>
+					<th>标题</th>
+					<th>图片</th>
+					<th>类型</th>
+					<th>状态</th>
+					<th>操作</th>
+					
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+			</tbody>
+		</table> 
+	</div>
+</div>
+<div class="layouts">
+	<ul class="ul">
+		<li><div class="color-default bold">表格二</div></li>
+	</ul>
+	<div class="table-data-row" style="margin:0px; width: 800px;">
+		<table class="table-group panel-6">
+			<thead class="block-header">
+				<tr>
+					<th>序号</th>
+					<th>标题</th>
+					<th>图片</th>
+					<th>类型</th>
+					<th>状态</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+				<tr>
+					<td>#</td>
+					<td>button.css</td>
+					<td>images.jpg</td>
+					<td>style样式</td>
+					<td>正常</td>
+					<td>
+						<span class="a-link pointer margin-right-10">编辑</span>
+						<span class="a-link pointer">删除</span>
+					</td>
+				</tr>
+			</tbody>
+		</table> 
+	</div>
+</div>	
+<div class="layouts">
+	<ul class="ul">
+		<li><div class="color-default bold">表格三(无边框)</div></li>
+	</ul>
+	<div class="table-default" style="margin:0px; width: 800px;">
+		<table class="width-max">
+			<thead class="block-header">
+
+			<tr class="align-left">
+				<th>序号</th>
+				<th>标题</th>
+				<th>图片</th>
+				<th>类型</th>
+				<th>状态</th>
+				<th>操作</th>
+				
+			</tr>
+			</thead>
+			<tr>
+				<td>#</td>
+				<td>button.css</td>
+				<td>images.jpg</td>
+				<td>style样式</td>
+				<td>正常</td>
+				<td>
+					<span class="a-link pointer margin-right-10">编辑</span>
+					<span class="a-link pointer">删除</span>
+				</td>
+			</tr>
+			<tr>
+				<td>#</td>
+				<td>button.css</td>
+				<td>images.jpg</td>
+				<td>style样式</td>
+				<td>正常</td>
+				<td>
+					<span class="a-link pointer margin-right-10">编辑</span>
+					<span class="a-link pointer">删除</span>
+				</td>
+			</tr>
+			<tr>
+		</table> 
+	</div>
+</div>
+<p id="tag-group">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------分类刷选项样式-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="tag-group"  style="margin-left:0px">
+				<span class="tag-type">button.css：</span>
+				<span class="tag-block">按钮</span>
+				<span class="tag-block">局部大类class</span>
+				<span class="tag-block tag-primary">边框设置</span>
+				<span class="tag-block">overflow</span>
+				<span class="tag-block">文字对齐</span>
+				<span class="tag-block">position定位</span>
+				<span class="tag-block">float浮动</span>
+				<span class="tag-block">省略号样式</span>
+				<span class="tag-block">div强制换行样式</span>
+				<span class="tag-block">图片垂直居中</span>
+				<span class="tag-block">鼠标状态</span>
+				<span class="tag-block">文字下划线</span>
+				<span class="tag-block">其他</span>
+			</div>
+		</li>
+	</ul>
+</div>
+<p id="nav-selected">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------分类刷选项选择状态-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div class="nav-selected">
+				<span class="nav-addon">button.css：</span>
+				<span class="nav-success">按钮</span>
+				<span class="nav-close">×</span>
+			</div>
+			<div class="nav-selected">
+				<span class="nav-addon">button.css：</span>
+				<span class="nav-success">局部大类class</span>
+				<span class="nav-close">×</span>
+			</div>
+			<div class="nav-selected">
+				<span class="nav-addon">button.css：</span>
+				<span class="nav-success">边框设置</span>
+				<span class="nav-close">×</span>
+			</div>
+		</li>
+		
+	</ul>
+</div>
+<p id="popover">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------弹窗图层-----------</p>
+<div class="layouts position-r" style="height: 320px;">
+	
+	<div class="popover-success" style="display:block;position: absolute;margin-left: 0px; margin-top: 0px; left: 0px; top: 0px;">
+		<div class="popover-success-top">
+			<div class="popover-success-ico"></div>
+				<div class="popover-success-title1">操作成功</div>
+				<div class="popover-success-title2">你已成功创建该项目！</div>
+			</div>
+			<div class="popover-success-bottom">
+				<div class="button button-sm button-primary">关闭</div>
+			</div>
+		</div>
+</div>	
+<div class="layouts position-r" style="height: 320px;">
+	<div class="popover-danger" style="display:block;position: absolute;margin-left: 0px; margin-top: 0px; left: 0px; top: 0px;">
+		<div class="popover-danger-top">
+			<div class="popover-danger-ico"></div>
+			<div class="popover-danger-title1">操作失败</div>
+			<div class="popover-danger-title2">您没有权限删除该项目！</div>
+		</div>
+		<div class="popover-danger-bottom">
+			<div class="button button-sm button-primary">关闭</div>
+		</div>
+	</div>
+</div>	
+<div class="layouts position-r" style="height: 320px;">
+	<div class="popover-info" style="display:block;position: absolute;margin-left: 0px; margin-top: 0px; left: 0px; top: 0px;">
+		<div class="popover-info-top">
+			<div class="popover-info-ico"></div>
+			<div class="popover-info-title1">操作成功</div>
+			<div class="popover-info-title2">您确定要删除该项目吗？</div>
+		</div>
+		<div class="popover-info-bottom">
+			<div class="button button-sm button-default">关闭</div>
+			<div class="button button-sm button-primary">确定</div>
+		</div>
+	</div>
+</div>	
+<div class="layouts position-r" style="height: 320px;">
+	<div class="popover-modal" style="display:block;position: absolute;margin-left: 0px; margin-top: 0px; left: 0px; top: 0px;">
+		<div class="popover-modal-header">
+			<div class="title">使用说明</div>
+			<div class="close"></div>
+		</div>
+
+		<div class="popover-modal-body">
+			1、引用button.css文件。copy对应的图层!<br>
+			2、不要随意更改button.css文件!<br>
+			3、修改图层样式时不要在一用的类目上重新定义。请从新创建新的class类名
+		</div>
+		<div class="popover-modal-footer">
+			<div class="button button-sm button-default">关闭</div>
+			<div class="button button-sm button-primary">确定</div>
+		</div>
+	</div>
+</div>
+<div class="layouts position-r" style="height: 120px;">
+	<div class="loading" style="display:block;position: absolute;margin-left: 0px; margin-top: 0px; left: 0px; top: 0px;">
+		<div class="i font-size-45 fa fa-spinner"></div>
+		<div class="text">请稍等…</div>
+	</div>
+</div>
+<p id="panel-backdrop">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------遮罩图层-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>半透明背景：class="panel-backdrop"</li>
+		<li>透明背景：class="panel-backdrop2"</li>
+	</ul>
+</div>
+<div class="panel-backdrop" style="display: none;"></div>
+<div class="panel-backdrop2" style="display: none;"></div>
+<p id="model">
+<i class="font-size-18 bold fa fa-check color-danger"></i>
+--------------------------------------------js模态框事件-----------</p>
+<div class="layouts">
+	<ul class="ul">
+		<li>
+			<div>1、js代码弹出加载提示框：<span class="color-red">model("loading","title")</span>  <span class="pointer a-link underline bold" onclick='model("loading","加载中")'>demo</span></div>
+		</li>
+		<li>
+			<div>2、js代码弹出中间图层：<span class="color-red">target_popup(i)</span><span class="padding-left-15 padding-right-15 color-default">(data-popover="modal" data-target="#modal1")</span>  <span class="pointer a-link underline bold" data-popover="modal" data-target="#modal2">demo</span></div>
+		</li>
+		<li>
+			<div>3、js代码关闭中间图层：<span class="color-red">close_popup(i)</span><span class="padding-left-15 padding-right-15 color-default">(data-close="modal")</span></div>
+		</li>
+		<li>
+			<div>4、js代码弹出右侧模态框：<span class="color-red">target_popup_animate(i)</span><span class="padding-left-15 padding-right-15 color-default">(data-popover="modal-animate" data-target="#modal1")</span><span class="pointer a-link underline bold" data-popover="modal-animate" data-target="#modal1">demo</span></div>
+		</li>
+		<li>
+			<div>5、js代码关闭右侧模态框：<span class="color-red">close_popup_animate(i)</span><span class="padding-left-15 padding-right-15 color-default">(data-close="modal-animate")</span></div>
+		</li>
+		<li class="clearfix">
+			
+			<div class="float-left">6、js代码弹出信息选择窗体：<span class="color-red">model("info","title");</span>  <span class="pointer a-link underline bold" onclick='model("info","info选择窗体")'>demo</span></div>
+			<div class="color-default float-left margin-left-30">警告模态框</div>
+		</li>
+		<li class="clearfix">
+			
+			<div class="float-left">7、js代码弹出成功窗体：<span class="color-red">model("success","title");</span>  <span class="pointer a-link underline bold" onclick='model("success","success成功窗体")'>demo</span></div>
+			<div class="color-default float-left margin-left-30">成功模态框</div>
+		</li>
+		<li class="clearfix">
+			
+			<div class="float-left">8、js代码弹出失败窗体：<span class="color-red">model("error","title");</span>  <span class="pointer a-link underline bold" onclick='model("error","error失败窗体")'>demo</span></div>
+			<div class="color-default float-left margin-left-30">失败模态框</div>
+		</li>
+	</ul>
+</div>	
+
+        </div>
+<!-- 模态框 新增编辑 -->
+        <div id="modal1" class="popover-modal popover-animate" data-modal="zx-animate">
+            <div class="popover-modal-header">
+                <div class="title" v-html="trackTempateName">button.css右侧模态框</div>
+                <div class="close" data-close="modal-animate"></div>
+            </div>
+            <div class="popover-modal-body">
+                <div class="table-data">
+        					<table class="table-group panel-6">
+        						<thead class="block-header">
+        							<tr>
+        								<th>序号</th>
+										<th>标题</th>
+										<th>图片</th>
+										<th>类型</th>
+										<th>状态</th>
+										<th>操作</th>
+        							</tr>
+        						</thead>
+        						<tbody>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        							<tr>
+        								<td>#</td>
+        								<td>button.css</td>
+        								<td>images.jpg</td>
+        								<td>style样式</td>
+        								<td>正常</td>
+        								<td>
+        									<span class="a-link pointer margin-right-10">编辑</span>
+        									<span class="a-link pointer">删除</span>
+        								</td>
+        							</tr>
+        						</tbody>
+        					</table> 
+        				</div>
+            </div>
+            <div class="popover-modal-footer position-a bottom-0 right-0" style="text-align: right;">
+                <button class="button button-md button-primary" @click="saveTrackTemplate()">确定</button>
+            </div>
+        
+        </div>
+<a href="#top" id="toTop"></a>
+
+
+<div id="modal2" class="popover-modal" data-modal="zx" style="position: fixed;margin-top:-135px">
+	<div class="popover-modal-header">
+		<div class="title">使用说明</div>
+		<div class="close" data-close="modal"></div>
+	</div>
+
+	<div class="popover-modal-body">
+		1、引用button.css文件。copy对应的图层!<br>
+		2、不要随意更改button.css文件!<br>
+		3、修改图层样式时不要在已有的类上重新定义。请从新创建新的class类名
+	</div>
+	<div class="popover-modal-footer">
+		<div class="button button-default button-sm" data-close="modal">关闭</div>
+		<div class="button button-primary button-sm" data-close="modal">确定</div>
+	</div>
+</div>
+</body>
+
+<script>
+$('a[href^="#"]').click(function(event) {
+		var id = $(this).attr("href");
+		var target = $(id).offset().top;
+		$('html, body').animate({scrollTop:target}, 300);
+		event.preventDefault();
+	});
+
+function getTargetTop(elem){
+	var id = elem.attr("href");
+	var offset = 60;
+	return $(id).offset().top - offset;
+}
+
+
+var sections = $('a[href^="#"]');
+
+
+$(function(){
+	$("#projecttemplates a").click(function(){
+		$("#projecttemplates a").removeClass("active");
+		$(this).addClass("active");
+	})
+})
+</script>
+</html>

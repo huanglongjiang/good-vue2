@@ -1,0 +1,385 @@
+/* 悬浮弹出层提示框背景色和文字色 */
+.align-left {
+  text-align: left;
+}
+.align-center {
+  text-align: center;
+}
+.align-right {
+  text-align: right;
+}
+.vertical {
+  display: table-cell;
+  vertical-align: middle;
+}
+.vertical-top {
+  vertical-align: text-top;
+}
+.vertical-middle {
+  vertical-align: middle;
+}
+.vertical-bottom {
+  vertical-align: text-bottom;
+}
+.tag-primary {
+  background: #4fb845;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-success {
+  background: #5cb85c;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-info {
+  background: #5bc0de;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-danger {
+  background: #d9534f;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-warning {
+  background: #f0ad4e;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-default {
+  background: #999999;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-red {
+  background: red;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-orange {
+  background: orange;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-yellow {
+  background: yellow;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-green {
+  background: green;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-aqua {
+  background: aqua;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-blue {
+  background: blue;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.tag-purple {
+  background: purple;
+  display: inline-block;
+  padding: 4px 6px;
+  color: #fff;
+}
+.a-primary {
+  color: #4fb845;
+}
+.a-success {
+  color: #5cb85c;
+}
+.a-info {
+  color: #5bc0de;
+}
+.a-danger {
+  color: #d9534f;
+}
+.a-warning {
+  color: #f0ad4e;
+}
+.a-default {
+  color: #999999;
+}
+.a-red {
+  color: red;
+}
+.a-orange {
+  color: orange;
+}
+.a-yellow {
+  color: yellow;
+}
+.a-green {
+  color: green;
+}
+.a-aqua {
+  color: aqua;
+}
+.a-blue {
+  color: blue;
+}
+.a-purple {
+  color: purple;
+}
+.a-black {
+  color: #000;
+}
+.a-white {
+  color: #f00;
+}
+.a-333 {
+  color: #333333;
+}
+.a-666 {
+  color: #666666;
+}
+.a-999 {
+  color: #999999;
+}
+.a-ccc {
+  color: #cccccc;
+}
+.a-ddd {
+  color: #ddd;
+}
+.a-eee {
+  color: #eee;
+}
+.a-link {
+  color: #2973b7;
+}
+.a-visited {
+  color: #cccccc;
+}
+.a-hover {
+  color: #333;
+  text-decoration: underline;
+}
+.a-active {
+  color: #333;
+}
+.color-primary {
+  color: #4fb845;
+}
+.color-success {
+  color: #5cb85c;
+}
+.color-info {
+  color: #5bc0de;
+}
+.color-danger {
+  color: #d9534f;
+}
+.color-warning {
+  color: #f0ad4e;
+}
+.color-default {
+  color: #999999;
+}
+.color-red {
+  color: red;
+}
+.color-orange {
+  color: orange;
+}
+.color-yellow {
+  color: yellow;
+}
+.color-green {
+  color: green;
+}
+.color-aqua {
+  color: aqua;
+}
+.color-blue {
+  color: blue;
+}
+.color-purple {
+  color: purple;
+}
+.color-black {
+  color: #000;
+}
+.color-white {
+  color: #fff;
+}
+.color-333 {
+  color: #333333;
+}
+.color-666 {
+  color: #666666;
+}
+.color-999 {
+  color: #999999;
+}
+.color-ccc {
+  color: #cccccc;
+}
+.color-ddd {
+  color: #ddd;
+}
+.color-eee {
+  color: #eee;
+}
+.color-star {
+  position: relative;
+}
+.color-star:before {
+  content: "*";
+  position: absolute;
+  color: #f00;
+  left: -10px;
+  font-size: 20px;
+}
+.border-primary {
+  border-color: #4fb845;
+}
+.border-success {
+  border-color: #5cb85c;
+}
+.border-info {
+  border-color: #5bc0de;
+}
+.border-danger {
+  border-color: #d9534f;
+}
+.border-warning {
+  border-color: #f0ad4e;
+}
+.border-default {
+  border-color: #ddd;
+}
+.border-red {
+  border-color: red;
+}
+.border-orange {
+  border-color: orange;
+}
+.border-yellow {
+  border-color: yellow;
+}
+.border-green {
+  border-color: green;
+}
+.border-aqua {
+  border-color: aqua;
+}
+.border-blue {
+  border-color: blue;
+}
+.border-purple {
+  border-color: purple;
+}
+.border-333 {
+  border-color: #333333;
+}
+.border-666 {
+  border-color: #666;
+}
+.border-999 {
+  border-color: #999999;
+}
+.border-ccc {
+  border-color: #cccccc;
+}
+.border-ddd {
+  border-color: #ddd;
+}
+.border-eee {
+  border-color: #eee;
+}
+.background-primary {
+  background: #4fb845;
+}
+.background-success {
+  background: #5cb85c;
+}
+.background-info {
+  background: #5bc0de;
+}
+.background-danger {
+  background: #d9534f;
+}
+.background-warning {
+  background: #f0ad4e;
+}
+.background-default {
+  background: #999999;
+}
+.background-red {
+  background: red;
+}
+.background-orange {
+  background: orange;
+}
+.background-yellow {
+  background: yellow;
+}
+.background-green {
+  background: green;
+}
+.background-aqua {
+  background: aqua;
+}
+.background-blue {
+  background: blue;
+}
+.background-purple {
+  background: purple;
+}
+.background-white {
+  background: #fff;
+}
+.background-black {
+  background: #000;
+}
+.background-333 {
+  background: #333333;
+}
+.background-666 {
+  background: #666;
+}
+.background-999 {
+  background: #999999;
+}
+.background-ccc {
+  background: #CCCCCC;
+}
+.background-ddd {
+  background: #ddd;
+}
+.background-eee {
+  background: #eee;
+}
+.background-one {
+  background: #9c27b0;
+}
+.background-two {
+  background: #dc5801;
+}
+.background-three {
+  background: #0072c6;
+}
+.background-four {
+  background: #68217a;
+}
+.background-five {
+  background: #1c2d6f;
+}

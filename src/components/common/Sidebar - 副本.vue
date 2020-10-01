@@ -1,0 +1,292 @@
+<template>
+<div>
+<!-- <div class="position-f width-200 height-max left-0 top-0 bottom-0" style="background:#2b3131"></div> -->
+<audio src="static/btn.mp3" id="btnmp3" class="none"></audio>
+    <div class="layout width-200 height-max border-primary position-a left-0 top-0 bottom-0 z-index-100 background-primary" style="box-sizing:border-box; background: #2B3131;">
+    <div class="layout background-primary width-max height-60 line-height-60" style="background: #242A2A">
+        <!-- <span class="width-60 align-center color-white radius-30 margin-20 fa fa-pinterest-p font-size-24"> -->
+            <!-- <span class="margin-left-5" title="退出平台系统">{{state.webTitle}}</span>
+            BTBeginner fa fa-twitter
+                    </span> -->
+
+                    <div class="div-icons">
+ 
+   
+    <!--     Windy -->
+    <svg class="icon icon-windy" viewBox="0 0 220 220">
+<!--       Small cloud -->
+      <g class="small-cloud">
+<path fill="#43647E" d="M69.054,67.463c-5.109-9.405-15.105-15.409-25.866-15.409c-14.947,0-27.066,10.456-29.036,24.651
+  C6.634,78.396,1,85.121,1,93.143c0,9.293,7.561,16.854,16.853,16.854c3.911,0,7.547-1.27,10.472-3.617
+  c4.715,3.022,9.6,4.497,14.864,4.497c4.978,0,8.361-0.792,12.25-2.944c3.312,1.927,7.053,2.944,10.932,2.944
+  c12.016,0,21.792-9.776,21.792-21.792C88.162,77.976,79.807,68.789,69.054,67.463z"/></g>
+      <!--       Cloud offset -->
+      <g class="cloud-offset">
+      <path fill="#43647E" d="M113.903,179.264c-6.173,0-12.273-1.229-17.931-3.585
+  c-6.062,2.515-12.218,3.585-19.999,3.585c-8.325,0-16.356-1.866-23.959-5.559c-5.329,2.711-11.262,4.119-17.492,4.119
+  c-21.27,0-38.574-17.306-38.574-38.576c0-15.345,9.325-29.175,22.996-35.269c6.653-25.268,29.615-42.96,57.029-42.96
+  c19.873,0,38.259,9.958,49.18,26.313c20.532,5.085,35.406,23.653,35.406,45.276C160.56,158.334,139.63,179.264,113.903,179.264z"/></g>
+<!--       Main cloud -->
+      <g class="main-cloud">
+<path fill="#43647E" d="M118.294,97.231c-8.359-15.388-24.715-25.212-42.32-25.212c-24.457,0-44.283,17.108-47.506,40.333
+  c-12.301,2.767-21.52,13.771-21.52,26.896c0,15.205,12.369,27.576,27.574,27.576c6.396,0,12.348-2.078,17.133-5.917
+  c7.713,4.944,15.705,7.356,24.318,7.356c8.145,0,13.68-1.295,20.043-4.816c5.418,3.152,11.541,4.816,17.887,4.816
+                        c19.662,0,35.656-15.996,35.656-35.656C149.56,114.432,135.888,99.401,118.294,97.231z"/></g>
+      <g class="wind-string">
+  <path fill="none" stroke="#43637D" stroke-miterlimit="10" d="M85.263,105.176
+    c3.002-1.646,6.403-2.549,9.903-2.549c11.375,0,20.633,9.256,20.633,20.633s-9.258,20.633-20.633,20.633H3.473"/>
+  <path fill="none" stroke="#43637D" stroke-miterlimit="10" d="M69.756,113.884
+    c1.62-0.888,3.457-1.376,5.345-1.376c6.14,0,11.136,4.996,11.136,11.137c0,6.14-4.996,11.136-11.136,11.136H25.313"/>
+  <path fill="none" stroke="#43637D" stroke-miterlimit="10" d="M75.536,180.462
+    c2.131,1.166,4.545,1.809,7.027,1.809c8.072,0,14.642-6.569,14.642-14.643s-6.569-14.643-14.642-14.643H18.043"/>
+</g>
+</svg>
+</div>
+<span class="margin-left-5 color-white position-r left-65" title="退出平台系统">{{state.webTitle}}</span>
+            <!-- BTBeginner fa fa-twitter -->
+                    </span>
+    </div>
+
+    <ul id="side">
+        <li class="font-size-14 background-danger" style="background: #2B3131;color: #adb5bd">
+            <div class="title">
+                <i class="fa fa-tachometer margin-right-10"></i>统计
+                <i class="fa fa-angle-down float-right position-r top-20 right-10"></i>
+            </div>
+            <ul class="position-r ">
+                <!-- <li class="position-r line-height-36">
+                    <router-link to="money" tag="span" class="margin-left-10" style="color:#adb5bd"  data-module="money">小金库</router-link>
+                </li> -->
+               
+                <li class="position-r line-height-36">
+                    <router-link to="log" tag="span" class="margin-left-10"data-module="log">登录日志</router-link>
+                    <span class="padding-1 padding-left-5 padding-right-5 radius-30 background-danger font-size-12" style="color:white">{{state.log}}</span>
+
+                </li>
+            </ul>
+        </li>
+        <li class="font-size-14 background-danger" style="background: #2B3131;color: #adb5bd">
+            <div class="title">
+                <i class="fa fa-folder-open margin-right-10"></i>管理
+                <i class="fa fa-angle-right float-right position-r top-20 right-10"></i>
+            </div>
+            <ul class="position-r none">
+                <li class="position-r line-height-36">
+                    <router-link to="root" tag="span" class="margin-left-10" data-module="root">栏目中心</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="tag" tag="span" class="margin-left-10" data-module="tag">标签中心</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="keywords" tag="span" class="margin-left-10" data-module="tag">关键词库</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="article?type=all&status=all" tag="span" class="margin-left-10" data-module="article">文章中心</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="user?type=all&status=all" tag="span" class="margin-left-10" data-module="user">用户管理</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="link?type=all&status=all" tag="span" class="margin-left-10" data-module="link">友情链接</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="adsense?status=all" tag="span" class="margin-left-10" data-module="adsense">广告管理</router-link>
+                </li>
+                
+                <li class="position-r line-height-36">
+                    <router-link to="slider?type=all&status=all" tag="span" class="margin-left-10" data-module="slider">图片轮播</router-link>
+                </li>
+                
+            </ul>
+        </li>
+
+        <li class="font-size-14 background-danger" style="background: #2B3131;color: #adb5bd">
+            <div class="title">
+                <i class="fa fa-windows margin-right-10"></i>功能
+                <i class="fa fa-angle-right float-right position-r top-20 right-10"></i>
+            </div>
+            <ul class="position-r none">
+                <li class="position-r line-height-36">
+                    <router-link to="bbs" tag="span" class="margin-left-10" data-module="bbs">留言板</router-link>
+                    <span class="padding-1 padding-left-5 padding-right-5 radius-30 background-danger font-size-12" style="color:white">{{state.bbs}}</span>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="help?type=all&status=all" tag="span" class="margin-left-10" data-module="help">客服信息</router-link>
+                </li>
+                
+                <li class="position-r line-height-36">
+                    <router-link to="cnzz" tag="span" class="margin-left-10" data-module="cnzz">站长统计</router-link>
+                </li>
+
+                <li class="position-r line-height-36">
+                <router-link to="html" tag="span" class="margin-left-10" data-module="html">页面静态化</router-link>
+                </li>
+                
+            </ul>
+        </li>
+        <li class="font-size-14 background-danger" style="background: #2B3131;color: #adb5bd">
+            <div class="title">
+                <i class="fa fa-cogs margin-right-10"></i>设置
+                <i class="fa fa-angle-right float-right position-r top-20 right-10"></i>
+            </div>
+            <ul class="position-r none">
+                <li class="position-r line-height-36">
+                    <router-link to="index_seo" tag="span" class="margin-left-10" data-module="index_seo">首页SEO</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="copyright" tag="span" class="margin-left-10" data-module="copyright">版权信息</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="system" tag="span" class="margin-left-10" data-module="system">常规选项</router-link>
+                </li>
+                <li class="position-r line-height-36">
+                    <router-link to="authority" tag="span" class="margin-left-10" data-module="authority">用户管理权限</router-link>
+                </li>
+                
+            </ul>
+        </li>
+    </ul>
+</div>
+   
+    </div>
+</template>
+
+<script>
+    import { mapState } from 'vuex'
+    export default {
+        data() {
+            return {
+              
+            }
+        },
+        mounted: function() {
+          $(function(){
+                $("#side li ul li").each(function(){
+                    var module=$(this).find("span").data("module");
+                    if(module!=undefined){
+                        if(window.location.href.indexOf(module)>-1){
+
+                            $(this).parent().show();
+
+                            $(this).parent().parent().siblings().find("ul").hide();
+                            $(this).addClass("active");
+                        }
+                        
+                    }
+                    
+                });
+          })  
+        },
+        computed: {
+            ...mapState(['state']),
+        },
+        watch: {  
+           // 'form.url': 'init',
+        }, 
+        methods:{
+            submitForm(){
+                this.$axios.post(global.APIRETURN).then(res => {
+                  console.log(res)
+                })
+            },
+        }
+    }
+</script>
+
+<style>
+    .sidebar{
+        display: block;
+        position: absolute;
+        width: 250px;
+        left: 0;
+        top: 70px;
+        bottom:0;
+        background: #2E363F;
+    }
+    .sidebar > ul {
+        height:100%;
+    }
+   .tag-group{background: none;margin: 0px;}
+   textarea{font-family: '微软雅黑'; padding:20px}
+   #side .fa{display: initial;} 
+</style>
+<style scoped>
+    .small-cloud path {
+  fill: #ffffff;
+  animation: flyby 6s linear infinite;
+}
+
+.cloud-offset path {
+  fill: #222;
+}
+.main-cloud path {
+  fill: #ffffff;
+}
+.wind-string path {
+  stroke: #CCC;
+  stroke-linecap: round;
+  stroke-width: 7px;
+  animation: wind-blow 3s linear infinite;
+}
+
+
+.div-icons {
+  position: absolute;
+  display: block;
+  width: 200px;
+  height: 60px;
+  text-align: left;
+  padding-left: 15px;
+  top: 0px;
+  left: 0px;
+}
+
+.icon {
+  width: 60px;
+  height: 60px;
+}
+@keyframes flyby {
+  0% {
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    opacity: 0;
+  }
+  30% {
+    -webkit-transform: translate(39px, 0px);
+    transform: translate(39px, 0px);
+    opacity: 1;
+  }
+  70% {
+    -webkit-transform: translate(91px, 0px);
+    transform: translate(91px, 0px);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: translate(130px, 0px);
+    transform: translate(130px, 0px);
+    opacity: 0;
+  }
+}
+@keyframes wind-blow {
+  0% {
+    stroke-dasharray: 5 300;
+    stroke-dashoffset: -200;
+    opacity: 1;
+  }
+  50% {
+    stroke-dasharray: 300 300;
+    stroke-dashoffset: -100;
+    opacity: 1;
+  }
+  90% {
+    stroke-dasharray: 50 300;
+    stroke-dashoffset: -20;
+    opacity: 0.7;
+  }
+  100% {
+    stroke-dasharray: 20 300;
+    stroke-dashoffset: 0;
+    opacity: 0.2;
+  }
+}
+</style>

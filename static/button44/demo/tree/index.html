@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript" src="http://www.100sucai.com/js/jquery.js"></script>
+<script type="text/javascript" src="200.js"></script>
+<link rel="stylesheet" href="../../css/button.css">
+<style>
+*{ margin: 0px; padding: 0px; }
+body{ font-family: "微软雅黑" }
+
+#tree-demo{overflow-x: auto; width: 300px;}
+#tree-demo li{display: table;}
+#tree-demo li span{border:0px solid red;max-width: 600px;overflow: hidden;white-space: nowrap;text-overflow: ellipsis; line-height: 20px;}
+#tree-demo li label{border:0px solid red;display: inline-block;}
+</style>
+
+</head>
+<body>
+<div id="tree-demo"></div>
+<script type="text/javascript">
+	$(function(){
+		$(document).on("click","span",function(){
+			var i=$(this).siblings("ul").hasClass("block");
+			console.log(i)
+			if(i){
+				$(this).siblings("ul").removeClass("block");
+				// $(this).find("em").removeClass("close");
+				// $(this).find("em").addClass("open");
+
+				$(this).find("em").removeClass("open");
+				$(this).find("em").addClass("close");
+			}else{
+				$(this).siblings("ul").addClass("block");
+				// $(this).find("em").removeClass("open");
+				// $(this).find("em").addClass("close");
+
+				$(this).find("em").removeClass("close");
+				$(this).find("em").addClass("open");
+			}
+			
+		})
+
+		$(document).on("click","#tree-demo li label",function(){
+			var i=$(this).siblings().prop("checked")
+			if(i){
+				$(this).find("img").attr("src","images/checkbox-active.png");
+			}else{
+				$(this).find("img").attr("src","images/checkbox-default.png");
+			}
+			console.log(i+"66");
+		})
+	})
+
+
+</script>
+</body>
+</html>

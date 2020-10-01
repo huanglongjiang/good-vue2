@@ -1,0 +1,41 @@
+@import url("color.less");
+
+.page-lg{ width: 600px; height: auto; border: 0px solid red;
+	li{ height: 32px; padding: 0px 12px; display: inline-block; border: 1px solid #ccc; background: #fff; text-align: center; line-height: 32px; font-size: 14px; cursor: pointer;}
+	li:hover{ background: #efefef;}
+	li.selected{ background: @primary; color: #fff; border:1px solid @primary;}
+	li.selected:hover{ background: @primary; color: #fff;}
+	li.page-number{ background: none;  border: 1px; cursor: inherit;}
+	li.page-number:hover{ background: none;}	
+}
+
+.page-sm{ width: 600px; height: auto; border: 0px solid red;
+	li{ height: 25px; padding: 0px 8px; display: inline-block; border: 1px solid #ccc; background: #fff; text-align: center; line-height: 25px; font-size: 12px; cursor: pointer;}
+	li:hover{ background: #efefef;}
+	li.selected{ background: @primary; color: #fff; border:1px solid @primary;}
+	li.selected:hover{ background: @primary; color: #fff;}
+	li.page-number{ background: none;  border: 1px; cursor: inherit;}
+	li.page-number:hover{ background: none;}	
+}
+
+
+.page-link-lg{ width: 600px; height: auto; border: 0px solid red;
+
+	li{ height: 32px; padding: 0px 12px; float: left; display:table; border: 1px solid #ccc; border-left: 0px; background: #fff; text-align: center; line-height: 32px; font-size: 14px; cursor: pointer;}
+	li:hover{ background: #efefef;}
+	li.selected{ background: @primary; color: #fff; margin-left:-1px; border:1px solid @primary;}
+	li.selected:hover{ background: @primary; color: #fff; border:1px solid @primary;}
+	li.page-number{ background: none;  border: 1px; cursor: inherit;}
+	li.page-number:hover{ background: none;}
+	li.first{border-left: 1px solid #ccc;}
+}
+
+.page-link-sm{ width: 600px; height: auto; border: 0px solid red;
+	li{ height: 25px; padding: 0px 8px; float: left; display:table; border: 1px solid #ccc; border-left: 0px; background: #fff; text-align: center; line-height: 25px; font-size: 12px; cursor: pointer;}
+	li:hover{ background: #efefef;}
+	li.selected{ background: @primary; color: #fff; margin-left:-1px; border:1px solid @primary;}
+	li.selected:hover{ background: @primary; color: #fff; border:1px solid @primary;}
+	li.page-number{ background: none;  border: 1px; cursor: inherit;}
+	li.page-number:hover{ background: none;}
+	li.first{border-left: 1px solid #ccc;}
+}

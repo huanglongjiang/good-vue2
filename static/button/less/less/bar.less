@@ -1,0 +1,49 @@
+@import url("color.less"); 
+.breadbar{ padding: 8px 0px; list-style: none; border-radius: 4px;
+  li{display: inline-block;}
+  li + li:before { padding: 0 5px; color: #ccc; content: "/\00a0";}
+  a{ text-decoration: none; color: #999}
+  .active { color: #555; }
+}
+
+.headder-nav-group{min-width:760px;  height: 50px;border: 0px solid red; text-align: center; line-height: 50px; background: @primary;
+	li{ border: 0px solid red; display:table-cell;	padding: 0px 50px;  color: #fff}
+	li a{ display: block; width: 100%; height: 100%; color: #fff; text-decoration: none;}
+	li.selected{ background:darken( @primary,15%);}
+	li:hover{ background:darken( @primary,15%);}
+}
+
+.tab-button-group{width: 100%; height: auto; border-bottom: 1px solid @primary; border-left: 1px solid #DDDDDD; position: relative;
+
+	.tab-link{ 
+		width: auto; height: 50px; text-align: center; line-height: 50px;
+		background: #FAFAFA;
+		border: 1px solid #DDDDDD;
+		float: left;
+		cursor: pointer;
+		border-left: 0px;
+		border-bottom: 1px  solid @primary;
+		margin-bottom: -1px;
+	}
+	.tab-active{border:1px solid @primary; color: @primary; border-bottom: 1px  solid #fff; background: #fff;}
+
+	.sm{ height: 36px;  line-height: 36px; padding: 0px 20px;}
+	.md{ height: 45px;  line-height: 45px; padding: 0px 36px;}
+}
+
+.tab2-button-group{width: 100%; height: 51px; border-bottom: 2px solid #ddd; position: relative;
+	.tab2-button{ text-align: center; height: 51px; line-height: 51px; padding:0px 20px;}
+	.tab2-link{ background: #fff; border-bottom: 2px solid #DDDDDD; float: left; cursor: pointer;}
+	.tab2-active{border-bottom:2px solid @primary; background: #fff;}
+}
+
+
+.tab3-button-group{width:auto; height: auto;position: relative;
+
+	.tab3-link{ background: #fff; border: 1px solid #DDDDDD; float: left;margin-left: -1px;text-align: center; cursor: pointer; .button-ico{padding: 0px 5px 0px 0px;}}
+	.tab3-active{border:1px solid @primary; background: #fff; color: @primary; position: relative;z-index: 10}
+
+	.sm{padding: 5px; }
+	.md{padding: 10px; }
+}
+

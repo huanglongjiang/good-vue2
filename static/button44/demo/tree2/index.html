@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Document</title>
+<script type="text/javascript" src="http://www.100sucai.com/js/jquery.js"></script>
+<script type="text/javascript" src="200.js"></script>
+<link rel="stylesheet" href="../../css/button.css">
+<!-- <style>
+*{ margin: 0px; padding: 0px; }
+body{ font-family: "微软雅黑" }
+
+
+</style> -->
+
+</head>
+<body>
+<div id="tree-demo"></div>
+<script type="text/javascript">
+	$(function(){
+		$(document).on("click","span",function(){
+			var i=$(this).siblings("ul").hasClass("block");
+			if(i){
+				$(this).siblings("ul").removeClass("block");
+				// $(this).find("em").removeClass("close");
+				// $(this).find("em").addClass("open");
+
+				$(this).find("em").removeClass("open");
+				$(this).find("em").addClass("close");
+			}else{
+				$(this).siblings("ul").addClass("block");
+				// $(this).find("em").removeClass("open");
+				// $(this).find("em").addClass("close");
+
+				$(this).find("em").removeClass("close");
+				$(this).find("em").addClass("open");
+			}
+			
+		})
+	})
+
+</script>
+</body>
+</html>
