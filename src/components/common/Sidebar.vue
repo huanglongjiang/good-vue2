@@ -4,10 +4,10 @@
     <div class="layout width-max height-60 line-height-60" style="">
       <!-- <good-logo></good-logo> -->
       <!-- <i class="fa fa-yelp"></i> -->
-      <span class="color-999 float-left font-size-24 bold padding-left-30 padding-right-30" title="退出平台系统">{{constant.webTitle}}</span>
+      <!-- <span class="color-999 float-left font-size-24 bold padding-left-30 padding-right-30" title="退出平台系统">{{constant.webTitle}}</span> -->
     </div>
 
-    <ul id="side" class="padding-30">
+    <ul id="side" class="padding-30 padding-left-50">
       <template v-for="(item,index) in state.menu">
         <li class="font-size-14">
                 <div class="title color-333" @click="open(item,index)">
@@ -18,10 +18,10 @@
                               
                 <ul class="position-r overflow-hidden padding-left-15 margin-top-10 margin-bottom-10" >
                   <template v-for="(item2,index2) in item.children">
-                    <li class="position-r line-height-36" :class="{'a-link':item2.select}">
-                        <router-link :to="item2.url" tag="span" class="margin-left-10 pointer" data-module="log"  @click.native="select(item2,item.children)">{{item2.title}}</router-link>
-                          <good-info :data="state.log" v-if="item2.title=='登录日志'"></good-info>
-                          <good-info :data="state.bbs" v-if="item2.title=='留言板'"></good-info>
+                    <li class="position-r line-height-36">
+                        <router-link active-class="a-link" :to="item2.url" tag="span" class="margin-left-10 pointer" data-module="log"  @click.native="select(item2,item.children)">{{item2.title}}</router-link>
+                          <good-info :data="state.log_total" v-if="item2.title=='登录日志'"></good-info>
+                          <good-info :data="state.bbs_total" v-if="item2.title=='留言板'"></good-info>
                         
                     </li>
                   </template>  

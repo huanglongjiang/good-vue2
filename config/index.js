@@ -12,16 +12,16 @@ module.exports = {
     assetsPublicPath: '/',
     proxyTable: {
         '/good':{
-            target:'http://localhost/',
-            //target:'http://www.good1230.com/',
+            //target:'http://localhost/',
+            target:'http://www.good1230.com/',
             changeOrigin:true,
             pathRewrite:{
                 '^/good':'/good'
             }
         },
         '/dist':{
-            target:'http://localhost/',
-            //target:'http://www.good1230.com/',
+            //target:'http://localhost/',
+            target:'http://www.good1230.com/',
             changeOrigin:true,
             pathRewrite:{
                 '^/dist':'/dist'
@@ -67,7 +67,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: '/',
+    assetsPublicPath: './',
 
     /**
      * Source Maps

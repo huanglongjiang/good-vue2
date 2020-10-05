@@ -21,8 +21,8 @@ const store = new Vuex.Store({
             marquee:"精简个人博客网站平台管理系统，售价 ￥150 元！有需要或想了解的朋友们请联系QQ：2970302840",
             authority:'',
             account:'',
-            bbs:0,
-            log:0,
+            bbs_total:0,
+            log_total:0,
             path:'',
             paramsType:0,
             paramsStatus:0,
@@ -34,7 +34,10 @@ const store = new Vuex.Store({
                   title:'统计',
                   select:true,
                   icon:'fa fa-tachometer',
-                  children:[{title:'登录日志',select:true,url:'log'}]
+                  children:[
+                    {title:'首页',select:true,url:'index'},
+                    {title:'登录日志',select:false,url:'log'},
+                  ]
                 },
                 {
                   title:'管理',

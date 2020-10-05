@@ -8,7 +8,7 @@ const initData=[
   //"status",
   "lists",
   "delete",
-  "select",
+  //"select",
 ];
 function request(config) {
 

@@ -18,6 +18,10 @@ export default new Router({
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
                 {
+                    path: '/index',
+                    component: resolve => require(['../components/page/index.vue'], resolve)
+                },
+                {
                     path: '/log',
                     component: resolve => require(['../components/page/log.vue'], resolve)
                 },

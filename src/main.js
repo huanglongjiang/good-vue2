@@ -6,6 +6,7 @@ import router from './router'
 import axios from 'axios';
 import VueResource from 'vue-resource';  
 import ElementUI from 'element-ui';
+import Ehartist from 'vue-chartist';
 /*import Editor from 'editor';*/
 /*import Jquery from 'jquery';*/
 import moment from 'moment';
@@ -15,6 +16,7 @@ import constant from './vuex/const'
 import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
 Vue.use(Good)
 Vue.use(ElementUI);
+Vue.use(Ehartist);
 // Vue.use(Jquery);
 
 Vue.prototype.$axios = axios;

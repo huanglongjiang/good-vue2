@@ -34,15 +34,15 @@
 
 <style scoped>
 .small-cloud path {
-  fill: #777;
+  fill: #ffffff;
   animation: flyby 6s linear infinite;
 }
 
 .cloud-offset path {
-  fill: #777;
+  fill: #222;
 }
 .main-cloud path {
-  fill: #777;
+  fill: #ffffff;
 }
 .wind-string path {
   stroke: #CCC;
@@ -53,18 +53,18 @@
 
 
 .div-icons {
-  position: absolute;
+/*  position: absolute;*/
   display: block;
-  width: 200px;
+  width: 60px;
   height: 60px;
   text-align: left;
   padding-left: 15px;
-  top: 0px;
-  left: 0px;
+ /* top: 0px;
+  left: 0px;*/
 }
 
 .icon {
-  width: 70px;
+  width: 60px;
   height: 60px;
 }
 @keyframes flyby {

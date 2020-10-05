@@ -1,27 +1,26 @@
 <template>
-<div class="header height-60 width-max background-white" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px; background: rgb(32, 35, 42);">
+<div class="header height-60 width-max background-white z-index-100" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px; background: rgb(32, 35, 42);">
     <div class="header height-60 width-max position-r">
-        <div class="position-a left-230 clearfix">
-            
+        <div class="position-a clearfix">
+            <div class="float-left width-280 height-60 font-size-24 bold line-height-60 color-999">
+              <good-logo class="float-left"></good-logo>
+              <span class="padding-left-20">{{state.webTitle}}</span>
+            </div>
             <a :href="domain" class="color-666 none-line float-left" target="_blank">
-              <template v-if="form.image!=''">
-                  <img :src="state.Imgpath+'user/'+form.image" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.image!=''">
+              <template v-if="form.file!=''">
+                  <img :src="'good/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.file!=''">
               </template>
               <template v-else>
                   <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
               </template>
               <span class="line-height-60 margin-left-20" >
                 {{form.name}}
-                
-  
-
               </span>
               
 
             </a>
             
             <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">
-                <span class=" margin-right-10">admin</span>
                 <template v-if="constant.authority==2">(超级管理员)</template>
                 <template v-if="constant.authority==1">(管理员)</template>
                 <template v-if="constant.authority==0">(普通用户)</template>
@@ -92,9 +91,9 @@
                       <tds-label>用户角色：</tds-label>
 
                       <td><div type="text" class="input-default line-height-34 width-max" readonly="readonly">
-                        <template v-if="form.role==1">普通用户</template>
-                        <template v-if="form.role==2">管理员</template>
-                        <template v-if="form.role==3">超级管理员</template>
+                        <template v-if="form.role==0">普通用户</template>
+                        <template v-if="form.role==1">管理员</template>
+                        <template v-if="form.role==2">超级管理员</template>
                       </div>
                       </td>
                   </tr>
@@ -156,7 +155,6 @@
               dialogShow:false,
               dialogShow2:false,
               domain:'',
-              result:'',
               bbs:0,
               income:0,
               paycount:0,
@@ -173,7 +171,7 @@
             }
         },
         created: function() {
-            //this.submitForm();
+            this.submitForm();
             this.domain=window.location.origin
         },
         computed: {
@@ -212,8 +210,7 @@
                     "operating":"update",
                     "form":this.form
                 }
-                this.$axios.post(global.APIPATH,data).then(res => {    
-                    this.result=res.data.result;
+                this.$axios.post(global.APIPATH,data).then(res => {   
                     this.submitForm();
                 });
             },
@@ -289,4 +286,7 @@ to {
 </style>
 <style>
       .uploader-list{display: none;}  
+      .main-cloud{
+    fill: #fff;
+}
 </style>
