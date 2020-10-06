@@ -6,6 +6,12 @@ Vue.use(Router);
 export default new Router({
     routes: [
         {
+            path: '*', // 页面不存在的情况下会跳到404页面
+            redirect: '/index',
+            name: 'notFound',
+            hidden: true
+        },
+        {
             path: '/',
             redirect: '/login'
         },
@@ -28,10 +34,6 @@ export default new Router({
                 {
                     path: '/seo',
                     component: resolve => require(['../components/page/seo.vue'], resolve)
-                },
-                {
-                    path: '/seo_tag',
-                    component: resolve => require(['../components/page/seo_tag.vue'], resolve)
                 },
                 {
                     path: '/keywords',
@@ -82,6 +84,10 @@ export default new Router({
                     component: resolve => require(['../components/page/article.vue'], resolve)
                 },
                 {
+                    path: '/article/action',
+                    component: resolve => require(['../components/page/article_action.vue'], resolve)
+                },
+                {
                     path: '/root',
                     component: resolve => require(['../components/page/root.vue'], resolve)
                 },
@@ -89,10 +95,7 @@ export default new Router({
                     path: '/tag',
                     component: resolve => require(['../components/page/tag.vue'], resolve)
                 },
-                {
-                    path: '/article_action',
-                    component: resolve => require(['../components/page/article_action.vue'], resolve)
-                },
+                
                {
                     path: '/cnzz',
                     component: resolve => require(['../components/page/cnzz.vue'], resolve)
@@ -124,10 +127,6 @@ export default new Router({
                 {
                     path: '/html',
                     component: resolve => require(['../components/page/html.vue'], resolve)
-                },
-                {
-                    path: '/picture',
-                    component: resolve => require(['../components/page/picture.vue'], resolve)
                 },
                 {
                     path: '/authority',

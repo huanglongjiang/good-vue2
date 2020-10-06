@@ -10,13 +10,18 @@ const initData=[
   "delete",
   //"select",
 ];
-function request(config) {
 
-  for (let key of values(initData)) {
-    
-    if(config.data.operating===key){
-      console.log(`===${key}`)
-      Vue.prototype.$hlj.loading(config.data.operating);
+const google=[
+  "t-20008",
+];
+function request(config) {
+  if(!google.includes(config.data.google)){
+
+    for (let key of values(initData)) {
+      
+      if(config.data.operating===key){
+        Vue.prototype.$hlj.loading(config.data.operating);
+      }
     }
   }
   

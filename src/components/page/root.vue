@@ -78,8 +78,8 @@
                 </div>
             </div>
             <div slot="footer">
-                <el-button @click="dialogVisible = false">取 消</el-button>
-                <el-button type="primary" @click="Submit('update')">确 定</el-button>
+                <good-button type="default" @click="dialogVisible = false">取 消</good-button>
+                <good-button type="primary" @click="Submit('update')">确 定</good-button>
             </div>
         </good-dialog>   
 </good-page>
@@ -211,9 +211,11 @@
                     "form":this.form
                 }
                 this.$axios.post(global.APIPATH,data).then(res => {  
-                    this.dataList();
-                    this.dialogVisible=false;
-                    this.dialogVisible2=false;
+                    if(res.data.retType=='success'){
+                        this.dataList();
+                        this.dialogVisible=false;
+                        this.dialogVisible2=false;
+                    }
                 });
             },
             imgName(item){

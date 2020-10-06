@@ -243,6 +243,8 @@
             },
             select(item){
                 this.dialogVisible=true;
+                this.btnSubmit=1;
+                this.linkTitle="编辑友情链接";
                 this.form={...item}
             },
             openLink(){
@@ -270,6 +272,7 @@
                 }
                 this.$axios.post(global.APIPATH,data).then(res => {
                     if(res.data.retType=='success'){
+                        this.dialogVisible=false;
                         this.dataList();
                     }
                 });

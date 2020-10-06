@@ -290,6 +290,7 @@
                 }
                 this.$axios.post(global.APIPATH,data).then(res => {
                     if(res.data.retType=='success'){
+                        this.dialogShow=false;
                         this.dataList();
                     }
                 });

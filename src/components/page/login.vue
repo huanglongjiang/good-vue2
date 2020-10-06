@@ -6,7 +6,7 @@
                     <span class="float-left">hlj designs</span>
                 </h3>
             </div>
-            <el-tabs v-model="activeName" type="card" @tab-click="handleClick">
+            <el-tabs v-model="activeName" type="card">
                 <el-tab-pane label="登录" name="first">
                     <div id="form">
                         <div class="table-default  margin-top-0">
@@ -66,8 +66,10 @@
                     "form":this.form,
                 }
                 this.$axios.post(global.APIPATH,data).then(res => { 
-                   localStorage.token = res.data.token;
-                   this.$router.push('/index');
+                    if(res.data.retType=='success'){
+                       localStorage.token = res.data.token;
+                       this.$router.push('/index');
+                   }
                         
                 });
             },

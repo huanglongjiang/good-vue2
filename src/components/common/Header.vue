@@ -6,9 +6,10 @@
               <good-logo class="float-left"></good-logo>
               <span class="padding-left-20">{{state.webTitle}}</span>
             </div>
-            <a :href="domain" class="color-666 none-line float-left" target="_blank">
+            <!-- <a :href="domain" class="color-666 none-line float-left" target="_blank"> -->
+            <a class="color-666 none-line float-left" target="_blank">
               <template v-if="form.file!=''">
-                  <img :src="'good/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.file!=''">
+                  <img :src="filePath+'/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.file!=''">
               </template>
               <template v-else>
                   <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
@@ -125,11 +126,11 @@
               <table class="table-group">
                   <tr>
                       <tds-label>旧密码：</tds-label>
-                      <td><good-input v-model="form2.passOld" :disabled="true"></good-input></td>
+                      <td><good-input v-model="form2.passOld"></good-input></td>
                   </tr>
                   <tr>
                       <tds-label>新密码：</tds-label>
-                      <td><good-input v-model="form2.passNew" :disabled="true"></good-input></td>
+                      <td><good-input v-model="form2.passNew"></good-input></td>
                   </tr>
               </table> 
           </div>
@@ -152,6 +153,7 @@
         },
         data() {
             return {
+              filePath:global.filePath,
               dialogShow:false,
               dialogShow2:false,
               domain:'',
@@ -187,7 +189,7 @@
            
             submitForm(){
                 let data={
-                        "google":"t-10014",
+                        "google":"t-100142",
                         "operating":"select",
                     }
                 this.$axios.post(global.APIPATH,data).then(res => { 
@@ -210,8 +212,11 @@
                     "operating":"update",
                     "form":this.form
                 }
-                this.$axios.post(global.APIPATH,data).then(res => {   
+                this.$axios.post(global.APIPATH,data).then(res => {  
+                  if(res.data.retType=='success'){
+                    this.dialogShow=false; 
                     this.submitForm();
+                  }
                 });
             },
             SubmitEdit(index){
@@ -221,6 +226,9 @@
                     "form":this.form2
                 }
                 this.$axios.post(global.APIPATH,data).then(res => {   
+                  if(res.data.retType=='success'){
+                    this.dialogShow2=false; 
+                  }
                     //this.submitForm();
                 });
             },

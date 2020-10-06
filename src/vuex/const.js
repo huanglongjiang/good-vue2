@@ -16,7 +16,8 @@ const initData={
 	// 面包屑
 	breadcrumb:{
 		headTitle:'个人博客记录生活点点滴滴',
-		log:['登录日志'],
+		index:['首页'],
+    log:['登录日志'],
 		root:['栏目中心'],
 		tag:['标签中心'],
 		keywords:['关键词库'],

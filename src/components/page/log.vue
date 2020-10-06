@@ -25,7 +25,14 @@
                         <template v-for="(item,index) in list">
                         <tr>
                             <td>
-                                <img src="http://www.good1230.com/dist2/static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-auto radius-20 float-left" style="display: inherit;">
+                                <div class="line-height-30 padding-3">
+                                    <template v-if="item.file!=''">
+                                    <img :src="filePath+'/'+item.file" alt="" class="width-30 height-30 radius-20 block">
+                                </template>
+                                <template v-else>
+                                    <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 radius-20 block">
+                                </template>
+                                </div>
                             </td>
                             <td><span>{{item.account}} <span class="color-999">({{item.name}})</span></span></td>
                             <td><span>{{item.email}}</span></td>
@@ -53,6 +60,7 @@
     export default {
         data: function(){
             return {
+                filePath:global.filePath,
                 list:'',
                 google:"t-10001",
                 init:{

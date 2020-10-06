@@ -1,7 +1,7 @@
-/*// 本地地址
+// 本地地址
 
 //数据请求接口
-global.APIPATH = 'good/google.php'
+/*global.APIPATH = 'good/google.php'
 
 //退出登录接口
 global.APIRETURN = 'vue/return.php'
@@ -11,7 +11,8 @@ global.UPIMGPATH = 'good/google.php'
 global.APIPATH2 = 'good/google2.php'
 
 //上传图片服务器地址
-global.UPSERVER = 'good/server/fileupload.php'*/
+global.UPSERVER = 'good/server/fileupload.php'
+global.filePath='good'*/
 
 
 
@@ -29,6 +30,7 @@ global.APIPATH2 = 'http://www.good1230.com/good/google2.php'
 
 //上传图片服务器地址
 global.UPSERVER = 'http://www.good1230.com/good/server/fileupload.php'
+global.filePath='http://www.good1230.com/good'
 
 
 /*// 本地地址

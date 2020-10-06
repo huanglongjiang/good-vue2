@@ -13,7 +13,7 @@
                             <template v-else>
                                 <good-button icon="fa-pencil" @click="Submit('insert')">新增</good-button>
                             </template>
-                            <router-link to="article?module=article&type=all&status=all" tag="a">
+                            <router-link to="/article" tag="a">
                                 <good-button icon="fa-th-list">文章中心</good-button>
                             </router-link>
                         </td>
@@ -119,7 +119,7 @@
                             <template v-else>
                                 <good-button icon="fa-pencil" @click="Submit('insert')">新增</good-button>
                             </template>
-                            <router-link to="article?module=article&type=all&status=all" tag="a">
+                            <router-link to="/article" tag="a">
                             <good-button icon="fa-th-list">文章中心</good-button>
                             </router-link>
                         </td>

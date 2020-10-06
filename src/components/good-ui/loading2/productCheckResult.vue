@@ -41,24 +41,14 @@
    <transition name="bounceA">
  <!-- v-if="array2[0].type=='loading'" -->
 
-    <div class="position-f width-300 height-auto line-height-36 z-index-1000 color-999 align-center bottom-60" style="right:50%; margin-right:-150px;" v-if="array2.length!=0&&array2[0].type=='loading'">
-     <li class="radius-3 margin-bottom-20 align-left padding-left-20 color-primary font-size-36">
-         <i class="fa fa-check-circle margin-right-10"></i>
+    <div class="position-f width-80 height-80 line-height-80 z-index-1000 color-999 align-center radius-3" style="right:50%; margin-right:-15px; top:50%; background:rgba(40,40,40,0.6)" v-if="array2.length!=0&&array2[0].type=='loading'">
+     <li class="radius-3 margin-bottom-20 align-left padding-left-22 color-primary font-size-36" style="color:#fff">
+         <i class="el-icon-loading bold margin-right-10" style="font-weight: bold;"></i>
     
-         <template>{{message20}}......</template>
+         <!-- <template>{{message20}}......</template> -->
+         <svg viewBox="25 25 50 50" class="circular"><circle cx="50" cy="50" r="20" fill="none" class="path"></circle></svg>
          </li>
-<!-- <svg id="svg-spinner" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-  <circle cx="24" cy="4" r="4" fill="#fff"></circle>
-  <circle cx="12.19" cy="7.86" r="3.7" fill="#fffbf2"></circle>
-  <circle cx="5.02" cy="17.68" r="3.4" fill="#fef7e4"></circle>
-  <circle cx="5.02" cy="30.32" r="3.1" fill="#fef3d7"></circle>
-  <circle cx="12.19" cy="40.14" r="2.8" fill="#feefc9"></circle>
-  <circle cx="24" cy="44" r="2.5" fill="#feebbc"></circle>
-  <circle cx="35.81" cy="40.14" r="2.2" fill="#fde7af"></circle>
-  <circle cx="42.98" cy="30.32" r="1.9" fill="#fde3a1"></circle>
-  <circle cx="42.98" cy="17.68" r="1.6" fill="#fddf94"></circle>
-  <circle cx="35.81" cy="7.86" r="1.3" fill="#fcdb86"></circle>
-</svg> -->
+
        
      </div>
    </transition>
@@ -221,5 +211,11 @@ export default {
   100% {
     transform: scale(1);
   }
+}
+
+.el-loading-spinner .circular {
+    height: 42px;
+    width: 42px;
+    animation: loading-rotate 2s linear infinite;
 }
 </style>

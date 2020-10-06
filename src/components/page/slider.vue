@@ -38,7 +38,7 @@
                                 </td>
                                 <td>
                                     <div class="line-height-30 padding-3">
-                                        <img class="width-auto height-60 block" :src="'good/'+item.file" v-if="item.file!=''">
+                                        <img class="width-auto height-60 block" :src="filePath+'/'+item.file" v-if="item.file!=''">
                                         <img class="width-auto height-60 block" src="static/images/tianmao.jpg" alt="" v-else>
                                     </div>
                                     
@@ -165,6 +165,7 @@
     export default {
         data: function(){
             return {
+                filePath:global.filePath,
                 dialogVisible:false,
                 statusVal2:true,
                 list:'',

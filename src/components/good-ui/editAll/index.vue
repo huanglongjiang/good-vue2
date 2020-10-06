@@ -42,11 +42,11 @@
             }
             this.$axios.post(global.APIPATH,data).then(res => {
                 const options={
-                    type:"success",
+                    type:'success',
                     message:res.data.result,
                 }
-                this.$hlj.message(options)
-                console.log(this.selected)
+                this.$message(options);
+
                 this.$emit('update:random',Math.round(Math.random()*10000));           
             });
             

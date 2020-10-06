@@ -37,7 +37,7 @@ Vue.filter('moment', function (value, formatString) {
 
     if(value!=false){
       formatString = formatString || 'YYYY-MM-DD HH:mm:ss';
-      return moment(value).format(formatString)
+      return moment(parseInt(value)).format(formatString)
     }
 
      
@@ -50,7 +50,7 @@ config => {
 
     // Vue.prototype.$hlj.loading();
     num++
-    //Good.constant2(config)
+    Good.constant2(config)
     if (localStorage.getItem("token")) {  // 判断是否存在X-Authorization，如果存在的话，则每个http header都加上token
         config.headers["token"] ="token"+localStorage.getItem("token");
     };
@@ -72,7 +72,7 @@ axios.interceptors.response.use(
       return
     }
 
-    if(res.data.retType==='success'||res.data.retType==='error'||res.data.retType==='warning') {
+    if(res.data.retType==='success'||res.data.retType==='error'||res.data.retType==='warning'||res.data.retType==='info') {
      let options={
           type:res.data.retType,
           message:res.data.message,
@@ -87,7 +87,7 @@ axios.interceptors.response.use(
    
     // console.log(num)
     if(num===0){
-      //Vue.prototype.$hlj.loading2()
+      Vue.prototype.$hlj.loading2()
     }
 
     return res;

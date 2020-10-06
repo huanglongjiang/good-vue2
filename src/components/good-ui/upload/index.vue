@@ -21,6 +21,7 @@ import { mapState } from 'vuex'
     props:['id','type','data'],
     data() {
       return {
+        filePath:global.filePath,
         imageUrl:'',
         server:global.UPSERVER,
       };
@@ -29,7 +30,7 @@ import { mapState } from 'vuex'
       if(this.data.image=='undefined'||this.data.image=="") {
         this.imageUrl='';
       }else{
-        this.imageUrl=`good/${this.data.file}`;
+        this.imageUrl=`${this.filePath}/${this.data.file}`;
       }
     },
     watch: {
@@ -37,7 +38,7 @@ import { mapState } from 'vuex'
             if(this.data.image=='undefined'||this.data.image=="") {
               this.imageUrl='';
             }else{
-              this.imageUrl=`good/${this.data.file}`;
+              this.imageUrl=`${this.filePath}/${this.data.file}`;
             }
         }
       },

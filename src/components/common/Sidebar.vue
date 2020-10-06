@@ -19,7 +19,7 @@
                 <ul class="position-r overflow-hidden padding-left-15 margin-top-10 margin-bottom-10" >
                   <template v-for="(item2,index2) in item.children">
                     <li class="position-r line-height-36">
-                        <router-link active-class="a-link" :to="item2.url" tag="span" class="margin-left-10 pointer" data-module="log"  @click.native="select(item2,item.children)">{{item2.title}}</router-link>
+                        <router-link active-class="a-link" :to="'/'+item2.url" tag="span" class="margin-left-10 pointer" data-module="log"  @click.native="select(item2,item.children)">{{item2.title}}</router-link>
                           <good-info :data="state.log_total" v-if="item2.title=='登录日志'"></good-info>
                           <good-info :data="state.bbs_total" v-if="item2.title=='留言板'"></good-info>
                         

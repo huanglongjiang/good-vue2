@@ -39,11 +39,8 @@
         </good-box>
         <good-pagination :page.sync="init"></good-pagination>
         <!-- 模态框 --> 
-        <el-dialog
-          title="cnzz"
-          :visible.sync="dialogVisible"
-          width="600px"
-          :before-close="handleClose">
+        <good-dialog :title="userTitle" :visible.sync='dialogVisible'>
+            <div slot="body">
                <div class="table-default">
                   <table class="table-group">
                       <tr>
@@ -56,10 +53,11 @@
                       </tr>
                   </table> 
               </div>
-            <span slot="footer" class="dialog-footer">
+            </div>
+            <div slot="footer">
                 <good-button type="primary" @click="Submit()">确 定</good-button>
-            </span>
-        </el-dialog>
+            </div>
+        </good-dialog>
         <!-- 模态框 -->
     </good-page>
 </template>
@@ -85,6 +83,7 @@
                     currentPage1:1,
                 },
                 form:{
+                    id:'',
                     text:'',
                 },
             }
@@ -119,10 +118,11 @@
                 let data={
                     "google":this.google,
                     "operating":"insert",
-                    "text":this.form.text,
+                    "form":this.form,
                 }
           
                 this.$axios.post(global.APIPATH,data).then(res => {
+                    this.dialogVisible=false;
                     this.dataList();
                     this.form.text="";
                 });

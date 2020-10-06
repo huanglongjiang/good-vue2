@@ -226,8 +226,28 @@
                     }
                 });
             },
-            
             //删除数据
+            remove(item){
+                let options={
+                    type:"info",
+                    visible:true,
+                    msg:"此操作将永久删除该文件, 是否继续?",
+                    data:"操作成功",
+                }
+                this.$hlj.confirm(options).then(res=>{
+                    const data={
+                        "google":this.google,
+                        "operating":"delete",
+                        "id":item.id,
+                    }
+                    this.$axios.post(global.APIPATH,data).then(res => {
+                        if(res.status===200){
+                            this.dataList(); 
+                        }                        
+                    });
+                })
+            },
+            /*//删除数据
             remove(item){
 
                 this.$confirm('此操作将永久删除该文件, 是否继续?', '提示', {
@@ -248,7 +268,7 @@
                     })
 
 
-            },
+            },*/
      
         },
     }

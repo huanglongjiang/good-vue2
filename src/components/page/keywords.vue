@@ -133,13 +133,10 @@
                     "form":this.form
                 }
                 this.$axios.post(global.APIPATH,data).then(res => {  
-                 
-                    const options={
-                        type:"success",
-                        message:res.data.result,
+                    if(res.data.retType=='success'){
+                        this.dialogVisible=false,
+                        this.dataList();
                     }
-                    this.$hlj.message(options)
-                    this.dataList();
                 });
             },
         },

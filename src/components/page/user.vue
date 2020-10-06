@@ -7,7 +7,7 @@
         </good-box>
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.name"></good-search>
-            <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall>
+            <!-- <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall> -->
             <good-button class='float-right' icon="el-icon-edit" type="primary" @click="openUser">新增用户</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
@@ -17,9 +17,9 @@
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th style="width:100px;">
+                           <!--  <th style="width:100px;">
                                 <good-checkbox v-model="selectAll">全选择</good-checkbox>
-                            </th>
+                            </th> -->
                             <th>用户头像</th>
                             <th>用户名</th>
                             <th>用户邮箱</th>
@@ -32,16 +32,16 @@
                     <tbody>
                         <template v-for="(item,index) in list">
                             <tr :class="{'background-disabled':item.status==0}">
-                                <td>
+                                <!-- <td>
                                     <good-checkbox v-model="selected" :label="item.id">
                                         <template v-if="selected.includes(item.id)">已选择</template>
                                         <template v-else>选择</template>
                                     </good-checkbox>
-                                </td>
+                                </td> -->
                                 <td>
                                     <div class="line-height-30 padding-3">
-                                        <template v-if="item.image!=''">
-                                        <img :src="state.Imgpath+'user/'+item.image" alt="" class="width-30 height-30 radius-20 block">
+                                        <template v-if="item.file!=''">
+                                        <img :src="filePath+'/'+item.file" alt="" class="width-30 height-30 radius-20 block">
                                     </template>
                                     <template v-else>
                                         <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 radius-20 block">
@@ -81,7 +81,7 @@
         <good-pagination :page.sync="init" v-if="list"></good-pagination>
         <!-- 模态框 -->
         
-          <good-dialog title="新增用户" :visible.sync='dialogVisible'>
+          <good-dialog :title="userTitle" :visible.sync='dialogVisible'>
             <div slot="body">
             <div class="table-default">
                 <table class="table-group line-height-30 width-max">
@@ -99,11 +99,11 @@
                     <template v-else>
                         <tr>
                             <tds-label star>用户名：</tds-label>
-                            <td><el-input v-model="form.name" placeholder="请输入内容"></el-input></td>
+                            <td><el-input v-model="form.name" disabled placeholder="请输入内容"></el-input></td>
                         </tr>
                         <tr>
                             <tds-label star>用户邮箱：</tds-label>
-                            <td><el-input v-model="form.email" placeholder="请输入内容"></el-input></td>
+                            <td><el-input v-model="form.email" disabled placeholder="请输入内容"></el-input></td>
                         </tr>
                     </template>
                     <tr>
@@ -111,7 +111,7 @@
                         <td>
                             <el-radio v-model="form.role" label="0">普通用户</el-radio>
                             <el-radio v-model="form.role" label="1">管理员</el-radio>
-                            <el-radio v-model="form.role" label="2">超级管理员</el-radio>
+                            <el-radio v-model="form.role" label="2" disabled>超级管理员</el-radio>
                         </td>
                     </tr>
                     <tr>
@@ -139,6 +139,7 @@
     export default {
         data: function(){
             return {
+                filePath:global.filePath,
                 dialogTableVisible:false,
                 dialogVisible:false,
                 statusVal2:true,
@@ -239,6 +240,15 @@
                 };
             },
             Submit(operating){
+                const reg = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if(!reg.test(this.form.email)){
+                    let options={
+                          type:'warning',
+                          message:'请输入正确邮箱',
+                      }
+                    this.$message(options);
+                    return
+                }
 
                 const data={
                     "google":this.google,

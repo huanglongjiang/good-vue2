@@ -8,7 +8,7 @@
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.name"></good-search>
             <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall>
-            <router-link to="article_action?type=1" tag="a">
+            <router-link to="/article/action?type=1" tag="a">
                 <good-button class='float-right' icon="el-icon-edit" type="primary">新增文章</good-button>
             </router-link>
 
@@ -49,7 +49,7 @@
                                
                                 
                                 <div class="line-height-30 padding-3">
-                                        <img class="width-auto height-60 block" :src="'good/'+item.file" v-if="item.file!=''">
+                                        <img class="width-auto height-60 block" :src="filePath+'/'+item.file" v-if="item.file!=''">
                                         <img class="width-auto height-60 block" src="static/images/tianmao.jpg" alt="" v-else>
                                     </div>
                                 </td>
@@ -66,7 +66,7 @@
                                 
                                 <td>
                                     <div class="width-max break">
-                                        <router-link tag="span" class=" a-link textline pointer" :to="{path:'/article_action',query: {type:2,templateId: item.id}}">{{item.title}}</router-link>
+                                        <router-link tag="span" class=" a-link textline pointer" :to="{path:'/article/action',query: {type:2,templateId: item.id}}">{{item.title}}</router-link>
                                     </div>
                                 </td>
                                 <td>{{item.insertTime}}</td>
@@ -75,7 +75,7 @@
                                 </td>
                                 <td>
                                     <template>
-                                        <router-link tag="a" class="a-link pointer none-line" :to="{path:'/article_action',query: {type:2,templateId: item.id}}">
+                                        <router-link tag="a" class="a-link pointer none-line" :to="{path:'/article/action',query: {type:2,templateId: item.id}}">
                                         <good-button2 @click="select(item)">改</good-button2>
                                         </router-link>
                                         <good-button2 @click="remove(item)">弃</good-button2>
@@ -97,6 +97,7 @@
     export default {
         data: function(){
             return {
+                filePath:global.filePath,
                 randomVal:'',
                 listTitle:'',
                 titleVal:0, 
