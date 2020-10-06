@@ -1,6 +1,6 @@
 <template>
     <good-page>
-        <good-breadcrumb :list="constant.breadcrumb.root" />
+        <good-breadcrumb :list="constant.breadcrumb.tag" />
         <good-menu>
             <good-button class='float-right' icon="el-icon-edit" type="primary"  @click="openColumn(2,'新增标签')">新增标签</good-button>
             <good-total class="float-right" :total='init.total'></good-total>

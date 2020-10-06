@@ -52,6 +52,7 @@ const store = new Vuex.Store({
                     {title:'友情链接',select:false,url:'link'},
                     {title:'广告管理',select:false,url:'adsense'},
                     {title:'图片轮播',select:false,url:'slider'},
+                    {title:'新功能开发中',select:false,url:''},
                   ]
                 },
                 {
