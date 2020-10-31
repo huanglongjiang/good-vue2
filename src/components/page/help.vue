@@ -40,13 +40,13 @@
                                 </td>
                                 <td>    
                                     <good-label background="background-one" v-if="item.type==0">咨询客服</good-label>
-                                    <good-label background="background-danger" v-if="item.type==1">技术客服</good-label>
-                                    <good-label background="background-success" v-if="item.type==2">售后客服</good-label>
+                                    <good-label background="background-two" v-if="item.type==1">技术客服</good-label>
+                                    <good-label background="background-three" v-if="item.type==2">售后客服</good-label>
                                 </td>
 
                                 
-                                <td><span class="textline a-link">{{item.name}}</span></td>
-                                <td><span class="textline a-link">{{item.qq}}</span></td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.qq}}</td>
                                 <td>
                                     <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.help_status"></good-switch>
                                     <good-status :val='item' :key="index" v-else></good-status>

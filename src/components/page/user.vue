@@ -55,8 +55,8 @@
                                 <td>{{item.time}}</td>
                                 <td>
                                     <good-label background="background-one" v-if="item.role==0">普通用户</good-label>
-                                    <good-label background="background-danger" v-if="item.role==1">管理员</good-label>
-                                    <good-label background="background-success" v-if="item.role==2">超级管理员</good-label>
+                                    <good-label background="background-two" v-if="item.role==1">管理员</good-label>
+                                    <good-label background="background-three" v-if="item.role==2">超级管理员</good-label>
                                 </td>
                                 <td>
                                     <good-switch :val.sync='item' :key="index" v-if="constant.authority==2"></good-switch>

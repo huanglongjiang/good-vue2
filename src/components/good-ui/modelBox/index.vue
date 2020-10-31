@@ -8,7 +8,7 @@
   </template>
   
   <transition name="bouncea">
-    <div id="model1" class="popover-modal popover-animate layout" style="right:0px;" v-if="visible">
+    <div id="model1" class="popover-modal popover-animate" style="right:0px;" v-if="visible">
         <div class="popover-modal-header">
           <div class="title">{{title}}</div>
           <div class="close" @click="close"></div>

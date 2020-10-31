@@ -3,15 +3,15 @@
 
 <div class="panel-backdrop2" style="background:rgba(0,0,0,0.2);z-index:110" v-if="showBool" @click="close"></div>
 <div class="div" :class="{'animation10':showBool,'animation20':showBool2}">
-<div class="font-size-24 color-white align-center line-height-48 position-a top-250" style="background-color: #4fb845; width:48px; height:48px; display:block; left:-48px;border;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
+<div class="font-size-24 color-white align-center line-height-48 position-a top-250 background-primary" style=" width:48px; height:48px; display:block; left:-48px;border;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
   <span class="block width-max height-max line-height-48 el-icon-close pointer" style="line-height:48px;" v-if="showBool" @click="close"></span>
   <span class="block width-max height-max line-height-48 el-icon-setting pointer" style="line-height:48px;" v-else @click="open"></span>
 </div>
 <div>
-<span class="align-center bold height-36 line-height-36 margin-bottom-10 block color-999 background-eee border-bottom-1 border-ddd">角色类型选择</span>
+<span class="align-center bold height-36 line-height-36 margin-bottom-10 block color-white background-primary">角色类型选择</span>
   <ul class="align-left padding-20">
     <template v-for="(item,index) in data.roleList">
-    <li class="block padding-5 font-size-14 pointer" :class="{'background-primary color-white':data.roleId===item.id}" @click="Submit(item,data)">{{item.id}}、{{item.title}}
+    <li class="block padding-5 font-size-14 pointer" :class="{'background-primary color-white':data.roleId===item.id}" @click="Submit(item,data)">{{index+1}}、{{item.title}}
     </li>
     </template>
   </ul>

@@ -66,7 +66,8 @@
                                 
                                 <td>
                                     <div class="width-max break">
-                                        <router-link tag="span" class=" a-link textline pointer" :to="{path:'/article/action',query: {type:2,templateId: item.id}}">{{item.title}}</router-link>
+                                        <router-link tag="span" class=" a-link textline pointer" :to="{path:'/article/action',query: {type:2,templateId: item.id}}"  v-if="state.permission.article_edit">{{item.title}}</router-link>
+                                        <span v-else>{{item.title}}</span>
                                     </div>
                                 </td>
                                 <td>{{item.insertTime}}</td>

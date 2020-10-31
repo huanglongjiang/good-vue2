@@ -197,11 +197,6 @@
                 console.log(res)
              
           },
-          defaultProps: {
-              children: 'children',
-              label: 'label'
-            },
-         
             dataList2(){
                 const data={
                     "google":"t-20012",

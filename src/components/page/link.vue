@@ -42,16 +42,16 @@
                                         <template v-else>选择</template>
                                     </good-checkbox>
                                 </td>
-                                <td><span class="textline a-link">{{item.name}}</span></td>
-                                <td><span class="textline a-link">{{item.link}}</span></td>
+                                <td>{{item.name}}</td>
+                                <td>{{item.link}}</td>
                                 <td>{{item.starttime,'YYYY-MM-DD' | moment}}</td>
                                 <td>{{item.endtime,'YYYY-MM-DD' | moment}}</td>
                                 <td>
                                     <good-label background="background-one" v-if="item.type==0">友情链接</good-label>
-                                    <good-label background="background-danger" v-if="item.type==1">友情链接2</good-label>
-                                    <good-label background="background-success" v-if="item.type==2">全站链接</good-label>
-                                    <good-label background="background-danger" v-if="item.type==3">友情链接2</good-label>
-                                    <good-label background="background-success" v-if="item.type==4">全站链接</good-label>
+                                    <good-label background="background-two" v-if="item.type==1">友情链接2</good-label>
+                                    <good-label background="background-three" v-if="item.type==2">全站链接</good-label>
+                                    <good-label background="background-four" v-if="item.type==3">友情链接2</good-label>
+                                    <good-label background="background-five" v-if="item.type==4">全站链接</good-label>
                                 </td>
                                 <td>
                                     <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.link_status"></good-switch>
@@ -93,7 +93,7 @@
                                 <td>
                                     <el-radio v-model="form.type" label="0">首页链接</el-radio>
                                     <el-radio v-model="form.type" label="1">全站链接</el-radio>
-                                    <el-radio v-model="form.type" label="0">服务结束</el-radio>
+                                    <el-radio v-model="form.type" label="2">服务结束</el-radio>
                                 </td>
                             </tr>
                             <tr>

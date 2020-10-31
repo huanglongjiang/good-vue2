@@ -9,13 +9,14 @@
             </div>
             <!-- <a :href="domain" class="color-666 none-line float-left" target="_blank"> -->
             <a class="color-666 none-line float-left" target="_blank">
-              <template v-if="form.file!=''">
-                  <img :src="filePath+'/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.file!=''">
+
+              <template v-if="form.file!=''&&form.file!=undefined">
+                  <img :src="filePath+'/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
               </template>
               <template v-else>
                   <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
               </template>
-              <span class="line-height-60 margin-left-20" >
+              <span class="line-height-60 margin-left-20  margin-right-10 color-999" >
                 {{form.name}}
               </span>
               
@@ -26,7 +27,7 @@
             <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==1">(用户类型：管理员</span>
             <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==2">(用户类型：超级管理员</span>
 
-            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">======用户角色：{{form.roleName}})</span>
+            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">、用户角色：{{form.roleName}})</span>
             <!-- <template v-if="state.authority!=2">
             <marquee class="float-left position-r top-20 margin-left-20" style="width:450px;">{{state.marquee}}</marquee>
             </template> -->
@@ -90,7 +91,7 @@
                   </tr>
                   
                   <tr>
-                      <tds-label>用户角色：</tds-label>
+                      <tds-label>用户类型：</tds-label>
 
                       <td><div type="text" class="input-default line-height-34 width-max" readonly="readonly">
                         <template v-if="form.role==0">普通用户</template>
@@ -100,13 +101,15 @@
                       </td>
                   </tr>
                   <tr>
+                      <tds-label>用户角色：</tds-label>
+                      <td><good-input v-model="form.roleName" :disabled="true"></good-input></td>
+                  </tr>
+                  <tr>
                       <tds-label>用户名称：</tds-label>
                       <td><good-input v-model="form.name"></good-input></td>
                   </tr>
                   <tr>
-                      <tds-label class=" position-r">
-                          <div class="position-a top-0 right-0">用户头像：</div>
-                      </tds-label>
+                      <tds-label class=" position-r">用户头像：</tds-label>
                       <td>
                         <good-upload id="u1" type="user" :data.sync='form'></good-upload>
                       </td>

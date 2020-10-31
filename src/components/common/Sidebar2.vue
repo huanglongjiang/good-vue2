@@ -3,8 +3,8 @@
     <template v-for="(item,index) in data">
 
       <template v-if="item.children&&item.children.length==0">
-      <li class="position-r line-height-36 padding-left-30 menu">
-          <router-link active-class="a-link" :to="'/'+item.url" tag="span" class="margin-left-10 padding-left-30 pointer" data-module="log">
+      <li class="font-size-14 position-r line-height-36 padding-left-30 menu">
+          <router-link active-class="color-primary" :to="'/'+item.url" tag="span" class="margin-left-10 padding-left-30 pointer" data-module="log">
           <!-- <i class="padding-right-13 color-999 fa " :class="item.icon"></i> -->
           {{item.name}}
           </router-link>

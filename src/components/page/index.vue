@@ -29,7 +29,7 @@
                 <span>12日内访问量</span>
             </div>
             <div class="clear"></div>
-            <div class="width-400 height-180 background-red margin-right-20 margin-bottom-20 float-left radius-5 padding-20" style="background: rgb(32, 160, 255); width: 28%; min-width: 360px;"><div>当前用户访问次数<span class=" block font-size-24 padding-top-10">10</span></div><div class="margin-top-20">上一次访问时间是<span class=" block font-size-24 padding-top-10">2020-08-21 13:14:45</span></div></div>
+            <div class="width-400 height-180 background-red margin-right-20 margin-bottom-20 float-left radius-5 padding-20" style="background: rgb(32, 160, 255); width: 28%; min-width: 360px;"><div>当前用户访问次数<span class=" block font-size-24 padding-top-10">{{data.login_total}}</span></div><div class="margin-top-20">上一次访问时间是<span class=" block font-size-24 padding-top-10">{{data.last_time}}</span></div></div>
 
             <div class="width-400 height-180 background-red margin-right-20 margin-bottom-20 float-left radius-5 padding-20" style="background:#f7ba2a; width: 28%; min-width: 360px;"><span>用户</span><span class="block font-size-36 margin-top-30 align-center">{{data.user_total}}</span></div>
 

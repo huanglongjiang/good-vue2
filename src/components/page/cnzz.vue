@@ -21,7 +21,7 @@
                     </thead>
                     <tbody>
                         <template v-for="(item,index) in list">
-                        <tr :class="{'background-eee':item.status==0}">
+                        <tr :class="{'background-disabled':item.status==0}">
                             <td v-if="state.permission.cnzz_status_all">
                                 <good-checkbox v-model="selected" :label="item.id">
                                     <template v-if="selected.includes(item.id)">已选择</template>

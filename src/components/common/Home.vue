@@ -2,12 +2,10 @@
     <div class="wrapper" style="min-width:1200px;">
         <v-head></v-head>
         <v-sidebar></v-sidebar>
-        <div class="content padding-bottom-40" style=" padding-left: 220px;padding-right:20px; min-height:680px">
+        <div class="content padding-bottom-40" style=" padding-left: 220px;padding-right:20px; min-height:560px">
             <transition name="move" mode="out-in"><router-view></router-view></transition>
         </div>
         <v-footer></v-footer>
-
-
     </div>
 </template>
 
@@ -100,8 +98,5 @@ body{background: #f6f8f9}
   .button-primary{background: #0084FF;}
   .fa-check-square,.fa-square-o{width: 14px; height: 14px;}
   .webuploader-pick{background: #0084FF!important;} */
-  .tag-group .tag-primary,.tag-group .tag-block:hover{background: #4fb845!important; border-radius: 3px;}
   .el-tag{height: 24px; line-height: 22px;}
-  .button-primary{box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);}
-  .button-primary:hover{box-shadow: inset 0 1px 0 0 rgba(255,255,255,0.4);}
 </style>

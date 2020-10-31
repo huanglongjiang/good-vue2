@@ -260,4 +260,9 @@
 <style scoped>
    .tag-group .tag-block{display: inline-table;}
    .tag-group .tag-block:hover{color: #333;}
+   .el-tag.el-tag--info{
+    background-color: #e4e8f1;
+    border-color: #e4e8f1;
+    color: #48576a;
+   }
 </style>

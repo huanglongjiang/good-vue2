@@ -44,8 +44,8 @@
                                         <template v-else="selected.includes(item.id)">选择</template>
                                     </good-checkbox>
                                 </td>
-                                <td><span class="textline a-link">{{item.email}}</span></td>
-                                <td><span class="textline a-link">{{item.name}}</span></td>
+                                <td>{{item.email}}</td>
+                                <td>{{item.name}}</td>
                                 <td>{{item.position}}</td>
                                 <td>{{item.price}}</td>
                                 <td>{{item.size}}</td>
@@ -196,7 +196,7 @@
                     email:'',
                     image:'',
                     type:0,
-                    status:0,
+                    status:'1',
                     starttime:'',
                     endtime:'',
                     price:'',
@@ -276,7 +276,7 @@
                     label:'',
                     email:'',
                     image:'',
-                    status:1,
+                    status:'1',
                     starttime:'',
                     endtime:'',
                     price:'',

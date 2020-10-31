@@ -1,10 +1,6 @@
 function hasPermission(route, role) {
   let {keys, values, entries} = Object;
-  console.log(route.meta)
   if (route.meta && route.meta.roles) {
-    console.log(route.name)
-
-    console.log(JSON.parse(role)[route.name])
     //console.log(route.meta.roles
       if(JSON.parse(role)[route.name]){
         return true
@@ -28,6 +24,5 @@ export const generateRoutes = function(asyncRoutes, role){
       res.push(mid)
     }
   })
-  console.log(res)
   return res
 }

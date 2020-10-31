@@ -3,7 +3,7 @@
         <good-breadcrumb :list="constant.breadcrumb.keywords" />
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="filterText"></good-search>
-            <good-button class='float-right' type="primary" v-if="state.permission.keywords_add" @click="openColumn('新增关键词')">新增栏目</good-button>
+            <good-button class='float-right' type="primary" v-if="state.permission.keywords_add" @click="openColumn('新增关键词')">新增关键词</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         
@@ -31,7 +31,7 @@
                 <table class="table-group">
                     <tr>
                         <tds-label star>名称：</tds-label>
-                        <td><good-input v-model="form.name"></good-input></td>
+                        <td><el-input v-model="form.name"></el-input></td>
                     </tr>
              
                 </table> 
@@ -153,4 +153,9 @@
 <style scoped>
    .tag-group .tag-block{display: inline-table;}
    .tag-group .tag-block:hover{color: #333;}
+   .el-tag.el-tag--info{
+    background-color: #e4e8f1;
+    border-color: #e4e8f1;
+    color: #48576a;
+   }
 </style>

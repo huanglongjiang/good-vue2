@@ -48,9 +48,9 @@
                                 <td><span>{{item.title}}</span></td>
                                 <td>
                                     <good-label background="background-one" v-if="item.type==0">通用轮播图</good-label>
-                                    <good-label background="background-danger" v-if="item.type==1">首页轮播图</good-label>
-                                    <good-label background="background-success" v-if="item.type==2">栏目页轮播图</good-label>
-                                    <good-label background="background-one" v-if="item.type==3">内容页轮播图</good-label>
+                                    <good-label background="background-two" v-if="item.type==1">首页轮播图</good-label>
+                                    <good-label background="background-three" v-if="item.type==2">栏目页轮播图</good-label>
+                                    <good-label background="background-four" v-if="item.type==3">内容页轮播图</good-label>
                                 </td>
                                 <td>
                                     <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.slider_status"></good-switch>
