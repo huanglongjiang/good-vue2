@@ -2,7 +2,7 @@
     <good-page>
         <good-breadcrumb :list="constant.breadcrumb.tag" />
         <good-menu>
-            <good-button class='float-right' icon="el-icon-edit" type="primary"  @click="openColumn(2,'新增标签')">新增标签</good-button>
+            <good-button class='float-right' icon="el-icon-edit" type="primary" v-if="state.permission.tag_edit"  @click="openColumn(2,'新增标签')">新增标签</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         <good-box :data="viewList">
@@ -16,9 +16,10 @@
                     </thead>
                     <tbody>
                     <template v-for="(item,index) in viewList">
-                        <tr v-if="item.type==2">
+                        <tr v-if="item.type==2" style="height:45px;">
                             <td>
-                                <span class="pointer keys" @click="select(item,'编辑标签')">{{index+1}}、{{item.name}}</span>
+                                <span class="pointer keys" @click="select(item,'编辑标签')" v-if="state.permission.tag_edit">{{index+1}}、{{item.name}}</span>
+                                <span v-else>{{index+1}}、{{item.name}}</span>
                             </td>
                             <td>
                                 <div class="layout keys">
@@ -33,7 +34,7 @@
 
                                     </template>
                                 </template>
-                               <el-button class="button-new-tag" size="small"  @click="openColumn2(item)">+ 新增</el-button>
+                               <el-button class="button-new-tag" size="small" v-if="state.permission.tag_edit"  @click="openColumn2(item)">+ 新增</el-button>
                                 </div>
 
 
@@ -86,6 +87,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
@@ -120,6 +122,7 @@
             }
         },
         computed: {
+            ...mapState(['state']),
             // 搜索功能
             viewList(){
                 const arr=[];

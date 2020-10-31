@@ -8,7 +8,7 @@
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.name"></good-search>
             <!-- <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall> -->
-            <good-button class='float-right' icon="el-icon-edit" type="primary" @click="openUser">新增用户</good-button>
+            <good-button class='float-right' icon="el-icon-edit" type="primary" v-if="state.permission.user_add" @click="openUser">新增用户</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         
@@ -26,7 +26,7 @@
                             <th>注册时间</th>
                             <th>类型</th>
                             <th>状态</th>
-                            <th v-if="constant.authority==2">操作</th>
+                            <!-- <th v-if="state.permission.user_edit || state.permission.user_delete">操作</th> -->
                         </tr>
                     </thead>
                     <tbody>
@@ -64,10 +64,10 @@
                                 </td>
 
                                 <template>
-                                     <td>
-                                        <good-button2 @click="select(item)">改</good-button2>
-                                        <good-button2 @click="remove(item)">弃</good-button2>
-                                    </td>
+                                     <!-- <td>
+                                        <good-button2 v-if="state.permission.user_edit" @click="select(item)">改</good-button2>
+                                        <good-button2 v-if="state.permission.user_delete" @click="remove(item)">弃</good-button2>
+                                    </td> -->
                                 </template>
                             </tr>
                         </template>

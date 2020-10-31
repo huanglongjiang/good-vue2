@@ -30,7 +30,7 @@ import goodTime from './good-ui/time/'
 import goodUpload from './good-ui/upload/'
 import goodPaper from './good-ui/paper/'
 import goodKey from './good-ui/key/'
-
+import goodConfig from './good-ui/config/'
 
 const components = {
 	constant2,
@@ -64,6 +64,7 @@ const components = {
 	goodUpload,
 	goodPaper,
 	goodKey,
+	goodConfig,
 };
 
 Vue.prototype.constant2 = constant2;
@@ -98,6 +99,7 @@ Vue.use(components.goodTime)
 Vue.use(components.goodUpload)
 Vue.use(components.goodPaper)
 Vue.use(components.goodKey)
+Vue.use(components.goodConfig)
 
 
 export default components;

@@ -1,64 +1,37 @@
 <template>
     <good-page>
-
-        <good-breadcrumb :list="constant.breadcrumb.slider" />
-        {{state.permission.add}}
-        <good-box data="true">
-        <good-tag tagName="服务类型" :list="constant.filter.slider.type" :selected.sync='init.type' />
-        <good-tag tagName="服务状态" :list="constant.filter.slider.status" :selected.sync='init.status' />
-        </good-box>
+        <good-breadcrumb :list="constant.breadcrumb.role" />
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.title"></good-search>
-            <good-statusall :google="google" :selected="selected" :random.sync='random' v-if="state.permission.slider_status_all"></good-statusall>
-            <good-button class='float-right' icon="el-icon-edit" type="primary" v-if="state.permission.slider_add" @click="openSlider">新增轮播图</good-button>
+            <good-button class='float-right' icon="el-icon-edit" type="primary" @click="openSlider">新增角色</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
-        
         <good-box :data="list">
             <div class="table-data">
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th class="width-100" v-if="state.permission.slider_status_all">
-                                <good-checkbox v-model="selectAll">全选择</good-checkbox>
-                            </th>
-                            <th class="width-100;">图片</th>
-                            <th style="min-width:50px;width:300px;">标题</th>
-                            <th class="width-150;">类型</th>
-                            <th class="width-100;">状态</th>
-                            <th v-if="state.permission.slider_edit || state.permission.slider_delete">操作</th>
+                            <th>角色名称</th>
+                            <th >描述</th>
+                            <th>编辑状态</th>
+                            <th>操作</th>
                         </tr>
                     </thead>
                     <tbody>
                         <template v-for="(item,index) in list">
-                            <tr class="width-80" :class="{'background-disabled':item.status==0}">
-                                <td v-if="state.permission.slider_status_all">
-                                    <good-checkbox v-model="selected" :label="item.id">
-                                        <template v-if="selected.includes(item.id)">已选择</template>
-                                        <template v-else="selected.includes(item.id)">选择</template>
-                                    </good-checkbox>
-                                </td>
-                                <td>
-                                    <div class="line-height-30 padding-3">
-                                        <img class="width-auto height-60 block" :src="filePath+'/'+item.file" v-if="item.file!=''">
-                                        <img class="width-auto height-60 block" src="static/images/tianmao.jpg" alt="" v-else>
-                                    </div>
-                                    
-                                </td>
+                            <tr :class="{'background-disabled':item.status==0}">
                                 <td><span>{{item.title}}</span></td>
+                                <td>{{item.text}}</td>
                                 <td>
-                                    <good-label background="background-one" v-if="item.type==0">通用轮播图</good-label>
-                                    <good-label background="background-danger" v-if="item.type==1">首页轮播图</good-label>
-                                    <good-label background="background-success" v-if="item.type==2">栏目页轮播图</good-label>
-                                    <good-label background="background-one" v-if="item.type==3">内容页轮播图</good-label>
+                                    <good-status :val='item' :key="index"></good-status>
                                 </td>
                                 <td>
-                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.slider_status"></good-switch>
-                                    <good-status :val='item' :key="index" v-else></good-status>
-                                </td>
-                                <td>
-                                    <good-button2 v-if="state.permission.slider_edit" @click="select(item)">改</good-button2>
-                                    <good-button2 v-if="state.permission.slider_delete" @click="remove(item)">弃</good-button2>
+                                    <!-- <span class="margin-right-10 color-ccc" v-if="item.status==0">权限配置</span> -->
+                                    <span class="a-link margin-right-10 pointer" v-if="item.status==0" @click="select2(item)">权限查看</span>
+                                    <span class="a-link margin-right-10 pointer" v-else @click="select2(item)">权限配置</span>
+                                    <good-button2 v-if="item.status==1" @click="select(item)">改</good-button2>
+
+                                    <!-- <good-button2 v-if="item.status==1" @click="remove(item)">弃</good-button2> -->
                                 </td>
                             </tr>
                         </template>    
@@ -68,43 +41,28 @@
         </good-box>
         <good-pagination :page.sync="init"></good-pagination>
         <!-- 模态框 -->
-          <good-dialog :title="sliderTitle" :visible.sync='dialogVisible'>
+          <good-dialog :title="roleTitle" :visible.sync='dialogVisible'>
             <div slot="body">
             <div class="table-default">
                 <table class="table-group line-height-30 width-max">
                     <tr>
-                        <tds-label star>图片标题：</tds-label>
+                        <tds-label star>角色名称：</tds-label>
                         <td><el-input v-model="form.title" placeholder="请输入内容"></el-input></td>
                     </tr>
 
                     <tr>
-                        <tds-label>链接地址：</tds-label>
-                        <td><el-input v-model="form.url" placeholder="请输入内容"></el-input></td>
+                        <tds-label>描述：</tds-label>
+                        <td><el-input v-model="form.text" placeholder="请输入内容"></el-input></td>
                     </tr>
-                    <tr>
-                       <tds-label>图片类型：</tds-label>
-                       <td>
-                            <el-radio v-model="form.type" label="0">通用轮播图</el-radio>
-                            <el-radio v-model="form.type" label="1">首页轮播图</el-radio>
-                            <el-radio v-model="form.type" label="2">栏目页轮播图</el-radio>
-                            <el-radio v-model="form.type" label="3">内容页轮播图</el-radio>
-                       </td>
-                    </tr>
-                    <tr>
-                       <tds-label>服务状态：</tds-label>
-                       <td>
+                    <!-- <tr>
+                        <tds-label>服务状态：</tds-label>
+                        <td>
                             <el-radio v-model="form.status" label="0">关闭</el-radio>
                             <el-radio v-model="form.status" label="1">开启</el-radio>
-                       </td>
-                    </tr>
-                    <tr>
-                        <tds-label>图片路径：</tds-label>
-                        <td>
-                        <good-upload id="u3" type="slider" :data.sync='form'></good-upload>
                         </td>
-                    </tr>
+                    </tr> -->
                 </table> 
-            </div>
+            </div> 
             </div>
             <div slot="footer">
                 <good-button type="default" @click="dialogVisible = false">取 消</good-button>
@@ -113,6 +71,35 @@
             </div>
         </good-dialog>
 
+        <good-dialog :title="roleTitle2" :visible.sync='dialogVisible2'>
+            <div slot="body">
+            <div class="table-data">
+            <el-tree
+              :data="listTitle"
+              show-checkbox
+              node-key="id"
+              ref="tree"
+              default-expand-all
+              :default-checked-keys='authorityId'
+              @check-change="handleCheckChange">
+
+              <span class="custom-tree-node" slot-scope="{ node, data }">
+                <span class="color-999">{{ node.label }}</span>
+                <span class="padding-left-30 color-ccc" v-if="data.type==0">目录</span>
+                <span class="padding-left-30 color-ccc" v-if="data.type==1">路由菜单</span>
+                <span class="padding-left-30 color-ccc" v-if="data.type==2">按钮</span>
+              </span>
+            </el-tree>
+            </div>  
+            </div>
+            <div slot="footer" v-if="viewStatus==1">
+                <good-button type="default" @click="dialogVisible = false">取 消</good-button>
+                <good-button type="primary" @click="Submit('insert')" v-if="btnSubmit==0">确 定</good-button>
+                <good-button type="primary" @click="Submit('update')" v-else>确 定</good-button>
+            </div>
+        </good-dialog>
+
+    
         <!-- 模态框 -->
         
 
@@ -124,15 +111,19 @@
     export default {
         data: function(){
             return {
+                viewStatus:0,
+                listTitle:[],
                 filePath:global.filePath,
                 dialogVisible:false,
+                dialogVisible2:false,
                 statusVal2:true,
                 list:'',
                 selected: [],
                 random:'',
-                google:"t-10007",
+                google:"t-20013",
                 btnSubmit:0,
-                sliderTitle:'新增轮播图',
+                roleTitle:'新增角色',
+                roleTitle2:'',
                 init:{
                     title:'',
                     type:'',
@@ -142,14 +133,14 @@
                     total:0,
                     currentPage1:1,
                 },
+                authorityId:[],
+                authorityId2:[],
                 form:{
                     id:0,
-                    type:0,
                     title:'',
-                    image:'',
-                    file:'',
-                    url:'',
-                    status:0,
+                    authorityId:'',
+                    text:'',
+                    status:'1',
                 },
                 params:{
                     type:'',
@@ -183,8 +174,46 @@
         },
         created: function() {
             this.dataList();
+            this.dataList2();
         },
         methods: {
+            handleCheckChange(data, checked, indeterminate) {
+            console.log(data, checked, indeterminate);
+               /* if(this.authorityId.includes(data.id)){
+                    this.authorityId.map((item2,i)=>{
+                        if(data.id==item2){
+                            this.authorityId.splice(i,1);
+                        }
+                    })
+                }else{
+                    this.authorityId.push(data.id)
+                }*/
+          
+                //this.authorityId=[];
+                //let res = this.$refs.tree.getCheckedKeys().concat(this.$refs.tree.getHalfCheckedKeys())
+                //this.authorityId2=res
+                let res = this.$refs.tree.getCheckedKeys()
+                this.authorityId=[...res]
+                console.log(res)
+             
+          },
+          defaultProps: {
+              children: 'children',
+              label: 'label'
+            },
+         
+            dataList2(){
+                const data={
+                    "google":"t-20012",
+                    "operating":"lists",
+                }
+                this.$axios.post(global.APIPATH,data).then(res => {
+                    this.listTitle=res.data.data;
+            
+                });
+            },
+
+
             dataList(){
                 const data={
                     "google":this.google,
@@ -204,23 +233,38 @@
             openSlider(){
                 this.dialogVisible=true;
                 this.btnSubmit=0;
-                this.sliderTitle="新增轮播图";
+                this.roleTitle="新增角色";
+                this.authorityId=[];
                 this.form={
-                        id:0,
-                        type:'0',
-                        title:'',
-                        image:'',
-                        url:'',
-                        status:'1',
+                    id:0,
+                    title:'',
+                    authorityId:'',
+                    text:'',
+                    status:'1',
                 };
             },
             select(item){
+                this.authorityId=[];
                 this.dialogVisible=true;
                 this.btnSubmit=1;
-                this.sliderTitle="编辑轮播图";
+                this.roleTitle="编辑角色";
+                this.form={...item}
+            },
+
+            select2(item){
+                console.log(item)
+                this.dialogVisible2=true;
+                this.viewStatus=item.status;
+                this.btnSubmit=1;
+                this.roleTitle2=item.title;
+                this.authorityId=[];
+                if(item.authorityId!=''){
+                   this.authorityId=item.authorityId.split(',');
+                }
                 this.form={...item}
             },
             Submit(operating){
+                this.form.authorityId=this.authorityId.join(',');
                 const data={
                     "google":this.google,
                     "operating":operating,

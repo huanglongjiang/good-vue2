@@ -1,10 +1,9 @@
-import Vue from 'vue';
+ import Vue from 'vue';
 import Router from 'vue-router';
-
+import { generateRoutes } from './permission'
 Vue.use(Router);
 
-export default new Router({
-    routes: [
+    let routes= [
         {
             path: '*', // 页面不存在的情况下会跳到404页面
             redirect: '/index',
@@ -13,7 +12,11 @@ export default new Router({
         },
         {
             path: '/',
-            redirect: '/login'
+            redirect: '/index'
+        },
+        {
+            path: '/login',
+            component: resolve => require(['../components/page/login.vue'], resolve)
         },
         {
             path: '/readme',
@@ -25,120 +28,198 @@ export default new Router({
                 },
                 {
                     path: '/index',
-                    component: resolve => require(['../components/page/index.vue'], resolve)
+                    component: resolve => require(['../components/page/index.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
+                
+                {
+                    path: '/authority',
+                    component: resolve => require(['../components/page/authority.vue'], resolve),
+                    name: 'authority',
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
+                },
+                {
+                    path: '/role',
+                    name: 'role',
+                    component: resolve => require(['../components/page/role.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
+                },
+                 
+            ]
+        }
+        
+        
+    ]
+
+
+    let routes2= [
+        {
+            path: '/readme',
+            component: resolve => require(['../components/common/Home.vue'], resolve),
+            children:[
                 {
                     path: '/log',
-                    component: resolve => require(['../components/page/log.vue'], resolve)
+                    name: 'log',
+                    component: resolve => require(['../components/page/log.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
-                {
-                    path: '/seo',
-                    component: resolve => require(['../components/page/seo.vue'], resolve)
-                },
+                
                 {
                     path: '/keywords',
-                    component: resolve => require(['../components/page/keywords.vue'], resolve)
-                },
-                {
-                    path: '/report',
-                    component: resolve => require(['../components/page/report.vue'], resolve)
-                },
-                {
-                    path: '/install',
-                    component: resolve => require(['../components/page/install.vue'], resolve)
+                    name: 'keywords',
+                    component: resolve => require(['../components/page/keywords.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/user',
-                    component: resolve => require(['../components/page/user.vue'], resolve)
+                    name: 'user',
+                    component: resolve => require(['../components/page/user.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/adsense',
-                    component: resolve => require(['../components/page/adsense.vue'], resolve)
+                    name: 'adsense',
+                    component: resolve => require(['../components/page/adsense.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/link',
-                    component: resolve => require(['../components/page/link.vue'], resolve)
-                },
-                {
-                    path: '/money',
-                    component: resolve => require(['../components/page/money.vue'], resolve)
+                    name: 'link',
+                    component: resolve => require(['../components/page/link.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/system',
-                    component: resolve => require(['../components/page/system.vue'], resolve)
+                    name: 'system',
+                    component: resolve => require(['../components/page/system.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/copyright',
-                    component: resolve => require(['../components/page/copyright.vue'], resolve)
+                    name: 'copyright',
+                    component: resolve => require(['../components/page/copyright.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/index_seo',
-                    component: resolve => require(['../components/page/index_seo.vue'], resolve)
+                    name: 'index_seo',
+                    component: resolve => require(['../components/page/index_seo.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/slider',
-                    component: resolve => require(['../components/page/slider.vue'], resolve)
+                    name: 'slider',
+                    component: resolve => require(['../components/page/slider.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/article',
-                    component: resolve => require(['../components/page/article.vue'], resolve)
+                    name: 'article',
+                    component: resolve => require(['../components/page/article.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/article/action',
-                    component: resolve => require(['../components/page/article_action.vue'], resolve)
+                    name: 'article_action',
+                    component: resolve => require(['../components/page/article_action.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/root',
-                    component: resolve => require(['../components/page/root.vue'], resolve)
+                    name: 'root',
+                    component: resolve => require(['../components/page/root.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/tag',
-                    component: resolve => require(['../components/page/tag.vue'], resolve)
+                    name: 'tag',
+                    component: resolve => require(['../components/page/tag.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 
                {
-                    path: '/cnzz',
-                    component: resolve => require(['../components/page/cnzz.vue'], resolve)
-                },
-                {
-                    path: '/user',
-                    component: resolve => require(['../components/page/user.vue'], resolve)
-                },
-                {
                     path: '/help',
-                    component: resolve => require(['../components/page/help.vue'], resolve)
+                    name: 'help',
+                    component: resolve => require(['../components/page/help.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
-                    path: '/file',
-                    component: resolve => require(['../components/page/file.vue'], resolve)
-                },
-                {
-                    path: '/job',
-                    component: resolve => require(['../components/page/job.vue'], resolve)
+                    path: '/cnzz',
+                    name: 'cnzz',
+                    component: resolve => require(['../components/page/cnzz.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/bbs',
-                    component: resolve => require(['../components/page/bbs.vue'], resolve)
-                },
-                {
-                    path: '/music',
-                    component: resolve => require(['../components/page/music.vue'], resolve)
-                },
-                {
-                    path: '/html',
-                    component: resolve => require(['../components/page/html.vue'], resolve)
+                    name: 'bbs',
+                    component: resolve => require(['../components/page/bbs.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
                 {
                     path: '/authority',
-                    component: resolve => require(['../components/page/authority.vue'], resolve)
+                    component: resolve => require(['../components/page/authority.vue'], resolve),
+                    name: 'authority',
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
                 },
-          
+                {
+                    path: '/role',
+                    name: 'role',
+                    component: resolve => require(['../components/page/role.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
+                },
                
             ]
         },
-        {
-            path: '/login',
-            component: resolve => require(['../components/page/login.vue'], resolve)
-        },
     ]
+    let permission=localStorage.getItem('permission');
+    if(permission!=null){
+        let router=[...routes]
+        let generateAsyncRoutes = generateRoutes(routes2, permission)  // 根据登录角色生成动态路由
+        router = router.concat(generateAsyncRoutes)
+        routes=[...router]
+    }
+export default new Router({
+    routes
 })

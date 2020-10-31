@@ -9,8 +9,8 @@
             <good-time v-model="init.starttime" text="日期"></good-time>
             <good-time v-model="init.endtime" text=" 至" class="margin-left-5"></good-time>
             <good-button class='float-left margin-left-20 margin-right-20' @click="dataList()">查询</good-button>
-            <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall>
-            <good-button class='float-right' icon="el-icon-edit" type="primary" @click="openAdsense">新增广告位</good-button>
+            <good-statusall :google="google" :selected="selected" :random.sync='random' v-if="state.permission.adsense_status_all"></good-statusall>
+            <good-button class='float-right' icon="el-icon-edit" type="primary" v-if="state.permission.adsense_add" @click="openAdsense">新增广告位</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         
@@ -19,7 +19,7 @@
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th>
+                            <th v-if="state.permission.adsense_status_all">
                                 <good-checkbox v-model="selectAll">全选择</good-checkbox>
                             </th>
                             <th>用户邮箱</th>
@@ -31,14 +31,14 @@
                             <th>开始时间</th>
                             <th>结束时间</th>
                             <th>投放状态</th>
-                            <th>操作</th>
+                            <th v-if="state.permission.adsense_edit || state.permission.adsense_delete">操作</th>
                         </tr>
                     </thead>
                     </thead>
                     <tbody>
                         <template v-for="(item,index) in list">
                             <tr :class="{'background-disabled':item.status==0}">
-                                <td>
+                                <td v-if="state.permission.adsense_status_all">
                                     <good-checkbox v-model="selected" :label="item.id">
                                         <template v-if="selected.includes(item.id)">已选择</template>
                                         <template v-else="selected.includes(item.id)">选择</template>
@@ -54,11 +54,12 @@
                                 <td>{{item.endtime,'YYYY-MM-DD' | moment}}</td>
 
                                 <td>
-                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index"></good-switch>
+                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.adsense_status"></good-switch>
+                                    <good-status :val='item' :key="index" v-else></good-status>
                                 </td>
                                 <td>
-                                    <good-button2 @click="select(item)">改</good-button2>
-                                    <good-button2 @click="remove(item)">弃</good-button2>
+                                    <good-button2 v-if="state.permission.adsense_edit" @click="select(item)">改</good-button2>
+                                    <good-button2 v-if="state.permission.adsense_delete" @click="remove(item)">弃</good-button2>
                                 </td>
                             </tr>
                         </template>    

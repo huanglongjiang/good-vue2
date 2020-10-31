@@ -20,13 +20,14 @@
                         <tr>
                             <tds-label class=" position-r">前台LOGO：</tds-label>                    
                             <td>
-                                <good-upload id="u2" type="logo" :data.sync='form'></good-upload>
+                                <good-upload id="u2" type="logo" :data.sync='form' v-if="state.permission.system_upload"></good-upload>
+                                <img class="width-150 height-150 radius-3" :src="filePath+'/'+form.file" v-else>
                             </td>
                         </tr>
                         <tr>
                             <td></td>
                             <td>
-                                <good-button type="primary" @click="Submit()">保存修改</good-button>
+                                <good-button type="primary" v-if="state.permission.system_edit" @click="Submit()">保存修改</good-button>
                             </td>
                         </tr>
 
@@ -38,9 +39,11 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
+                filePath:global.filePath,
                 google:"t-10005",
                 form:{"coding": "t-10004",
                     id:'',
@@ -54,6 +57,9 @@
         },
         created: function() {
             this.submitForm();
+        },
+        computed: {
+            ...mapState(['state']),
         },
         methods: {
             submitForm(){

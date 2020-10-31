@@ -20,7 +20,7 @@
                         <tr>
                             <td></td>
                             <td>
-                                <good-button type="primary" @click="Submit()">保存修改</good-button>
+                                <good-button type="primary" v-if="state.permission.copyright_edit" @click="Submit()">保存修改</good-button>
                             </td>
                         </tr>
                     </tbody>
@@ -31,6 +31,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
@@ -45,6 +46,9 @@
         },
         created: function() {
             this.submitForm();
+        },
+        computed: {
+            ...mapState(['state'])
         },
         methods: {
             submitForm(){

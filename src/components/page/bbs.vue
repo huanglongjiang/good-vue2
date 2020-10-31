@@ -2,7 +2,7 @@
     <good-page>
         <good-breadcrumb :list="constant.breadcrumb.bbs" />
         <good-menu>
-            <good-button type="primary" icon="el-icon-edit" class="float-right margin-left-20" @click="openBbc">留言</good-button>
+            <good-button type="primary" icon="el-icon-edit" class="float-right margin-left-20" v-if="state.permission.bbs_add" @click="openBbc">留言</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         <good-box data="list">

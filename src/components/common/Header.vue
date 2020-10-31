@@ -1,6 +1,7 @@
 <template>
 <div class="header height-60 width-max background-white z-index-100" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px; background: rgb(32, 35, 42);">
     <div class="header height-60 width-max position-r">
+
         <div class="position-a clearfix">
             <div class="float-left width-280 height-60 font-size-24 bold line-height-60 color-999">
               <good-logo class="float-left"></good-logo>
@@ -21,11 +22,11 @@
 
             </a>
             
-            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">
-                <template v-if="constant.authority==2">(超级管理员)</template>
-                <template v-if="constant.authority==1">(管理员)</template>
-                <template v-if="constant.authority==0">(普通用户)</template>
-              </span>
+            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==0">用户类型：普通用户</span>
+            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==1">(用户类型：管理员</span>
+            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==2">(用户类型：超级管理员</span>
+
+            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">======用户角色：{{form.roleName}})</span>
             <!-- <template v-if="state.authority!=2">
             <marquee class="float-left position-r top-20 margin-left-20" style="width:450px;">{{state.marquee}}</marquee>
             </template> -->
@@ -140,7 +141,7 @@
         </div>
        </good-dialog>
         <!-- 模态框 -->
- 
+       <good-config :data.sync="form"></good-config>
 </div>
 </template>
 <script>
@@ -179,6 +180,13 @@
         computed: {
             ...mapState(['state']),
         },
+        watch: {  
+            'form.roleId': function(val,val2){
+              if(val2!=undefined){
+                this.submitForm();
+              }
+            },
+        }, 
         methods:{
             logOut(){
               this.$router.push('login');
@@ -193,6 +201,9 @@
                         "operating":"select",
                     }
                 this.$axios.post(global.APIPATH,data).then(res => { 
+                  localStorage.setItem("lastname", "Smith");
+
+                    localStorage.setItem("permission",JSON.stringify(res.data.data.authority));
                     this.form2.id=res.data.data.id
                     this.form=res.data.data;
                     this.bbs=res.data.bbs;
@@ -203,6 +214,12 @@
                     this.state.account=res.data.data.account;
                     this.state.bbs_total=res.data.bbs_total;
                     this.state.log_total=res.data.log_total;
+                    this.state.permission=res.data.data.authority;
+                    this.state.roleId=res.data.data.roleId;
+                    this.state.menu2=res.data.data.menu;
+                    //localStorage.setItem = ('permission',res.data.data.authority);
+
+
 
                 })
             },

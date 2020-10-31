@@ -2,7 +2,7 @@
     <good-page>
         <good-breadcrumb :list="constant.breadcrumb.cnzz" />
         <good-menu>
-            <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall>
+            <good-statusall :google="google" :selected="selected" v-if="state.permission.cnzz_status_all" :random.sync='random'></good-statusall>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         <good-box data="list">
@@ -10,19 +10,19 @@
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th class="width-100">
+                            <th class="width-100" v-if="state.permission.cnzz_status_all">
                                 <good-checkbox v-model="selectAll">全选择</good-checkbox>
                             </th>
                             <th class="width-100">统计类型</th>
                             <th class="width-auto">code</th>
                             <th class="width-100">服务状态</th>
-                            <th class="width-100">操作</th>
+                            <th class="width-100" v-if="state.permission.cnzz_edit">操作</th>
                         </tr>
                     </thead>
                     <tbody>
                         <template v-for="(item,index) in list">
                         <tr :class="{'background-eee':item.status==0}">
-                            <td>
+                            <td v-if="state.permission.cnzz_status_all">
                                 <good-checkbox v-model="selected" :label="item.id">
                                     <template v-if="selected.includes(item.id)">已选择</template>
                                     <template v-else>选择</template>
@@ -30,9 +30,12 @@
                             </td>
                             <td><span>{{item.type}}</span></td>
                             <td><span>{{item.code}}</span></td>
-                            <td><good-switch :val.sync='item' :key="index"></good-switch></td>
                             <td>
-                                <good-button2 @click="select(item)">改</good-button2>
+                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.cnzz_status"></good-switch>
+                                    <good-status :val='item' :key="index" v-else></good-status>
+                                </td>
+                            <td>
+                                <good-button2 v-if="state.permission.cnzz_edit" @click="select(item)">改</good-button2>
                             </td>
                         </tr>
                        </template>
@@ -76,6 +79,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
@@ -102,6 +106,7 @@
             'random': 'dataList',
         }, 
         computed: {
+            ...mapState(['state']),
             selectAll: {
                 get: function () {
                   return this.list ? this.selected.length == this.list.length : false;

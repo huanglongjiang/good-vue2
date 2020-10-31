@@ -7,8 +7,8 @@
         </good-box>
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.name"></good-search>
-            <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall>
-            <router-link to="/article/action?type=1" tag="a">
+            <good-statusall :google="google" :selected="selected" :random.sync='random' v-if="state.permission.article_status_all"></good-statusall>
+            <router-link to="/article/action?type=1" tag="a" v-if="state.permission.article_add">
                 <good-button class='float-right' icon="el-icon-edit" type="primary">新增文章</good-button>
             </router-link>
 
@@ -21,7 +21,7 @@
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th style="width：50px">
+                            <th style="width：50px" v-if="state.permission.article_status_all">
                                 <good-checkbox v-model="selectAll">全选择</good-checkbox>
                             </th>
                             <th>缩略图</th>
@@ -30,13 +30,13 @@
                             <th>标题</th>
                             <th>创建时间</th>
                             <th>状态</th>
-                            <th v-if="constant.authority>0">操作</th>
+                            <th v-if="state.permission.article_edit || state.permission.article_delete">操作</th>
                         </tr>
                     </thead>
                     <tbody>
                         <template v-for="(item,index) in list">
                             <tr :class="{'background-disabled':item.status==0}">
-                                <td>
+                                <td v-if="state.permission.article_status_all">
                                     <good-checkbox v-model="selected" :label="item.id">
                                         <template v-if="selected.includes(item.id)">已选择</template>
                                         <template v-else="selected.includes(item.id)">选择</template>
@@ -71,14 +71,15 @@
                                 </td>
                                 <td>{{item.insertTime}}</td>
                                 <td>
-                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index"></good-switch>
+                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.article_status"></good-switch>
+                                    <good-status :val='item' :key="index" v-else></good-status>
                                 </td>
                                 <td>
                                     <template>
-                                        <router-link tag="a" class="a-link pointer none-line" :to="{path:'/article/action',query: {type:2,templateId: item.id}}">
+                                        <router-link tag="a" class="a-link pointer none-line" :to="{path:'/article/action',query: {type:2,templateId: item.id}}" v-if="state.permission.article_edit">
                                         <good-button2 @click="select(item)">改</good-button2>
                                         </router-link>
-                                        <good-button2 @click="remove(item)">弃</good-button2>
+                                        <good-button2 v-if="state.permission.article_delete" @click="remove(item)">弃</good-button2>
                                     </template>
                                 </td>
                             </tr>

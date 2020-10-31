@@ -33,6 +33,8 @@ const initData={
 		index_seo:['首页SEO'],
 		copyright:['版权信息'],
 		system:['常规选项'],
+    role:['角色权限'],
+    authority:['菜单设置'],
 		// authority:['用户管理权限'],
 	},
 	// 面包屑

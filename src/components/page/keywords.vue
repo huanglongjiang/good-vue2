@@ -3,17 +3,23 @@
         <good-breadcrumb :list="constant.breadcrumb.keywords" />
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="filterText"></good-search>
-            <good-button class='float-right' type="primary" @click="openColumn('新增关键词')">新增栏目</good-button>
+            <good-button class='float-right' type="primary" v-if="state.permission.keywords_add" @click="openColumn('新增关键词')">新增栏目</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         
         <good-box :data="viewList">
             <div class="align-center clearfix">
                 <template v-for="(item,index) in viewList">
-                   
-                    <div class="layout margin-bottom-10 pointer" @click="select(item,'编辑关键词')">
-                        <el-tag type="info" class="float-left margin-5">{{item.name}}</el-tag>
-                    </div>
+                    <template v-if="state.permission.keywords_edit">
+                        <div class="layout margin-bottom-10 pointer" @click="select(item,'编辑关键词')">
+                            <el-tag type="info" class="float-left margin-5">{{item.name}}</el-tag>
+                        </div>
+                    </template>
+                    <template v-else>
+                        <div class="layout margin-bottom-10">
+                            <el-tag type="info" class="float-left margin-5">{{item.name}}</el-tag>
+                        </div>
+                    </template>
                 </template> 
             </div>
         </good-box>  
@@ -42,6 +48,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
@@ -66,6 +73,7 @@
             }
         },
         computed: {
+            ...mapState(['state']),
             // 搜索功能
             viewList(){
                 const arr = [];

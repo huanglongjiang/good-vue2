@@ -8,8 +8,8 @@
         
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.name"></good-search>
-            <good-statusall :google="google" :selected="selected" :random.sync='random'></good-statusall>
-            <good-button class='float-right' type="primary" @click="openHelp">新增客服</good-button>
+            <good-statusall :google="google" :selected="selected" v-if="state.permission.help_status_all" :random.sync='random'></good-statusall>
+            <good-button class='float-right' type="primary" v-if="state.permission.help_add" @click="openHelp">新增客服</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
 
@@ -18,7 +18,7 @@
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th>
+                            <th v-if="state.permission.help_status_all">
                                 <good-checkbox v-model="selectAll">全选择</good-checkbox>
                             </th>
                             <th>类型</th>
@@ -32,7 +32,7 @@
                     <tbody>
                         <template v-for="(item,index) in list">
                             <tr :class="{'background-disabled':item.status==0}">
-                                <td>
+                                <td v-if="state.permission.help_status_all">
                                     <good-checkbox v-model="selected" :label="item.id">
                                         <template v-if="selected.includes(item.id)">已选择</template>
                                         <template v-else>选择</template>
@@ -48,11 +48,12 @@
                                 <td><span class="textline a-link">{{item.name}}</span></td>
                                 <td><span class="textline a-link">{{item.qq}}</span></td>
                                 <td>
-                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index"></good-switch>
+                                    <good-switch :val.sync='item' :aaa.sync='statusVal' :key="index" v-if="state.permission.help_status"></good-switch>
+                                    <good-status :val='item' :key="index" v-else></good-status>
                                 </td>
                                 <td>
-                                    <good-button2 @click="select(item)">改</good-button2>
-                                    <good-button2 @click="remove(item)">弃</good-button2>
+                                    <good-button2 v-if="state.permission.help_edit" @click="select(item)">改</good-button2>
+                                    <good-button2 v-if="state.permission.help_delete" @click="remove(item)">弃</good-button2>
                                 </td>
                             </tr>
                         </template>
@@ -113,6 +114,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
@@ -160,6 +162,7 @@
             'init.status':'dataList',
         }, 
         computed: {
+            ...mapState(['state']),
             selectAll: {
                 get: function () {
                   return this.list ? this.selected.length == this.list.length : false;

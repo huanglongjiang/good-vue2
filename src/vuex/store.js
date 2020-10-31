@@ -10,6 +10,9 @@ const store = new Vuex.Store({
 	// 定义状态
 	state: {
         state: {
+            permission:{},
+            menu2:{},
+            roleId:'',
             counter:0,
             pickerOptions: {
               disabledDate(time) {
@@ -30,7 +33,7 @@ const store = new Vuex.Store({
             //Imgpath:'../dist/server/images/',
             // 左侧导航
             menu:[
-                {
+               /* {
                   title:'统计',
                   select:true,
                   icon:'fa fa-tachometer',
@@ -38,24 +41,26 @@ const store = new Vuex.Store({
                     {title:'首页',select:true,url:'index'},
                     {title:'登录日志',select:false,url:'log'},
                   ]
-                },
+                },*/
                 {
-                  title:'管理',
+                  title:'权限设置',
                   select:false,
-                  icon:'fa fa-folder-open',
+                  icon:'fa fa-cog',
                   children:[
-                    {title:'栏目中心',select:false,url:'root'},
+                    /*{title:'栏目中心',select:false,url:'root'},
                     {title:'标签中心',select:false,url:'tag'},
                     {title:'关键词库',select:false,url:'keywords'},
                     {title:'文章中心',select:false,url:'article'},
                     {title:'用户管理',select:false,url:'user'},
                     {title:'友情链接',select:false,url:'link'},
                     {title:'广告管理',select:false,url:'adsense'},
-                    {title:'图片轮播',select:false,url:'slider'},
-                    {title:'新功能开发中',select:false,url:''},
+                    {title:'图片轮播',select:false,url:'slider'},*/
+                    {title:'角色权限',select:false,url:'role'},
+                    {title:'菜单设置',select:false,url:'authority'},
+                    // {title:'新功能开发中',select:false,url:''},
                   ]
                 },
-                {
+                /*{
                   title:'功能',
                   select:false,
                   icon:'fa fa-windows',
@@ -76,7 +81,7 @@ const store = new Vuex.Store({
                     {title:'常规选项',select:false,url:'system'},
                     // {title:'用户管理权限',select:false,url:'authority'},
                   ]
-                },
+                },*/
             ]
             // 左侧导航
 

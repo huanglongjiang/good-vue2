@@ -40,6 +40,18 @@
                     </div>
                 </el-tab-pane>
             </el-tabs>
+            <div class="color-999">
+                <span class="margin-right-20">账号：admin100@163.com</span>
+                <span>密码：123456</span>
+            </div>
+            <div class="color-999">
+                <span class="margin-right-20">账号2：admin102@163.com</span>
+                <span>密码：123456</span>
+            </div>
+            <div class="color-999">
+                <span class="margin-right-20">账号3：admin102@163.com</span>
+                <span>密码：123456</span>
+            </div>
             
         </div>
 
