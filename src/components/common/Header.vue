@@ -11,7 +11,8 @@
             <a class="color-666 none-line float-left" target="_blank">
 
               <template v-if="form.file!=''&&form.file!=undefined">
-                  <img :src="filePath+'/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
+                  <img :src="filePath+'/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-if="form.file.length>7">
+                  <img :src="'http://www.good1230.com/good/RandomUser/'+form.file" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left" v-else>
               </template>
               <template v-else>
                   <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">

@@ -61,7 +61,16 @@
                     </div>
                 </el-tab-pane>
             </el-tabs>
-            <div class="padding-top-36 line-height-20 align-center font-size-16 margin-top-0"><a class="inline-block none-line" href="http://good1230.com" target="_blank"><i class="fa fa-home font-size-20  float-left color-999" style="color: rgb(85, 85, 85);"></i><span class="padding-left-5 color-999" style="color: rgb(85, 85, 85);">Home</span></a><a class="inline-block margin-left-30 none-line" href="http://www.good1230.com/good_vue2/#/index" target="_blank"><i class="fa fa-github font-size-20  float-left color-999" style="color: rgb(85, 85, 85);"></i><span class="padding-left-5 color-999" style="color: rgb(85, 85, 85);">Github</span></a></div>
+            <div class="padding-top-36 line-height-20 align-center font-size-16 margin-top-0">
+                <a class="inline-block none-line" href="http://good1230.com" target="_blank">
+                    <i class="fa fa-home font-size-20  float-left color-999" style="color: rgb(85, 85, 85);"></i>
+                    <span class="padding-left-5 color-999" style="color: rgb(85, 85, 85);">Home</span>
+                </a>
+                <a class="inline-block margin-left-30 none-line" href="https://github.com/huanglongjiang/good-vue2" target="_blank">
+                    <i class="fa fa-github font-size-20  float-left color-999" style="color: rgb(85, 85, 85);"></i>
+                    <span class="padding-left-5 color-999" style="color: rgb(85, 85, 85);">Github</span>
+                </a>
+            </div>
             
         </div>
 
@@ -101,7 +110,7 @@
                 this.$axios.post(global.APIPATH,data).then(res => { 
                     if(res.data.retType=='success'){
                        localStorage.token = res.data.token;
-                       this.$router.push('/index');
+                       this.$router.push('/role');
                    }
                         
                 });

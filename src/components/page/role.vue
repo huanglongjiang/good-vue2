@@ -3,7 +3,8 @@
         <good-breadcrumb :list="constant.breadcrumb.role" />
         <good-menu>
             <good-search class="float-left margin-right-10" v-model="init.title"></good-search>
-            <good-button class='float-right' icon="el-icon-edit" type="primary" @click="openSlider">新增角色</good-button>
+            <!-- <good-button class='float-right' icon="el-icon-edit" type="primary" @click="openSlider">新增角色</good-button> -->
+            <good-button class='float-right no-drop' icon="el-icon-edit" type="primary">新增角色</good-button>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         <good-box :data="list">
@@ -12,7 +13,7 @@
                     <thead class="block-header">
                         <tr>
                             <th>角色名称</th>
-                            <th >描述</th>
+                            <th>用户</th>
                             <th>编辑状态</th>
                             <th>操作</th>
                         </tr>
@@ -21,7 +22,20 @@
                         <template v-for="(item,index) in list">
                             <tr :class="{'background-disabled':item.status==0}">
                                 <td><span>{{item.title}}</span></td>
-                                <td>{{item.text}}</td>
+                                <td>
+                                  <template v-for="(item2,index2) in item.image">
+                                    <template v-if="index2<10">
+                                        <template v-if="item2.length<7">
+                                        
+                                          <img class="width-32 height-32 radius-20 float-left" style="margin-right: -5px; border:2px solid #fff" :src="'http://www.good1230.com/good/RandomUser/'+item2" :key="item2+index2" />
+                                        </template>
+                                        <template v-else>
+                                          <img class="width-32 height-32 radius-20 float-left" style="margin-right: -5px; border:2px solid #fff" :src="filePath+'/'+item2" :key="item2+index2" />
+                                        </template>
+                                    </template>
+                                  </template>
+                                  <span v-if="item.image.length>10" class="width-32 height-32  float-left color-999 line-height-32 font-size-12 margin-left-10" style="color:#0366d6">+{{item.image.length}}</span>
+                                </td>
                                 <td>
                                     <good-status :val='item' :key="index"></good-status>
                                 </td>
@@ -29,7 +43,7 @@
                                     <!-- <span class="margin-right-10 color-ccc" v-if="item.status==0">权限配置</span> -->
                                     <span class="a-link margin-right-10 pointer" v-if="item.status==0" @click="select2(item)">权限查看</span>
                                     <span class="a-link margin-right-10 pointer" v-else @click="select2(item)">权限配置</span>
-                                    <good-button2 v-if="item.status==1" @click="select(item)">改</good-button2>
+                                    <!-- <good-button2 v-if="item.status==1" @click="select(item)">改</good-button2> -->
 
                                     <!-- <good-button2 v-if="item.status==1" @click="remove(item)">弃</good-button2> -->
                                 </td>

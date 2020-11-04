@@ -11,7 +11,11 @@
 <span class="align-center bold height-36 line-height-36 margin-bottom-10 block color-white background-primary">角色类型选择</span>
   <ul class="align-left padding-20">
     <template v-for="(item,index) in data.roleList">
-    <li class="block padding-5 font-size-14 pointer" :class="{'background-primary color-white':data.roleId===item.id}" @click="Submit(item,data)">{{index+1}}、{{item.title}}
+    <li class="block padding-5 font-size-14 background-primary color-white" v-if="data.roleId===item.id">
+      {{index+1}}、{{item.title}}
+    </li>
+    <li class="block padding-5 font-size-14 pointer" v-else @click="Submit(item,data)">
+      {{index+1}}、{{item.title}}
     </li>
     </template>
   </ul>

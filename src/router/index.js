@@ -6,7 +6,7 @@ Vue.use(Router);
     let routes= [
         {
             path: '*', // 页面不存在的情况下会跳到404页面
-            redirect: '/index',
+            redirect: '/role',
             name: 'notFound',
             hidden: true
         },
@@ -26,13 +26,7 @@ Vue.use(Router);
                     path: '/',
                     component: resolve => require(['../components/page/Readme.vue'], resolve)
                 },
-                {
-                    path: '/index',
-                    component: resolve => require(['../components/page/index.vue'], resolve),
-                    meta: {
-                      roles: true  // 该部分和权限相关
-                    }
-                },
+                
                 
                 {
                     path: '/authority',
@@ -63,6 +57,14 @@ Vue.use(Router);
             path: '/readme',
             component: resolve => require(['../components/common/Home.vue'], resolve),
             children:[
+                {
+                    path: '/index',
+                    name: 'index',
+                    component: resolve => require(['../components/page/index.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
+                },
                 {
                     path: '/log',
                     name: 'log',

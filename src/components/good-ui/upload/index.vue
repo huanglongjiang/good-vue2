@@ -27,16 +27,20 @@ import { mapState } from 'vuex'
       };
     },
     created: function() {
-      if(this.data.image=='undefined'||this.data.image=="") {
+      if(this.data.file=='undefined'||this.data.file=="") {
         this.imageUrl='';
+      }else if(this.data.file.length<7){
+        this.imageUrl=`http://www.good1230.com/good/RandomUser//${this.data.file}`;
       }else{
         this.imageUrl=`${this.filePath}/${this.data.file}`;
       }
     },
     watch: {
         data(val) {
-            if(this.data.image=='undefined'||this.data.image=="") {
+            if(this.data.file=='undefined'||this.data.file=="") {
               this.imageUrl='';
+            }else if(this.data.file.length<7){
+              this.imageUrl=`http://www.good1230.com/good/RandomUser//${this.data.file}`;
             }else{
               this.imageUrl=`${this.filePath}/${this.data.file}`;
             }
