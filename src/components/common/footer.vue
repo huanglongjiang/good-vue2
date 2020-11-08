@@ -1,6 +1,7 @@
 <template>
 <div>
 <div class="width-max color-999 font-size-12" style="padding-left: 220px; padding-right: 20px;">
+<div class="layout bold font-size-36 color-ccc margin-bottom-50" style="text-shadow: 0px 0px 1px #eee">"功能权限体验请点击右侧悬浮按钮选择不同角色！"</div>
   <div class="border-bottom-1 border-ddd padding-bottom-10">
     <span>相关平台：</span>
     <span><a class=" color-999 none-line" href="http://www.good1230.com/good_vue2/#/index" target="_blank">good-vue2</a></span>

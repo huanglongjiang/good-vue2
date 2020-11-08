@@ -19,6 +19,11 @@
     </li>
     </template>
   </ul>
+  <ul class="align-left padding-20">
+    <li class="block padding-5 font-size-14 pointer"><a class="a-link" target="_blank" href="http://www.good1230.com/good_vue2/#/index">1、vue管理平台</a></li>
+    <li class="block padding-5 font-size-14 pointer"><a class="a-link" target="_blank" href="http://www.good1230.com/good_vue_typescript/#/index">2、vue+typescript管理平台</a></li>
+    <li class="block padding-5 font-size-14 pointer"><a class="a-link" target="_blank" href="http://www.good1230.com/react/">3、react管理平台</a></li>
+  </ul>
 </div>
 </div>
 

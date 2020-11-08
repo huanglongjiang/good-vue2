@@ -54,6 +54,7 @@
             </div>
         </good-box>
         <good-pagination :page.sync="init"></good-pagination>
+        
         <!-- 模态框 -->
           <good-dialog :title="roleTitle" :visible.sync='dialogVisible'>
             <div slot="body">

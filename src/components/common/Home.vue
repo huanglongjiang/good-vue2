@@ -2,7 +2,7 @@
     <div class="wrapper" style="min-width:1200px;">
         <v-head></v-head>
         <v-sidebar></v-sidebar>
-        <div class="content padding-bottom-40" style=" padding-left: 220px;padding-right:20px; min-height:560px">
+        <div class="content padding-bottom-40" style=" padding-left: 220px;padding-right:20px; min-height:450px">
             <transition name="move" mode="out-in"><router-view></router-view></transition>
         </div>
         <v-footer></v-footer>
