@@ -72,31 +72,31 @@
                         
                         
                         <tr>
-                            <tds-label star>用户名：</tds-label>
-                            <td><el-input v-model="form.name" placeholder="请输入内容"></el-input></td>
+                            <tds-label star>用户名</tds-label>
+                            <td><good-input v-model="form.name" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label star>QQ：</tds-label>
-                            <td><el-input v-model="form.qq" placeholder="请输入内容"></el-input></td>
+                            <tds-label star>QQ</tds-label>
+                            <td><good-input v-model="form.qq" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>代码标签：</tds-label>
-                            <td><el-input v-model="'{$qq.'+form.id+'}'" :disabled="true" placeholder="请输入内容"></el-input></td>
+                            <tds-label>代码标签</tds-label>
+                            <td><good-input v-model="'{$qq.'+form.id+'}'" :disabled="true" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>用户类型：</tds-label>
+                            <tds-label>用户类型</tds-label>
                             <td>
-                                <el-radio v-model="form.type" label="0">咨询客服</el-radio>
-                                <el-radio v-model="form.type" label="1">技术客服</el-radio>
-                                <el-radio v-model="form.type" label="2">售后客服</el-radio>
+                                <good-radio v-model="form.type" label="0">咨询客服</good-radio>
+                                <good-radio v-model="form.type" label="1">技术客服</good-radio>
+                                <good-radio v-model="form.type" label="2">售后客服</good-radio>
                             </td>
                         </tr>
                         <tr>
-                            <tds-label>服务状态：</tds-label>
+                            <tds-label>服务状态</tds-label>
                             <td>
 
-                                <el-radio v-model="form.status" label="0">关闭</el-radio>
-                                <el-radio v-model="form.status" label="1">开启</el-radio>
+                                <good-radio v-model="form.status" label="0">关闭</good-radio>
+                                <good-radio v-model="form.status" label="1">开启</good-radio>
                             </td>
                         </tr>
                     </table> 

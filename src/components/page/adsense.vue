@@ -77,33 +77,33 @@
                 <table class="table-group">
                     <tr>
                         <tds-label star>用户邮箱</tds-label>
-                        <td><el-input v-model="form.email" placeholder="请输入内容"></el-input></td>
+                        <td><good-input v-model="form.email" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
                         <tds-label star>广告名称</tds-label>
-                        <td><el-input v-model="form.name" placeholder="请输入内容"></el-input></td>
+                        <td><good-input v-model="form.name" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
                         <tds-label>投放位置</tds-label>
-                        <td><el-input v-model="form.position" placeholder="请输入内容"></el-input></td>
+                        <td><good-input v-model="form.position" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
                         <tds-label>广告价格</tds-label>
-                        <td><el-input v-model="form.price" placeholder="请输入内容"></el-input></td>
+                        <td><good-input v-model="form.price" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
                         <tds-label>广告尺寸</tds-label>
-                        <td><el-input v-model="form.size" placeholder="请输入内容"></el-input></td>
+                        <td><good-input v-model="form.size" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
                         <tds-label>代码标签</tds-label>
-                        <td><el-input v-model="form.id" placeholder="请输入内容"></el-input></td>
+                        <td><good-input v-model="form.id" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
                             <tds-label>服务状态</tds-label>
                             <td>
-                                <el-radio v-model="form.status" label="0">关闭</el-radio>
-                                <el-radio v-model="form.status" label="1">开启</el-radio>
+                                <good-radio v-model="form.status" label="0">关闭</good-radio>
+                                <good-radio v-model="form.status" label="1">开启</good-radio>
                             </td>
                         </tr>
                     <tr>
@@ -131,23 +131,25 @@
                             </td>
                         </tr>
                         <tr>
-                                <tds-label>广告图片</tds-label>
+                                <tds-label class=" position-r">
+                                    <div class="position-a top-10 right-10">广告图片</div>
+                                </tds-label>
                                 <td>
                                     <good-upload id="u4" type="adsense " :data.sync='form'></good-upload>
                                     <div class="color-ccc font-size-12 margin-bottom-10">图片地址{{state.Imgpath}}adsense/{{form.image}}</div>
                                 </td>
                         </tr> 
                         <tr>
-                            <tds-label>投放代码</tds-label>
-                            <td>
-                                <good-textarea v-model="form.code"></good-textarea>
-                            </td>
+                            <tds-label class=" position-r">
+                                <div class="position-a top-10 right-10">投放代码</div>
+                            </tds-label>
+                            <td><el-input class="margin-bottom-10" type="textarea" :rows="6" v-model="form.code" placeholder="请输入内容"></el-input></td>
                         </tr>
                         <tr>
-                            <tds-label>备注说明</tds-label>
-                            <td>
-                                <good-textarea v-model="form.code"></good-textarea>
-                            </td>
+                            <tds-label class=" position-r">
+                                <div class="position-a top-10 right-10">备注说明</div>
+                            </tds-label>
+                            <td><el-input type="textarea" :rows="6" v-model="form.code" placeholder="请输入内容"></el-input></td>
                         </tr> 
                 </table> 
             </div>

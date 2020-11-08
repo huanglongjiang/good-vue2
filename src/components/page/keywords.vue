@@ -30,8 +30,8 @@
             <div class="table-default" style="margin:0px">
                 <table class="table-group">
                     <tr>
-                        <tds-label star>名称：</tds-label>
-                        <td><el-input v-model="form.name"></el-input></td>
+                        <tds-label star>名称</tds-label>
+                        <td><good-input v-model="form.name"></good-input></td>
                     </tr>
              
                 </table> 

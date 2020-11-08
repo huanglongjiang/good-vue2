@@ -87,30 +87,31 @@
                   
                   
                   <tr>
-                      <tds-label>用户邮箱：</tds-label>
+                      <tds-label>用户邮箱</tds-label>
                       <td><good-input v-model="form.email" :disabled="true"></good-input></td>
                   </tr>
                   
                   <tr>
-                      <tds-label>用户类型：</tds-label>
-
-                      <td><div type="text" class="input-default line-height-34 width-max" readonly="readonly">
-                        <template v-if="form.role==0">普通用户</template>
-                        <template v-if="form.role==1">管理员</template>
-                        <template v-if="form.role==2">超级管理员</template>
-                      </div>
+                      <tds-label>用户类型</tds-label>
+                      <td>
+                        <good-input v-if="form.role==0" value="普通用户" disabled></good-input>
+                        <good-input v-if="form.role==1" value="管理员" disabled></good-input>
+                        <good-input v-if="form.role==2" value="超级管理员" disabled></good-input>
                       </td>
+
                   </tr>
                   <tr>
-                      <tds-label>用户角色：</tds-label>
+                      <tds-label>用户角色</tds-label>
                       <td><good-input v-model="form.roleName" :disabled="true"></good-input></td>
                   </tr>
                   <tr>
-                      <tds-label>用户名称：</tds-label>
+                      <tds-label>用户名称</tds-label>
                       <td><good-input v-model="form.name"></good-input></td>
                   </tr>
                   <tr>
-                      <tds-label class=" position-r">用户头像：</tds-label>
+                      <tds-label class=" position-r">
+                          <div class="position-a top-10 right-10">用户头像</div>
+                      </tds-label>
                       <td>
                         <good-upload id="u1" type="user" :data.sync='form'></good-upload>
                       </td>
@@ -130,11 +131,11 @@
                <div class="table-default">
               <table class="table-group">
                   <tr>
-                      <tds-label>旧密码：</tds-label>
+                      <tds-label>旧密码</tds-label>
                       <td><good-input v-model="form2.passOld"></good-input></td>
                   </tr>
                   <tr>
-                      <tds-label>新密码：</tds-label>
+                      <tds-label>新密码</tds-label>
                       <td><good-input v-model="form2.passNew"></good-input></td>
                   </tr>
               </table> 

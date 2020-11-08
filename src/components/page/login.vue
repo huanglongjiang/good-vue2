@@ -1,6 +1,6 @@
 <template>
     <div id="login" class="position-f left-0 right-0 width-max height-max login">
-            <div class="layout position-f radius-3" style=" width:400px; height:450px; left:50%; top:50%; margin-left:-200px; margin-top:-225px; opacity:1;">
+            <div class="layout position-f radius-3" style=" width:400px; height:450px; left:50%; top:50%; margin-left:-200px; margin-top:-253px; opacity:1;">
             <div class="layout border-bottom-0 border-ddd margin-bottom-30">
                 <h3 class="font-size-45 color-primary bold clearfix">
                     <span class="float-left">hlj designs</span>

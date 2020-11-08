@@ -6,19 +6,21 @@
                 <table style="width:800px;">
                     <tbody>
                         <tr>
-                            <tds-label>标题：</tds-label>
-                            <td><el-input v-model="form.title" placeholder="请输入内容"></el-input></td>
+                            <tds-label>标题</tds-label>
+                            <td><good-input v-model="form.title" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>副标题：</tds-label>
-                            <td><el-input v-model="form.title2" placeholder="请输入内容"></el-input></td>
+                            <tds-label>副标题</tds-label>
+                            <td><good-input v-model="form.title2" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>站点地址：</tds-label>
-                            <td><el-input v-model="form.url" placeholder="请输入内容"></el-input></td>
+                            <tds-label>站点地址</tds-label>
+                            <td><good-input v-model="form.url" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label class=" position-r">前台LOGO：</tds-label>                    
+                            <tds-label class=" position-r">
+                               <div class="position-a top-10 right-10">前台LOGO</div>
+                            </tds-label>                  
                             <td>
                                 <good-upload id="u2" type="logo" :data.sync='form' v-if="state.permission.system_upload"></good-upload>
                                 <img class="width-150 height-150 radius-3" :src="filePath+'/'+form.file" v-else>

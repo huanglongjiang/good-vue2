@@ -52,10 +52,12 @@
                     <table class="table-group">
                         <tr>
                             <tds-label star>名称</tds-label>
-                            <td><el-input v-model="form.name"></el-input></td>
+                            <td><good-input v-model="form.name"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>缩 略 图</tds-label>
+                            <tds-label class=" position-r">
+                                <div class="position-a top-10 right-10">缩 略 图</div>
+                            </tds-label>
                             <td>
                                 <good-upload id="u7" type="article_title " :data.sync='form'></good-upload>
                             </td>

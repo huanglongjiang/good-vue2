@@ -50,18 +50,20 @@
                 <div class="table-default">
                     <table class="table-group">
                         <tr>
-                            <tds-label>统计类型：</tds-label>
-                            <td><el-input v-model="form.type" :disabled="true"></el-input></td>
+                            <tds-label>统计类型</tds-label>
+                            <td><good-input v-model="form.type"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>服务状态：</tds-label>
+                            <tds-label>服务状态</tds-label>
                             <td>
-                                <el-radio v-model="form.status" label="0">关闭</el-radio>
-                                <el-radio v-model="form.status" label="1">开启</el-radio>
+                                <good-radio v-model="form.status" label="0">关闭</good-radio>
+                                <good-radio v-model="form.status" label="1">开启</good-radio>
                             </td>
                         </tr>
                         <tr>
-                            <tds-label>统计代码：</tds-label>
+                            <tds-label class=" position-r">
+                                <div class="position-a top-10 right-10">统计代码</div>
+                            </tds-label>
                             <td><el-input type="textarea" :rows="6" v-model="form.code" placeholder="请输入内容"></el-input></td>
                         </tr>
                     </table> 

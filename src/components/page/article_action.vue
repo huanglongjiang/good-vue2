@@ -20,25 +20,25 @@
                     </tr>
                     <tbody>
                     <tr>
-                        <tds-label star>文章标题：</tds-label>
-                        <td><el-input v-model="form.title"></el-input></td>
+                        <tds-label star>文章标题</tds-label>
+                        <td><good-input v-model="form.title"></good-input></td>
                     </tr>
                     <tr>
-                        <tds-label>文章来源：</tds-label>
-                        <td><el-input v-model="form.source"></el-input></td>
+                        <tds-label>文章来源</tds-label>
+                        <td><good-input v-model="form.source"></good-input></td>
                     </tr>
                     <tr>
-                        <tds-label>自定义属性：</tds-label>
+                        <tds-label>自定义属性</tds-label>
                         <td>
-                            <el-radio v-model="form.type" label="0">默认</el-radio>
-                            <el-radio v-model="form.type" label="1">优质</el-radio>
-                            <el-radio v-model="form.type" label="2">热门</el-radio>
-                            <el-radio v-model="form.type" label="3">推荐</el-radio>
+                            <good-radio v-model="form.type" label="0">默认</good-radio>
+                            <good-radio v-model="form.type" label="1">优质</good-radio>
+                            <good-radio v-model="form.type" label="2">热门</good-radio>
+                            <good-radio v-model="form.type" label="3">推荐</good-radio>
                         </td>
                     </tr>
                     <tr>
                         <tds-label class=" position-r">
-                            <div class="position-a top-0 right-0">文章栏目：</div>
+                            <div class="position-a top-10 right-10">文章栏目</div>
                         </tds-label>
                         <td>
                             <good-box data="true">
@@ -49,13 +49,13 @@
                                 </el-checkbox-group>
                             </good-box>
                             <div class="layout margin-bottom-10 color-ccc margin-top-10 font-size-14"> 
-                               注：最多可选择3个栏目
+                               注最多可选择3个栏目
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <tds-label class="position-r">
-                            <div class="position-a top-0 right-0">tag标签：</div>
+                            <div class="position-a top-10 right-10">tag标签</div>
                         </tds-label>
                         <td>
                             <good-box data="true">
@@ -67,20 +67,20 @@
 
                             </good-box>
                             <div class="layout margin-bottom-10 color-ccc margin-top-10 font-size-14"> 
-                               注：至少选择一个分类
+                               注至少选择一个分类
                             </div>
                         </td>
                     </tr>
                     <tr>
                         <tds-label class="position-r">
-                            <div class="position-a top-0 right-0">缩 略 图：</div>
+                            <div class="position-a top-10 right-10">缩 略 图</div>
                         </tds-label>
                         <td>
                             <good-upload id="u6" type="article" :data.sync='form'></good-upload>
                         </td>
                     </tr>
                     <!-- <tr>
-                        <tds-label>关键词：</tds-label>
+                        <tds-label>关键词</tds-label>
                         <div class="layout padding-top-20">
                             <template v-for="(item,index) in colorKeywords">
                                 <span class="tag-block padding-3 padding-left-5 padding-right-5 font-size-14" style="margin-right:10px; border:1px solid #ccc; background:#eee">
@@ -90,7 +90,7 @@
                             </template>
                             <a class="pointer a-link" @click="openColumn2(item)"><i class="padding-right-5 fa fa-plus-square"></i>关键词库</a>
                             <div class="layout margin-bottom-10 color-ccc margin-top-15 font-size-14"> 
-                               注：最多5个关键词
+                               注最多5个关键词
                             </div>
                         </div>
                         
@@ -98,13 +98,13 @@
                     </tr> -->
                     <tr>
                         <tds-label class="position-r">
-                            <div class="position-a top-0 right-0">内容简介：</div>
+                            <div class="position-a top-10 right-10">内容简介</div>
                         </tds-label>
-                        <td><textarea maxlength="250" class="input-default height-120 width-max" v-model="form.description"></textarea></td>
+                        <td><el-input class="margin-bottom-10" type="textarea" :rows="6" v-model="form.description" placeholder="请输入内容"></el-input></td>
                     </tr>
                     <tr>
                         <tds-label class="position-r">
-                            <div class="position-a top-0 right-0">内容摘要：</div>
+                            <div class="position-a top-10 right-10">内容摘要</div>
                         </tds-label>
                         <td>
                             <textarea id="textarea" name="content" class="width-max height-400" v-html="text"></textarea>
@@ -172,7 +172,7 @@
                 <div class="table-default" style="margin:0px">
                     <table class="table-group line-height-30 width-max">
                         <tr>
-                            <td class="width-100 align-right">自定义关键词：</td>
+                            <td class="width-100 align-right">自定义关键词</td>
                             <td><input type="text" class="input-default width-max height-32" placeholder="手动添加关键词..." v-model="addkeywords"></td>
                         </tr>
                     </table>

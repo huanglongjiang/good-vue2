@@ -79,39 +79,39 @@
                     <table class="table-group">
                         <tr>
                             <tds-label star>名称</tds-label>
-                            <td><el-input v-model="form.label"></el-input></td>
+                            <td><good-input v-model="form.label"></good-input></td>
                         </tr>
                         <tr>
                             <tds-label star>url</tds-label>
-                            <td><el-input v-model="form.url"></el-input></td>
+                            <td><good-input v-model="form.url"></good-input></td>
                         </tr>
                         <tr>
                             <tds-label star>icon</tds-label>
-                            <td><el-input v-model="form.icon"></el-input></td>
+                            <td><good-input v-model="form.icon"></good-input></td>
                         </tr>
                         <tr>
                             <tds-label star>类型</tds-label>
                             <td>
-                                <el-radio v-model="form.type" label="0">目录</el-radio>
-                                <el-radio v-model="form.type" label="1">菜单</el-radio>
-                                <el-radio v-model="form.type" label="2">按钮</el-radio>
+                                <good-radio v-model="form.type" label="0">目录</good-radio>
+                                <good-radio v-model="form.type" label="1">菜单</good-radio>
+                                <good-radio v-model="form.type" label="2">按钮</good-radio>
                             </td>
                         </tr>
                         <tr>
                             <tds-label star>是否含有子项</tds-label>
                             <td>
-                                <el-radio v-model="form.leaf" label="1">含有子项</el-radio>
-                                <el-radio v-model="form.leaf" label="0">没有子项</el-radio>
+                                <good-radio v-model="form.leaf" label="1">含有子项</good-radio>
+                                <good-radio v-model="form.leaf" label="0">没有子项</good-radio>
                             </td>
                         </tr>
                         
                         <tr>
                             <tds-label star>code</tds-label>
-                            <td><el-input v-model="form.code"></el-input></td>
+                            <td><good-input v-model="form.code"></good-input></td>
                         </tr>
                         <tr>
                             <tds-label star>序号</tds-label>
-                            <td><el-input v-model="form.level"></el-input></td>
+                            <td><good-input v-model="form.level"></good-input></td>
                         </tr>
                  
                     </table> 

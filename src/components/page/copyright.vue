@@ -6,16 +6,16 @@
                 <table style="width:800px;">
                     <tbody>
                         <tr>
-                            <tds-label>版权信息：</tds-label>
-                            <td><el-input v-model="form.title" placeholder="请输入内容"></el-input></td>
+                            <tds-label>版权信息</tds-label>
+                            <td><good-input v-model="form.title" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>版权所有：</tds-label>
-                            <td><el-input v-model="form.title2" placeholder="请输入内容"></el-input></td>
+                            <tds-label>版权所有</tds-label>
+                            <td><good-input v-model="form.title2" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>版权链接：</tds-label>
-                            <td><el-input v-model="form.url" placeholder="请输入内容"></el-input></td>
+                            <tds-label>版权链接</tds-label>
+                            <td><good-input v-model="form.url" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
                             <td></td>

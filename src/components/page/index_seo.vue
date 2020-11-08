@@ -6,16 +6,18 @@
                 <table style="width:800px;">
                     <tbody>
                         <tr>
-                            <tds-label>标题：</tds-label>
-                            <td><el-input v-model="form.title" placeholder="请输入内容"></el-input></td>
+                            <tds-label>标题</tds-label>
+                            <td><good-input v-model="form.title" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label>关键词：</tds-label>
-                            <td><el-input v-model="form.keywords" placeholder="请输入内容"></el-input></td>
+                            <tds-label>关键词</tds-label>
+                            <td><good-input v-model="form.keywords" placeholder="请输入内容"></good-input></td>
                         </tr>
                         <tr>
-                            <tds-label class=" position-r">网页描述：</tds-label> 
-                            <td><el-input type="textarea" :rows="2" v-model="form.description" placeholder="请输入内容"></el-input></td>
+                            <tds-label class=" position-r">
+                               <div class="position-a top-10 right-10">网页描述</div>
+                            </tds-label>
+                            <td><el-input type="textarea" :rows="6" v-model="form.description" placeholder="请输入内容"></el-input></td>
                         </tr>
                         <tr>
                             <td></td>

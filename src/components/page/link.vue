@@ -77,34 +77,34 @@
                             
                             
                             <tr>
-                                <tds-label star>网站名称：</tds-label>
-                                <td><el-input v-model="form.name"></el-input></td>
+                                <tds-label star>网站名称</tds-label>
+                                <td><good-input v-model="form.name"></good-input></td>
                             </tr>
                             <tr>
-                                <tds-label star>网站地址：</tds-label>
-                                <td><el-input v-model="form.link"></el-input></td>
+                                <tds-label star>网站地址</tds-label>
+                                <td><good-input v-model="form.link"></good-input></td>
                             </tr>
                             <tr>
-                                <tds-label>用户邮箱：</tds-label>
-                                <td><el-input v-model="form.email"></el-input></td>
+                                <tds-label>用户邮箱</tds-label>
+                                <td><good-input v-model="form.email"></good-input></td>
                             </tr>
                             <tr>
-                                <tds-label>服务类型：</tds-label>
+                                <tds-label>服务类型</tds-label>
                                 <td>
-                                    <el-radio v-model="form.type" label="0">首页链接</el-radio>
-                                    <el-radio v-model="form.type" label="1">全站链接</el-radio>
-                                    <el-radio v-model="form.type" label="2">服务结束</el-radio>
+                                    <good-radio v-model="form.type" label="0">首页链接</good-radio>
+                                    <good-radio v-model="form.type" label="1">全站链接</good-radio>
+                                    <good-radio v-model="form.type" label="2">服务结束</good-radio>
                                 </td>
                             </tr>
                             <tr>
-                                <tds-label>服务状态：</tds-label>
+                                <tds-label>服务状态</tds-label>
                                 <td>
-                                    <el-radio v-model="form.status" label="0">关闭</el-radio>
-                                    <el-radio v-model="form.status" label="1">开启</el-radio>
+                                    <good-radio v-model="form.status" label="0">关闭</good-radio>
+                                    <good-radio v-model="form.status" label="1">开启</good-radio>
                                 </td>
                             </tr>
                             <tr>
-                                <tds-label star>开始时间：</tds-label>
+                                <tds-label star>开始时间</tds-label>
                                 <td>
                               
                                     <el-date-picker
@@ -117,7 +117,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <tds-label star>结束时间：</tds-label>
+                                <tds-label star>结束时间</tds-label>
                                 <td>
                                     <el-date-picker
                                       v-model="form.endtime"
@@ -129,12 +129,12 @@
                                 </td>
                             </tr>
                             <tr>
-                                <tds-label>链接价格：</tds-label>
-                                <td><el-input v-model="form.price"></el-input></td>
+                                <tds-label>链接价格</tds-label>
+                                <td><good-input v-model="form.price"></good-input></td>
                             </tr>
                             <tr>
                                 <tds-label class=" position-r">
-                                    <div class="position-a top-0 right-0">备注说明：</div>
+                                    <div class="position-a top-10 right-10">备注说明</div>
                                 </tds-label>
                                 <td><el-input type="textarea" :rows="6" v-model="form.text" placeholder="请输入内容"></el-input></td>
                             </tr>

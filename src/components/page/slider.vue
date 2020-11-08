@@ -73,32 +73,34 @@
             <div class="table-default">
                 <table class="table-group line-height-30 width-max">
                     <tr>
-                        <tds-label star>图片标题：</tds-label>
-                        <td><el-input v-model="form.title" placeholder="请输入内容"></el-input></td>
+                        <tds-label star>图片标题</tds-label>
+                        <td><good-input v-model="form.title" placeholder="请输入内容"></good-input></td>
                     </tr>
 
                     <tr>
-                        <tds-label>链接地址：</tds-label>
-                        <td><el-input v-model="form.url" placeholder="请输入内容"></el-input></td>
+                        <tds-label>链接地址</tds-label>
+                        <td><good-input v-model="form.url" placeholder="请输入内容"></good-input></td>
                     </tr>
                     <tr>
-                       <tds-label>图片类型：</tds-label>
+                       <tds-label>图片类型</tds-label>
                        <td>
-                            <el-radio v-model="form.type" label="0">通用轮播图</el-radio>
-                            <el-radio v-model="form.type" label="1">首页轮播图</el-radio>
-                            <el-radio v-model="form.type" label="2">栏目页轮播图</el-radio>
-                            <el-radio v-model="form.type" label="3">内容页轮播图</el-radio>
+                            <good-radio v-model="form.type" label="0">通用轮播图</good-radio>
+                            <good-radio v-model="form.type" label="1">首页轮播图</good-radio>
+                            <good-radio v-model="form.type" label="2">栏目页轮播图</good-radio>
+                            <good-radio v-model="form.type" label="3">内容页轮播图</good-radio>
                        </td>
                     </tr>
                     <tr>
-                       <tds-label>服务状态：</tds-label>
+                       <tds-label>服务状态</tds-label>
                        <td>
-                            <el-radio v-model="form.status" label="0">关闭</el-radio>
-                            <el-radio v-model="form.status" label="1">开启</el-radio>
+                            <good-radio v-model="form.status" label="0">关闭</good-radio>
+                            <good-radio v-model="form.status" label="1">开启</good-radio>
                        </td>
                     </tr>
                     <tr>
-                        <tds-label>图片路径：</tds-label>
+                        <tds-label class=" position-r">
+                          <div class="position-a top-10 right-10">图片路径</div>
+                      </tds-label>
                         <td>
                         <good-upload id="u3" type="slider" :data.sync='form'></good-upload>
                         </td>

@@ -45,11 +45,9 @@
                   <table class="table-group">
                       <tr>
                         <tds-label class=" position-r">
-                            <div class="position-a top-0 right-0">留言内容：</div>
+                          <div class="position-a top-10 right-10">留言内容</div>
                         </tds-label>
-                        <td>
-                            <good-textarea v-model="form.text"></good-textarea>
-                        </td>
+                        <td><el-input type="textarea" :rows="6" v-model="form.text" placeholder="请输入内容"></el-input></td>
                       </tr>
                   </table> 
               </div>
