@@ -12,6 +12,7 @@
                             <th>访客头像</th>
                             <th>账号(匿名)</th>
                             <th>邮箱</th>
+                            <th>入口</th>
                             <th>登录账号</th>
                             <th>用户角色</th>
                             <th>来源IP</th>
@@ -37,6 +38,11 @@
                             </td>
                             <td><span>{{item.account}} <span class="color-999">({{item.name}})</span></span></td>
                             <td><span>{{item.email}}</span></td>
+                            <td>
+                              <span class="color-info" v-if="item.origin==0">react</span>
+                              <span class="color-danger" v-if="item.origin==1">vue2</span>
+                              <span class="color-warning" v-if="item.origin==2">vue+typeScript</span>
+                            </td>
                             <td><span>{{item.loginType}}</span></td>
                             <td>
                                 <good-label background="background-one" v-if="item.role==0">普通用户</good-label>

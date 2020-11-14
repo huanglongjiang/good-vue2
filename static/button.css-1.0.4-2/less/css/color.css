@@ -1,0 +1,17 @@
+/* 悬浮弹出层提示框背景色和文字色 */
+:root {
+  --primary: #4fc08d;
+  --primary-d: #41b580;
+  --primary-d-d: #3aa273;
+  --success: #5cb85c;
+  --success-d: #4cae4c;
+  --success-d-d: #449d44;
+  --info: #5bc0de;
+  --info-d: #46b8da;
+  --info-d-d: #31b0d5;
+  --warning: #f0ad4e;
+  --warning-d: #eea236;
+  --warning-d-d: #ec971f;
+  --danger: #d9534f;
+  --default: #f6f6f6;
+}

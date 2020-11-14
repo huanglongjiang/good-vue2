@@ -1,0 +1,165 @@
+/* 悬浮弹出层提示框背景色和文字色 */
+:root {
+  --primary: #4fc08d;
+  --primary-d: #41b580;
+  --primary-d-d: #3aa273;
+  --success: #5cb85c;
+  --success-d: #4cae4c;
+  --success-d-d: #449d44;
+  --info: #5bc0de;
+  --info-d: #46b8da;
+  --info-d-d: #31b0d5;
+  --warning: #f0ad4e;
+  --warning-d: #eea236;
+  --warning-d-d: #ec971f;
+  --danger: #d9534f;
+  --danger-d: #d43f3a;
+  --danger-d-d: #c9302c;
+  --default: #f6f6f6;
+  --default-d: #e9e9e9;
+  --default-d-d: #dcdcdc;
+}
+.star-default {
+  background: url(../images/star-default.png);
+}
+.star-active {
+  background: url(../images/star-active.png);
+}
+.star-sm {
+  width: 24px;
+  height: 24px;
+  background-size: 24px;
+  display: inline-block;
+}
+.star-big {
+  width: 32px;
+  height: 32px;
+  background-size: 32px;
+  display: inline-block;
+}
+.progress-sm {
+  position: relative;
+}
+.progress-sm .progress-default {
+  width: 200px;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  background: #DDDDDD;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.progress-sm .progress-primary {
+  width: 30%;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  background: var(--primary);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-sm .progress-success {
+  width: 30%;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  background: var(--success);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-sm .progress-info {
+  width: 30%;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  background: var(--info);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-sm .progress-danger {
+  width: 30%;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  background: var(--danger);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-sm .progress-warning {
+  width: 30%;
+  height: 6px;
+  border-radius: 3px;
+  display: block;
+  background: var(--warning);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-lg {
+  position: relative;
+}
+.progress-lg .progress-default {
+  width: 200px;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: #DDDDDD;
+  position: relative;
+  left: 0px;
+  top: 0px;
+}
+.progress-lg .progress-primary {
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: var(--primary);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-lg .progress-success {
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: var(--success);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-lg .progress-info {
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: var(--info);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-lg .progress-danger {
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: var(--danger);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}
+.progress-lg .progress-warning {
+  width: 30%;
+  height: 10px;
+  border-radius: 5px;
+  display: block;
+  background: var(--warning);
+  position: absolute;
+  left: 0px;
+  top: 0px;
+}

@@ -86,6 +86,7 @@
                     name: '',
                     email:'',
                     pass:'',
+                    origin:'1',
                 },
             }
         },

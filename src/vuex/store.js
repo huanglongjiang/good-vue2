@@ -19,7 +19,7 @@ const store = new Vuex.Store({
                 return time.getTime() < Date.now() - 8.64e7;
               },
             },
-            webTitle:"good1230.com",
+            webTitle:"Vue2 + element",
             headTitle:"个人博客日常笔记",
             marquee:"精简个人博客网站平台管理系统，售价 ￥150 元！有需要或想了解的朋友们请联系QQ：2970302840",
             authority:'',

@@ -14,6 +14,8 @@ import path from './vuex/global'
 import Good from './components/index.js'
 import constant from './vuex/const'
 import 'element-ui/lib/theme-chalk/index.css';    // 默认主题
+import color from './../static/color.js'
+color() //皮肤设置
 Vue.use(Good)
 Vue.use(ElementUI);
 Vue.use(Ehartist);

@@ -5,7 +5,7 @@
         <div class="position-a clearfix">
             <div class="float-left width-280 height-60 font-size-24 bold line-height-60 color-999">
               <good-logo class="float-left"></good-logo>
-              <span class="padding-left-20">{{state.webTitle}}</span>
+              <span class="padding-left-20 color-primary">{{state.webTitle}}</span>
             </div>
             <!-- <a :href="domain" class="color-666 none-line float-left" target="_blank"> -->
             <a class="color-666 none-line float-left" target="_blank">

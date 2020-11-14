@@ -1,0 +1,33 @@
+.item-inner {
+  position: relative;
+  width: 100%;
+
+}
+.item-inner:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: auto;
+  top: auto;
+  height: 1px;
+  width: 100%;
+  //background-color: #e7e7e7;
+  background-color: #ddd;
+  display: block;
+  z-index: 15;
+  -webkit-transform-origin: 50% 100%;
+          transform-origin: 50% 100%;
+}
+/* @media only screen and (-webkit-min-device-pixel-ratio: 2) {
+  .item-inner:after {
+    -webkit-transform: scaleY(0.5);
+            transform: scaleY(0.5);
+  }
+}
+@media only screen and (-webkit-min-device-pixel-ratio: 3) {
+  .item-inner:after {
+    -webkit-transform: scaleY(0.33);
+            transform: scaleY(0.33);
+  }
+} */
