@@ -257,7 +257,7 @@ body {
 .color-dodgerblue2 {
   color: #606266;
 }
-.is-checked {
+.is-checked3 {
   border-color: var(--primary) !important;
   background: var(--primary);
 }
@@ -273,7 +273,7 @@ body {
   transform: translate(-50%, -50%) scale(0);
   transition: transform 0.15s ease-in;
 }
-.is-checked:after {
+.is-checked3:after {
   width: 4px;
   height: 4px;
   border-radius: 100%;

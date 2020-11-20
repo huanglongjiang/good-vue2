@@ -12,10 +12,10 @@
                 <table class="table-group line-height-30">
                     <thead class="block-header">
                         <tr>
-                            <th>角色名称</th>
+                            <th class="width-200">角色名称</th>
                             <th>用户</th>
-                            <th>编辑状态</th>
-                            <th>操作</th>
+                            <th class="width-100">状态</th>
+                            <th class="width-100">操作</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -24,7 +24,6 @@
                                 <td><span>{{item.title}}</span></td>
                                 <td>
                                   <template v-for="(item2,index2) in item.image">
-                                    <template v-if="index2<10">
                                         <template v-if="item2.length<7">
                                         
                                           <img class="width-32 height-32 radius-20 float-left" style="margin-right: -5px; border:2px solid #fff" :src="'http://www.good1230.com/good/RandomUser/'+item2" :key="item2+index2" />
@@ -32,9 +31,8 @@
                                         <template v-else>
                                           <img class="width-32 height-32 radius-20 float-left" style="margin-right: -5px; border:2px solid #fff" :src="filePath+'/'+item2" :key="item2+index2" />
                                         </template>
-                                    </template>
                                   </template>
-                                  <span v-if="item.image.length>10" class="width-32 height-32  float-left color-999 line-height-32 font-size-12 margin-left-10" style="color:#0366d6">+{{item.image.length}}</span>
+                                  <span v-if="item.image.length>0" class="width-32 height-32  float-left color-999 line-height-32 font-size-12 margin-left-10" style="color:#0366d6">+{{item.image.length}}</span>
                                 </td>
                                 <td>
                                     <good-status :val='item' :key="index"></good-status>

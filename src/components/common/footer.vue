@@ -6,7 +6,7 @@
     <span>相关平台：</span>
     <span><a class=" color-999 none-line" href="http://www.good1230.com/good_vue2/#/index" target="_blank">good-vue2</a></span>
     <span class="padding-left-10 padding-right-10 color-ccc">|</span>
-    <span><a class=" color-999 none-line" href="http://www.good1230.com/good_vue-typescript/#/index" target="_blank">good-vue-typescript</a></span>
+    <span><a class=" color-999 none-line" href="http://www.good1230.com/good_vue_typescript/#/index" target="_blank">good-vue-typescript</a></span>
     <span class="padding-left-10 padding-right-10 color-ccc">|</span>
     <span><a class=" color-999 none-line" href="http://www.good1230.com/react/" target="_blank">good-react</a></span>
     <span class="padding-left-10 padding-right-10 color-ccc">|</span>

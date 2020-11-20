@@ -3,9 +3,9 @@
     <div class="header height-60 width-max position-r">
 
         <div class="position-a clearfix">
-            <div class="float-left width-280 height-60 font-size-24 bold line-height-60 color-999">
+            <div class="float-left width-290 height-60 font-size-24 bold line-height-60 color-999">
               <good-logo class="float-left"></good-logo>
-              <span class="padding-left-20 color-primary">{{state.webTitle}}</span>
+              <span class="padding-left-20 color-999">{{state.webTitle}}</span>
             </div>
             <!-- <a :href="domain" class="color-666 none-line float-left" target="_blank"> -->
             <a class="color-666 none-line float-left" target="_blank">
@@ -29,9 +29,6 @@
             <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==2">(用户类型：超级管理员</span>
 
             <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">、用户角色：{{form.roleName}})</span>
-            <!-- <template v-if="state.authority!=2">
-            <marquee class="float-left position-r top-20 margin-left-20" style="width:450px;">{{state.marquee}}</marquee>
-            </template> -->
         </div>
         <ul class="padding-top-20">
 
