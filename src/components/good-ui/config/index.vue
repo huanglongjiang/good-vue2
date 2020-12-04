@@ -1,8 +1,15 @@
 <template>
   <div>
 
+    <div class="font-size-24 color-white align-center position-f right-0 top-70 background-primary z-index-100" style=" width:36px; height:36px; display:block;border;border-top-left-radius: 55px;border-bottom-left-radius: 55px;">
+        <span class="block width-max height-max line-height-36 el-icon-setting pointer" v-if="showBool3" @click="switch3"></span>
+        <span class="block width-max height-max line-height-36 el-icon-close pointer" v-else @click="switch3"></span>
+    </div>
+
     <div class="panel-backdrop2" style="background:rgba(0,0,0,0.2);z-index:110" v-if="showBool" @click="close"></div>
-    <div class="div " :class="{'animation10':showBool,'animation20':showBool2}">
+
+   <!--  <div class="div " :class="{'animation10':showBool,'animation20':showBool2}"> -->
+   <div class="div " :class="{'b':!showBool,'b2':showBool}" style="transition:all 0.1s ease;">
       <div class="font-size-24 color-white align-center line-height-48 position-a top-250 background-primary" style=" width:48px; height:48px; display:block; left:-48px;border;border-top-left-radius: 5px;border-bottom-left-radius: 5px;">
         <span class="block width-max height-max line-height-48 el-icon-close pointer" style="line-height:48px;" v-if="showBool" @click="close"></span>
         <span class="block width-max height-max line-height-48 el-icon-setting pointer" style="line-height:48px;" v-else @click="open"></span>
@@ -18,6 +25,42 @@
             <li :key="index" class="block padding-5 font-size-14 pointer" v-else @click="Submit(item,data)">{{index+1}}、{{item.title}}
             </li>
           </template>
+        </ul>
+        <span class="align-center bold height-36 line-height-36 margin-bottom-10 block color-999 background-eee border-ddd border-top-1">小功能</span>
+        <ul class="align-left padding-20 padding-top-10">
+            <!-- <li class="block padding-5 font-size-14 clearfix">
+              <span class="float-left">Background Image</span>
+              <div class="layout float-right">
+                  <div class="layout container">
+                  <div class="switch" :class="{'a':topFixed}" @click="switch2">
+                    <span class="switch-label" data-on="on" data-off="off"></span>
+                    <span class="switch-handle"></span>
+                  </div>
+                </div>
+              </div>
+            </li> -->
+            <li class="block padding-5 font-size-14 clearfix">
+              <span class="float-left">Sidebar Mini</span>
+              <div class="layout float-right">
+                  <div class="layout container">
+                  <div class="switch" :class="{'a':sidebar}" @click="switch3">
+                    <span class="switch-label" data-on="on" data-off="off"></span>
+                    <span class="switch-handle"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="block padding-5 font-size-14 clearfix">
+              <span class="float-left">Fixed Navbar</span>
+              <div class="layout float-right">
+                  <div class="layout container">
+                  <div class="switch" :class="{'a':topFixed}" @click="switch2">
+                    <span class="switch-label" data-on="on" data-off="off"></span>
+                    <span class="switch-handle"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
         </ul>
         <span class="align-center bold height-36 line-height-36 margin-bottom-10 block color-999 background-eee border-ddd border-top-1">切换到其他平台</span>
         <ul class="align-left padding-20 padding-top-1">
@@ -42,6 +85,8 @@
       props: ["data"],
       data() {
           return {
+            topFixed:localStorage.getItem("topFixed")=='true'?true:false,
+            sidebar:localStorage.getItem("sidebar")=='true'?true:false,
               showBool:false,
               showBool2:false,
               color:{
@@ -77,6 +122,16 @@
           this.showBool2=true;
           document.body.style.overflowY="";
         },
+        switch2(){
+          this.topFixed=!this.topFixed;
+          this.state.topFixed=this.topFixed
+          localStorage.topFixed=this.topFixed?'true':false;
+        },
+        switch3(){
+          this.sidebar=!this.sidebar;
+          this.state.sidebar=this.sidebar
+          localStorage.sidebar=this.sidebar?'true':false;
+        },
         Submit(item,obj){
           this.form={
             userId:obj.id,
@@ -111,7 +166,8 @@ bottom: 0px;
 z-index: 121;
 }
 
-
+.b{right:-270px;}
+.b2{right:0px;}
 
 .animation10 {
   display: block;

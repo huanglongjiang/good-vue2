@@ -1,6 +1,6 @@
 <template>
 <div>
-<div class="layout width-200 height-auto border-primary position-a left-0 top-0 bottom-0 z-index-10" style="box-sizing:border-box;">
+<div class="layout width-200 height-auto border-primary" style="box-sizing:border-box;">
     <div class="layout width-max height-60 line-height-60 padding-bottom-30" style="">
       <!-- <good-logo></good-logo> -->
       <!-- <i class="fa fa-yelp"></i> -->
