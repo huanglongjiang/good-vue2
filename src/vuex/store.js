@@ -10,6 +10,8 @@ const store = new Vuex.Store({
 	// 定义状态
 	state: {
         state: {
+            topFixed:localStorage.getItem("topFixed")=='true'?true:false,
+            sidebar:localStorage.getItem("sidebar")=='true'?true:false,
             permission:{},
             menu2:{},
             roleId:'',
@@ -26,6 +28,7 @@ const store = new Vuex.Store({
             account:'',
             bbs_total:0,
             log_total:0,
+            user_total:0,
             path:'',
             paramsType:0,
             paramsStatus:0,

@@ -1,9 +1,9 @@
 <template>
   <div>
 
-    <div class="font-size-24 color-white align-center position-f right-0 top-70 background-primary z-index-100" style=" width:36px; height:36px; display:block;border;border-top-left-radius: 55px;border-bottom-left-radius: 55px;">
-        <span class="block width-max height-max line-height-36 el-icon-setting pointer" v-if="showBool3" @click="switch3"></span>
-        <span class="block width-max height-max line-height-36 el-icon-close pointer" v-else @click="switch3"></span>
+    <div class="font-size-24 color-white align-center position-f left-0 top-110 background-primary z-index-100" style=" width:36px; height:36px; display:block;border;border-top-right-radius: 10px;border-bottom-right-radius: 10px;">
+        <span class="width-max height-max el-icon-s-fold pointer" style="display: block; line-height:36px" v-if="sidebar" @click="switch3"></span>
+        <span class="width-max height-max el-icon-s-unfold pointer" style="display: block; line-height:36px" v-else @click="switch3"></span>
     </div>
 
     <div class="panel-backdrop2" style="background:rgba(0,0,0,0.2);z-index:110" v-if="showBool" @click="close"></div>
@@ -40,18 +40,7 @@
               </div>
             </li> -->
             <li class="block padding-5 font-size-14 clearfix">
-              <span class="float-left">Sidebar Mini</span>
-              <div class="layout float-right">
-                  <div class="layout container">
-                  <div class="switch" :class="{'a':sidebar}" @click="switch3">
-                    <span class="switch-label" data-on="on" data-off="off"></span>
-                    <span class="switch-handle"></span>
-                  </div>
-                </div>
-              </div>
-            </li>
-            <li class="block padding-5 font-size-14 clearfix">
-              <span class="float-left">Fixed Navbar</span>
+              <span class="float-left">头部固定</span>
               <div class="layout float-right">
                   <div class="layout container">
                   <div class="switch" :class="{'a':topFixed}" @click="switch2">
@@ -61,11 +50,23 @@
                 </div>
               </div>
             </li>
+            <li class="block padding-5 font-size-14 clearfix">
+              <span class="float-left">隐藏导航</span>
+              <div class="layout float-right">
+                  <div class="layout container">
+                  <div class="switch" :class="{'a':sidebar}" @click="switch3">
+                    <span class="switch-label" data-on="on" data-off="off"></span>
+                    <span class="switch-handle"></span>
+                  </div>
+                </div>
+              </div>
+            </li>
+            
         </ul>
         <span class="align-center bold height-36 line-height-36 margin-bottom-10 block color-999 background-eee border-ddd border-top-1">切换到其他平台</span>
         <ul class="align-left padding-20 padding-top-1">
           <li class="block padding-5 padding-left-10 padding-right-10 font-size-14 background-primary color-white inline-block radius-5">1、vue管理平台</li>
-          <li class="block padding-5 font-size-14 pointer"><a class="none-line a-666" target="_blank" href="http://www.good1230.com/good_vue_typescript/#/login">2、vue+typescript管理平台</a></li>
+          <li class="block padding-5 font-size-14 pointer"><a class="none-line a-666" target="_blank" href="http://www.good1230.com/good_vue_typescript/#/role">2、vue+typescript管理平台</a></li>
           <li class="block padding-5 font-size-14 pointer"><a class="none-line a-666" target="_blank" href="http://www.good1230.com/react/">3、react管理平台</a></li>
         </ul>
 </div>
@@ -168,39 +169,5 @@ z-index: 121;
 
 .b{right:-270px;}
 .b2{right:0px;}
-
-.animation10 {
-  display: block;
--webkit-animation:bounceInRight2 0.1s ease both;
--moz-animation:bounceInRight2 0.1s ease both;
-}
-@-webkit-keyframes bounceInRight2 {
-  0% {
-    right:-270px;
-    display: block;
-  }
- 
-  100% {
-  right:0px;
-  }
-}
-
-
-
-.animation20{
--webkit-animation:bounceInLeft2 0.1s  ease both;
--moz-animation:bounceInLeft2 0.1s  ease both;
-
-}
-@-webkit-keyframes bounceInLeft2{
-0%{
-  right:0px;
-}
-100%{
-  right:-270px;
-  display: none;
-}
-}
-
 
 </style>

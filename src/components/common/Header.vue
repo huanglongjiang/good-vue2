@@ -216,6 +216,7 @@
                     this.state.account=res.data.data.account;
                     this.state.bbs_total=res.data.bbs_total;
                     this.state.log_total=res.data.log_total;
+                    this.state.user_total=res.data.user_total;
                     this.state.permission=res.data.data.authority;
                     this.state.roleId=res.data.data.roleId;
                     this.state.menu2=res.data.data.menu;
