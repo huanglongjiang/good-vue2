@@ -18,4 +18,5 @@ export default {
   text-align: center;
   color: #2c3e50;
 } */
+body{background: #f6f8f9; min-width: 1360px;}
 </style>
