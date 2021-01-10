@@ -1,11 +1,11 @@
 <template>
-<div class="header height-60 width-max background-white z-index-100" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px; background: rgb(32, 35, 42);">
+<div class="header height-60 width-max background-primary z-index-100" style="box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 1px;">
     <div class="header height-60 width-max position-r">
 
         <div class="position-a clearfix">
             <div class="float-left width-290 height-60 font-size-24 bold line-height-60 color-999">
               <good-logo class="float-left"></good-logo>
-              <span class="padding-left-20 color-999">{{state.webTitle}}</span>
+              <span class="padding-left-20 color-white">{{state.webTitle}}</span>
             </div>
             <!-- <a :href="domain" class="color-666 none-line float-left" target="_blank"> -->
             <a class="color-666 none-line float-left" target="_blank">
@@ -17,37 +17,37 @@
               <template v-else>
                   <img src="static/images/tianmao.jpg" alt="" class="width-30 height-30 margin-top-15 radius-20 float-left">
               </template>
-              <span class="line-height-60 margin-left-20  margin-right-10 color-999" >
+              <span class="line-height-60 margin-left-20  margin-right-10 color-white" >
                 {{form.name}}
               </span>
               
 
             </a>
             
-            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==0">用户类型：普通用户</span>
-            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==1">(用户类型：管理员</span>
-            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==2">(用户类型：超级管理员</span>
+            <span class="color-white float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==0">用户类型：普通用户</span>
+            <span class="color-white float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==1">(用户类型：管理员</span>
+            <span class="color-white float-left font-size-14 line-height-60 margin-left-5" v-if="form.role==2">(用户类型：超级管理员</span>
 
-            <span class="color-999 float-left font-size-14 line-height-60 margin-left-5">、用户角色：{{form.roleName}})</span>
+            <span class="color-white float-left font-size-14 line-height-60 margin-left-5">、用户角色：{{form.roleName}})</span>
         </div>
         <ul class="padding-top-20">
 
             <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 margin-right-20 pointer" style="color: #adb5bd; top:-3px;" @click="logOut()">
               
-                <i class="fa fa-sign-in font-size-18" style="color: #adb5bd;"></i>
+                <i class="fa fa-sign-in font-size-18 color-white" ></i>
             </li>
 
             <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 pointer" style="color: #adb5bd; top:-3px;" title="修改密码" @click="editPass()">
               
-                <i class="fa fa-lock font-size-18" style="color: #adb5bd;"></i>
+                <i class="fa fa-lock font-size-18 color-white"></i>
             </li>
 
             <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-30 radius-4 float-right position-r radius-20 pointer" style="color: #adb5bd; top:-3px;" title="编辑个人资料" @click="select()">
               
-                <i class="fa fa-user font-size-18" style="color: #adb5bd;"></i>
+                <i class="fa fa-user font-size-18 color-white"></i>
             </li>
             <router-link to="bbs" tag="li" class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20 pointer" style="color: #adb5bd; top:-3px;">
-                <i class="fa fa-envelope-o font-size-18 color-white" style="color: #adb5bd;"></i>
+                <i class="fa fa-envelope-o font-size-18 color-white"></i>
             
                 <good-info class="position-a left-20 height-18 line-height-18" :data="state.bbs_total" v-if="state.bbs_total" style="top: -10px;"></good-info>
                 <good-info class="position-a left-20 height-18 line-height-18" :data="0" v-else style="top: -10px;"></good-info>
@@ -55,7 +55,7 @@
             
             <li class="width-30 height-30 line-height-30 align-center inline-block padding-bottom-5 margin-left-20 radius-4 float-right position-r radius-20" style="color: #adb5bd; top:-3px;">
               <a :href="domain" target="_blank">
-                <i class="fa fa-bell-o font-size-18" style="color: #adb5bd;"></i>
+                <i class="fa fa-bell-o font-size-18 color-white"></i>
             
                 <div class="notify  position-a top-0 right-0">
                     <span class="ring  position-a top-0 right-0"></span>

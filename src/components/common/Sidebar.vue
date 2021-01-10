@@ -21,7 +21,7 @@
       <template v-for="(item,index) in state.menu">
         <li class="font-size-14 margin-top-10">
                 <div class="title color-333 padding-left-45" @click="open(item,index)">
-                    <i class="margin-right-5 color-999 font-size-16" :class="item.icon"></i>
+                    <i class="margin-right-5 font-size-16" :class="item.icon" style="color: #FEA915"></i>
                     <span class=" color-999" data-module="log">
                     {{item.title}}
                     </span>

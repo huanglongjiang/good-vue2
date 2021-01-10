@@ -17,7 +17,7 @@
       </template>
       <template v-else>
         <li class="position-r line-height-36 border-bottom-1 border-eee">
-        <i class=" color-999 fa  padding-left-45" :class="item.icon"></i> 
+        <i class=" color-999 fa  padding-left-45" :class="item.icon" :style="{'color':item.color}"></i> 
           <span class="color-999 padding-left-5" data-module="log">
           {{item.name}}
           </span>

@@ -39,7 +39,7 @@
 }
 
 .cloud-offset path {
-  fill: #222;
+  fill: #eee;
 }
 .main-cloud path {
   fill: #ffffff;

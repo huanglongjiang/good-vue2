@@ -12,9 +12,9 @@ global.APIPATH2 = 'good2/google2.php'
 
 //上传图片服务器地址
 global.UPSERVER = 'good2/server/fileupload.php'
-global.filePath='good2'*/
+global.filePath='good2'
 
-
+*/
 
 
 

@@ -1,12 +1,12 @@
 <template>
     <div class="wrapper" style="min-width:1200px;">
         <v-head :class="{'fixed-header':state.topFixed}"></v-head>
-        <v-sidebar class=" position-a left-0 top-0 bottom-0 z-index-10" :class="{'fleft-220':!state.sidebar,'left-0':state.sidebar}" style="transition:all 0.1s ease;"></v-sidebar>
+        <v-sidebar class=" position-a left-0 top-0 bottom-0 z-index-10" :class="{'fleft-220':state.sidebar,'left-0':!state.sidebar}" style="transition:all 0.1s ease;"></v-sidebar>
         <div class="content padding-bottom-40 padding-right-20"
-            :class="{'margin-top-70':state.topFixed,'margin-top-10':!state.topFixed,'padding-left-220':state.sidebar,'padding-left-20':!state.sidebar}" style="min-height:450px;transition:all 0.1s ease;">
+            :class="{'margin-top-70':state.topFixed,'margin-top-10':!state.topFixed,'padding-left-220':!state.sidebar,'padding-left-20':state.sidebar}" style="min-height:450px;transition:all 0.1s ease;">
             <transition name="move" mode="out-in"><router-view></router-view></transition>
         </div>
-        <v-footer :class="{'padding-left-220':state.sidebar,'padding-left-20':!state.sidebar}" style="transition:all 0.1s ease;"></v-footer>
+        <v-footer :class="{'padding-left-220':!state.sidebar,'padding-left-20':state.sidebar}" style="transition:all 0.1s ease;"></v-footer>
     </div>
 </template>
 

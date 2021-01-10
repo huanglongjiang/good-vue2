@@ -4,16 +4,16 @@
         <div>
 
         <div class="color-white margin-bottom-15 clearfix flex">
-            <div class="height-120 background-primary margin-right-15 radius-5 padding-20 padding-top-10 width-300"><div>当前用户访问次数<span class=" font-size-24 padding-top-10 position-r top-3 margin-left-10">{{login_total}}</span></div><div class=" font-size-16 padding-top-10">上一次访问时间是<span class=" block font-size-24 padding-top-10">{{data.last_time}}</span></div></div>
+            <div class="height-120 margin-right-15 radius-5 padding-20 padding-top-10 width-300" style="background:linear-gradient(60deg, #2180FB, var(--primary));"><div>当前用户访问次数<span class=" font-size-24 padding-top-10 position-r top-3 margin-left-10">{{login_total}}</span></div><div class=" font-size-16 padding-top-10">上一次访问时间是<span class=" block font-size-24 padding-top-10">{{data.last_time}}</span></div></div>
 
-            <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background:linear-gradient(60deg, #66bb6a, var(--primary));;"><span>用户</span><span class="block font-size-36 align-center">{{user_total}}</span></div>
+            <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background:linear-gradient(60deg, #66bb6a, var(--primary));"><span>用户</span><span class="block font-size-36 align-center">{{user_total}}</span></div>
 
             <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background:linear-gradient(60deg, #962eaf, var(--primary));"><span>文章</span><span class="block font-size-36 align-center">{{article_total}}</span></div>
             <div class="item height-120 background-red radius-5 padding-20" style="background: linear-gradient(60deg, #ec4c49, var(--primary));"><span>访问</span><span class="block font-size-36 align-center">{{rizhi_total}}</span></div>
             </div>
 
          <div class="color-white flex align-center margin-bottom-15">
-            <div class="height-220 align-center radius-5 margin-right-15 width-300 background-primary">
+            <div class="height-220 align-center radius-5 margin-right-15 width-300" style="background:#ec4c49">
                 <div class="height-110 width-300 radius-5 padding-top-20"><span>今日访问</span><span class="block font-size-36 align-center  padding-top-10">{{today_total}}</span></div>
 
                 <div class="height-110 width-300radius-5 padding-top-20"><span>昨日访问</span><span class="block font-size-36 align-center  padding-top-10">{{yesterday_total}}</span></div>

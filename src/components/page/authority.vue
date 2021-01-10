@@ -29,6 +29,10 @@
                   label="code">
                 </el-table-column>
                 <el-table-column
+                  prop="color"
+                  label="icon颜色">
+                </el-table-column>
+                <el-table-column
                   prop="level"
                   label="level">
                 </el-table-column>
@@ -104,6 +108,12 @@
                                 <good-radio v-model="form.leaf" label="0">没有子项</good-radio>
                             </td>
                         </tr>
+                        <tr>
+                            <tds-label star>icon颜色</tds-label>
+                            <td>
+                                <el-color-picker v-model="form.color"></el-color-picker>
+                            </td>
+                        </tr>
                         
                         <tr>
                             <tds-label star>code</tds-label>
@@ -170,6 +180,7 @@
                     label:'',
                     image:'',
                     code:'',
+                    color:'#1ddaae',
                     icon:'',
                     type:'0',
                     leaf:'1',
@@ -261,6 +272,7 @@
                         label:'',
                         image:'',
                         code:'',
+                        color:'#1ddaae',
                         icon:'',
                         type:'0',
                         leaf:'1',
