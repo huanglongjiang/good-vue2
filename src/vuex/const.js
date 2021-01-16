@@ -18,6 +18,7 @@ const initData={
 		headTitle:'个人博客记录生活点点滴滴',
 		index:['首页'],
     log:['登录日志'],
+    access:['流量统计'],
 		root:['栏目中心'],
 		tag:['标签中心'],
 		keywords:['关键词库'],

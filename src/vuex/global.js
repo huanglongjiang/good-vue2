@@ -1,4 +1,4 @@
-/*// 本地地址
+// 本地地址
 
 //数据请求接口
 global.APIPATH = 'good2/google.php'
@@ -14,9 +14,9 @@ global.APIPATH2 = 'good2/google2.php'
 global.UPSERVER = 'good2/server/fileupload.php'
 global.filePath='good2'
 
-*/
 
 
+/*
 
 // good2接口
 
@@ -34,7 +34,7 @@ global.APIPATH2 = 'http://www.good1230.com/good2/google2.php'
 global.UPSERVER = 'http://www.good1230.com/good2/server/fileupload.php'
 global.filePath='http://www.good1230.com/good2'
 
-
+*/
 /*
 // 本地地址
 

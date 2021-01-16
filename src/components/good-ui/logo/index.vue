@@ -39,7 +39,7 @@
 }
 
 .cloud-offset path {
-  fill: #eee;
+  fill: #f6f6f6;
 }
 .main-cloud path {
   fill: #ffffff;
@@ -64,7 +64,7 @@
 }
 
 .icon {
-  width: 60px;
+  width: 62px;
   height: 60px;
 }
 @keyframes flyby {

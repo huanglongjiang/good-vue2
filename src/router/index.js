@@ -73,6 +73,14 @@ Vue.use(Router);
                       roles: true  // 该部分和权限相关
                     }
                 },
+                {
+                    path: '/access',
+                    name: 'access',
+                    component: resolve => require(['../components/page/access.vue'], resolve),
+                    meta: {
+                      roles: true  // 该部分和权限相关
+                    }
+                },
                 
                 {
                     path: '/keywords',
