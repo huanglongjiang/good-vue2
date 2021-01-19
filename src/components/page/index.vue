@@ -4,23 +4,34 @@
         <div>
 
         <div class="color-white margin-bottom-15 clearfix flex">
-            <!-- <div class="height-120 margin-right-15 radius-5 padding-20 padding-top-10 width-300" style="background:linear-gradient(60deg, #2180FB, var(--primary));"><div>当前用户访问次数<span class=" font-size-24 padding-top-10 position-r top-3 margin-left-10">{{login_total}}</span></div><div class=" font-size-16 padding-top-10">上一次访问时间是<span class=" block font-size-24 padding-top-10">{{data.last_time}}</span></div></div> -->
-            <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background: linear-gradient(60deg, chocolate, var(--primary));"><span>今日访问</span><span class="block font-size-36 align-center">{{today_total}}</span></div>
+          
+            <div class="item height-120 background-red margin-right-15 radius-5 padding-20  position-r" style="background:linear-gradient(60deg,#66bb6a,#43a047);">
+            <span class="position-a bottom-20 fa fa-bar-chart font-size-36"></span>
+            <span>今日访问</span>
+            <span class="block font-size-36 align-center">{{today_total}}</span></div>
 
-            <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background: linear-gradient(60deg, cornflowerblue, var(--primary));"><span>昨日访问</span><span class="block font-size-36 align-center">{{yesterday_total}}</span></div>
+            <div class="item height-120 background-red margin-right-15 radius-5 padding-20  position-r" style="background:linear-gradient(60deg,#ec407a,#d81b60);">
+            <span class="position-a bottom-20 fa fa-bar-chart font-size-36"></span>
+            <span>昨日访问</span>
+            <span class="block font-size-36 align-center">{{yesterday_total}}</span></div>
 
-            <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background: linear-gradient(60deg, #ec4c49, var(--primary));"><span>访问</span><span class="block font-size-36 align-center">{{rizhi_total}}</span></div>
+            <div class="item height-120 background-red margin-right-15 radius-5 padding-20  position-r" style="background:linear-gradient(60deg, #ffa726, #fb8c00);">
+            <span class="position-a bottom-20 fa fa-line-chart font-size-36"></span>
+            <span>访问</span>
+            <span class="block font-size-36 align-center">{{all_total}}</span></div>
 
-            <div class="item height-120 background-red margin-right-15 radius-5 padding-20" style="background:linear-gradient(60deg, #66bb6a, var(--primary));"><span>用户</span><span class="block font-size-36 align-center">{{user_total}}</span></div>
+            <div class="item height-120 background-red margin-right-15 radius-5 padding-20 position-r" style="background: linear-gradient(60deg, #26c6da, #00acc1);">
+            <span class="position-a bottom-20 fa fa-user-plus font-size-36"></span>
+            <span>用户</span>
+            <span class="block font-size-36 align-center">{{user_total}}</span></div>
 
-            <div class="item height-120 background-red radius-5 padding-20" style="background:linear-gradient(60deg, #962eaf, var(--primary));"><span>文章</span><span class="block font-size-36 align-center">{{article_total}}</span></div>
+            <div class="item height-120 background-red radius-5 padding-20 position-r" style="background: linear-gradient(60deg, #ef5350, #e53935);">
+            <span class="position-a bottom-20 fa fa-list-ol font-size-36"></span>
+            <span>文章</span>
+            <span class="block font-size-36 align-center">{{article_total}}</span></div>
 
-            
 
-            
-
-
-            </div>
+        </div>
 
          <div class="color-white flex align-center margin-bottom-15">
            <!--  <div class="height-250 align-center radius-5 margin-right-15 width-300" style="background:#ec4c49">
@@ -162,9 +173,17 @@
                     login_total:0,
                     user_total:0,
                     article_total:0,
-                    rizhi_total:0,
+                    all_total:0,
                     today_total:0,
                     yesterday_total:0,
+                    /*todayTotal:0,
+                    yesterdayTotal:0,
+                    total:0,*/
+                },
+                cnzz:{
+                    todayTotal:'0',
+                    yesterdayTotal:'0',
+                    total:'0',
                 },
                 google:"t-20008",
                 init:{
@@ -181,6 +200,7 @@
                     width: '100%',
                     height: 200,
                     low: 0,
+                    showArea: true
                    /* axisX: {
                         labelInterpolationFnc: function(value, index) {
                           return 30 % 2 === 0 ? 10 : null;
@@ -202,7 +222,7 @@
             login_total(){return this.data2.login_total.toFixed(0);},
             user_total(){return this.data2.user_total.toFixed(0);},
             article_total(){return this.data2.article_total.toFixed(0);},
-            rizhi_total(){return this.data2.rizhi_total.toFixed(0);},
+            all_total(){return this.data2.all_total.toFixed(0);},
             today_total(){return this.data2.today_total.toFixed(0);},
             yesterday_total(){return this.data2.yesterday_total.toFixed(0);},
         },
@@ -214,16 +234,16 @@
                     "operating":"lists",
                 }
                 this.$axios.post(global.APIPATH,data).then(res => {
-                    this.data=res.data;
-                    this.$set(this.chartData,'labels',res.data.online_date)
-                    this.$set(this.chartData,'series',[res.data.online])
+                    const data=res.data.data;
+                    this.$set(this.chartData,'labels',data.online_date)
+                    this.$set(this.chartData,'series',[data.online])
 
-                    const data=res.data;
-                    gsap.to(this.$data, { duration: 0.5, tweenedNumber: 666666 });
+                    
+              
                     gsap.to(this.$data.data2, { duration: 0.5, login_total: data.login_total });
                     gsap.to(this.$data.data2, { duration: 0.5, user_total: data.user_total });
                     gsap.to(this.$data.data2, { duration: 0.5, article_total: data.article_total });
-                    gsap.to(this.$data.data2, { duration: 0.5, rizhi_total: data.rizhi_total });
+                    gsap.to(this.$data.data2, { duration: 0.5, all_total: data.all_total });
                     gsap.to(this.$data.data2, { duration: 0.5, today_total: data.today_total });
                     gsap.to(this.$data.data2, { duration: 0.5, yesterday_total: data.yesterday_total });
                 })
@@ -237,7 +257,6 @@
                 }
               
                 this.$axios.post(global.APIPATH,data).then(res => {
-                     console.log(res)
                     this.userList=res.data.data;
                 });
             },
@@ -264,6 +283,11 @@
 .index .ct-series-a .ct-point, 
 .index .ct-series-a .ct-slice-donut {
     stroke: var(--primary)!important;
+}
+.index .ct-series-a .ct-area, 
+.index .ct-series-a .ct-slice-donut-solid, 
+.index .ct-series-a .ct-slice-pie{
+  fill: var(--primary)!important;
 }
 .index .ct-label {
     color: rgba(0,0,0,.2)!important;

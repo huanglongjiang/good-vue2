@@ -27,6 +27,14 @@ module.exports = {
                 '^/dist':'/dist'
             }
         },
+        '/phpajax':{
+            //target:'http://localhost/',
+            target:'http://www.good1230.com/',
+            changeOrigin:true,
+            pathRewrite:{
+                '^../phpajax':'/phpajax'
+            }
+        },
     },
 
     // Various Dev Server settings

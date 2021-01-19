@@ -11,7 +11,7 @@
                     :options="chartOptions" >
                 </chartist>
                 </div>
-                <span class="color-999">博客近24分钟在线访问量</span>
+                <span class="color-999">近24分钟在线访问量</span>
             </good-box>
 
             <good-box class="height-250 margin-bottom-15 align-center overflow-hidden" :data="list">
@@ -23,7 +23,7 @@
                     :options="chartOptions" >
                 </chartist>
                 </div>
-                <span class="color-999">博客24小时访问量</span>
+                <span class="color-999">24小时访问量</span>
             </good-box>
 
             <good-box class="height-250 align-center overflow-hidden" :data="list">
@@ -35,7 +35,7 @@
                     :options="chartOptions" >
                 </chartist>
                 </div>
-                <span class="color-999">博客近30日访问量</span>
+                <span class="color-999">近30日访问量</span>
             </good-box>
          </div>
     </good-page>
@@ -73,6 +73,7 @@ import gsap from "gsap";
                     width: '100%',
                     height: 200,
                     low: 0,
+                    showArea: true
                 }
             }
         },
@@ -92,7 +93,7 @@ import gsap from "gsap";
                     "google":this.google,
                     "operating":"lists",
                 }
-                    this.$axios.post("http://100sucai.com/phpajax/good.php",data).then(res => {
+                    this.$axios.post("../phpajax/good.php",data).then(res => {
                     this.data=res.data;
                     console.log(this.data)
 
@@ -105,7 +106,7 @@ import gsap from "gsap";
                     "google":this.google,
                     "operating":"lists",
                 }
-                    this.$axios.post("http://100sucai.com/phpajax/good2.php",data).then(res => {
+                    this.$axios.post("../phpajax/good2.php",data).then(res => {
                     this.data=res.data;
                     console.log(this.data)
 
@@ -118,7 +119,7 @@ import gsap from "gsap";
                     "google":this.google,
                     "operating":"lists",
                 }
-                    this.$axios.post("http://100sucai.com/phpajax/good3.php",data).then(res => {
+                    this.$axios.post("../phpajax/good3.php",data).then(res => {
                     this.data=res.data;
                     console.log(this.data)
                     this.$set(this.dayData,'labels',this.data.day.time)
@@ -136,6 +137,11 @@ import gsap from "gsap";
 .access .ct-series-a .ct-point, 
 .access .ct-series-a .ct-slice-donut {
     stroke: var(--primary)!important;
+}
+.access .ct-series-a .ct-area, 
+.access .ct-series-a .ct-slice-donut-solid, 
+.access .ct-series-a .ct-slice-pie{
+  fill: var(--primary)!important;
 }
 .access .ct-label {
     color: rgba(0,0,0,.2)!important;
