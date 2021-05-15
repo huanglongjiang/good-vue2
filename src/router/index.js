@@ -139,13 +139,21 @@ Vue.use(Router);
                     }
                 },
                 {
-                    path: '/slider',
-                    name: 'slider',
-                    component: resolve => require(['../components/page/slider.vue'], resolve),
-                    meta: {
-                      roles: true  // 该部分和权限相关
-                    }
-                },
+                  path: '/slider',
+                  name: 'slider',
+                  component: resolve => require(['../components/page/slider.vue'], resolve),
+                  meta: {
+                    roles: true  // 该部分和权限相关
+                  }
+              },
+              {
+                path: '/bookmark',
+                name: 'bookmark',
+                component: resolve => require(['../components/page/bookmark.vue'], resolve),
+                meta: {
+                  roles: true  // 该部分和权限相关
+                }
+            },
                 {
                     path: '/article',
                     name: 'article',

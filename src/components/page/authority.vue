@@ -2,7 +2,12 @@
     <good-page>
         <good-breadcrumb :list="constant.breadcrumb.authority" />
         <good-menu>
-            <good-button class='float-right' icon="el-icon-edit" type="primary"  @click="openColumn(2,'新增栏目')">新增栏目</good-button>
+            <template v-if="state.authority==2">
+                <good-button class='float-right' icon="el-icon-edit" type="primary"  @click="openColumn(2,'新增栏目')">新增栏目</good-button>
+            </template>
+            <template v-else>
+                <good-button class='float-right no-drop' icon="el-icon-edit" type="primary">新增栏目</good-button>
+            </template>
             <good-total class="float-right" :total='init.total'></good-total>
         </good-menu>
         <good-box :data="viewList">
@@ -43,13 +48,13 @@
                     操作
                   </template>
                   <template slot-scope="scope">
-                    <el-button v-if="(scope.row.leaf==1&&scope.row.type==0)||scope.row.leaf==1&&scope.row.type==1"
-                      size="mini"
-                      @click="openColumn(scope.row,'新增栏目')">新增子项</el-button>
-                    <el-button
-                      size="mini"
-                      type="danger"
-                      @click="select(scope.row,'编辑标签')">编辑</el-button>
+                    <template v-if="state.authority==2">
+                        <el-button v-if="(scope.row.leaf==1&&scope.row.type==0)||scope.row.leaf==1&&scope.row.type==1" size="mini" @click="openColumn(scope.row,'新增栏目')">新增子项</el-button>
+                        <el-button size="mini" type="danger" @click="select(scope.row,'编辑标签')">编辑</el-button>
+                    </template>
+                    <template v-else>
+                        <span class="color-ddd">权限隐藏</span>
+                    </template>
                   </template>
                 </el-table-column>
               </el-table>
@@ -151,6 +156,7 @@
 </template>
 
 <script>
+    import { mapState } from 'vuex'
     export default {
         data: function(){
             return {
@@ -191,6 +197,7 @@
             }
         },
         computed: {
+            ...mapState(['state']),
             // 搜索功能
             viewList(){
                 const arr=[];

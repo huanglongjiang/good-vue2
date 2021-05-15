@@ -40,7 +40,7 @@
                             <table class="width-max">
                                 <tr style="height:50px;">
                                     <td>
-                                        <div class="position-r radius-3 input-box"><i class="fa fa-envelope font-size-16 position-a top-13 left-15 color-ccc"></i><input type="text" placeholder="账号 / 邮箱登录" class="input-default height-40 line-height-40 font-size-16 width-max" v-model="form.email"></div>
+                                        <div class="position-r radius-3 input-box"><i class="fa fa-envelope font-size-16 position-a top-13 left-15 color-ccc"></i><input type="text" placeholder="请输入邮箱" class="input-default height-40 line-height-40 font-size-16 width-max" v-model="form.email"></div>
                                     </td>
                                 </tr>
                                 <tr style="height:50px;">
@@ -111,7 +111,7 @@
                 this.$axios.post(global.APIPATH,data).then(res => { 
                     if(res.data.retType=='success'){
                        localStorage.token = res.data.token;
-                       this.$router.push('/role');
+                       this.$router.push('/index');
                    }
                         
                 });
@@ -127,8 +127,8 @@
   
 </style>
 <style type="text/css">
-.login .el-tabs__item.is-active{font-weight: bold;color: #4fc08d; font-size: 18px;}
-.login .el-tabs__item:hover{color: #4fc08d;}
+.login .el-tabs__item.is-active{font-weight: bold;color: var(--primary); font-size: 18px;}
+.login .el-tabs__item:hover{color: var(--primary);}
 #login input{
   color: #5d6d81;
   border: 0px!important;

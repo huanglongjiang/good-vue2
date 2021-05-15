@@ -31,8 +31,11 @@
                               
                 <ul class="position-r overflow-hidden margin-top-10 ">
                   <template v-for="(item2,index2) in item.children">
+                    <li class="position-r line-height-36 padding-left-60 menu">
+                        <router-link active-class="color-primary" :to="'/'+item2.url" tag="span" class="margin-left-10 pointer" data-module="log">{{item2.title}}</router-link>                    
+                    </li>
            
-                    <li class="position-r line-height-36 padding-left-60 menu" v-if="state.authority!=2&&item2.url!='authority'">
+                    <!-- <li class="position-r line-height-36 padding-left-60 menu" v-if="state.authority!=2&&item2.url!='authority'">
                         <router-link active-class="color-primary" :to="'/'+item2.url" tag="span" class="margin-left-10 pointer" data-module="log">{{item2.title}}</router-link>                    
                     </li>
 
@@ -42,7 +45,7 @@
 
                     <li class="position-r line-height-36 padding-left-60 menu" v-if="state.authority==2">
                         <router-link active-class="color-primary" :to="'/'+item2.url" tag="span" class="margin-left-10 pointer" data-module="log">{{item2.title}}</router-link>                    
-                    </li>
+                    </li> -->
                    <!--  <li class="position-r line-height-36 padding-left-40 margin-10 margin-bottom-20" v-else>
                         <div class=" padding-left-10 menu2"><i class="el-icon-plus color-ccc padding-right-5 bold"></i>{{item2.title}}</div>
                     </li> -->

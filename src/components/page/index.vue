@@ -17,7 +17,7 @@
 
             <div class="item height-120 background-red margin-right-15 radius-5 padding-20  position-r" style="background:linear-gradient(60deg, #ffa726, #fb8c00);">
             <span class="position-a bottom-20 fa fa-line-chart font-size-36"></span>
-            <span>访问</span>
+            <span>总访问</span>
             <span class="block font-size-36 align-center">{{all_total}}</span></div>
 
             <div class="item height-120 background-red margin-right-15 radius-5 padding-20 position-r" style="background: linear-gradient(60deg, #26c6da, #00acc1);">
@@ -80,6 +80,7 @@
                             </th>
                         </tr>
                         <tr>
+                            <th>序号</th>
                             <th>图片</th>
                             <th>发布作者</th>
                             <th>标题</th>
@@ -89,7 +90,11 @@
                     <tbody>
                         <template v-for="(item,index) in articleList">
                             <tr>
-                                <td>
+                                    <td>
+                                        <span class="width-20 height-20 block radius-20 align-center line-height-20 color-white font-size-12" :class="setBackground(index)">
+                                        {{index+1}}</span>
+                                    </td>
+                                    <td>
                                     <div class="line-height-30 padding-3">
                                         <template v-if="item.file!=''">
                                         <img :src="filePath+'/'+item.file" alt="" class="width-30 height-30 radius-20 block" v-if="item.file.length>7">
@@ -101,7 +106,7 @@
                                     </div>
                                     
                                 </td>
-                                <td>{{item.account}}</td>
+                                <td>{{item.account?item.account:'-'}}</td>
                                 <td>
                                     <div class="width-max break">
                                         <span>{{item.title}}</span>
@@ -125,6 +130,7 @@
                             </th>
                         </tr>
                         <tr>
+                            <th>序号</th>
                             <th>用户头像</th>
                             <th>用户名</th>
                             <th>注册时间</th>
@@ -133,6 +139,10 @@
                     <tbody>
                         <template v-for="(item,index) in userList">
                             <tr>
+                                <td>
+                                    <span class="width-20 height-20 block radius-20 align-center line-height-20 color-white font-size-12" :class="setBackground(index)">
+                                    {{index+1}}</span>
+                                </td>
                                 <td>
                                     <div class="line-height-30 padding-3">
                                         <template v-if="item.file!=''">
@@ -225,9 +235,15 @@
             all_total(){return this.data2.all_total.toFixed(0);},
             today_total(){return this.data2.today_total.toFixed(0);},
             yesterday_total(){return this.data2.yesterday_total.toFixed(0);},
+            
         },
        
         methods: {
+            setBackground(item){
+               return item===0?'background-one':
+               item===1?'background-two':
+               item===2?'background-three':'background-ddd'
+            },
             dataList(){
                 const data={
                     "google":this.google,
